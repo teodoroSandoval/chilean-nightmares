@@ -15,14 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://glr82nrlkbhc" path="res://assets/ui/Rectangle 41.png" id="6_hsn8a"]
 [ext_resource type="Texture2D" uid="uid://coxmlyaynhh5g" path="res://assets/ui/pause.png" id="7_4j5yk"]
 [ext_resource type="Texture2D" uid="uid://d320ml58qgg1g" path="res://assets/ui/cliente fondo.png" id="7_hlv5w"]
-[ext_resource type="PackedScene" uid="uid://dmhget4c4ky7d" path="res://prefabs/roads_loader.tscn" id="8_1yji8"]
 [ext_resource type="Texture2D" uid="uid://bppe46cfgn587" path="res://assets/personajes/character 02/character_image_02.png" id="8_e3rac"]
 [ext_resource type="Texture2D" uid="uid://4btfqrmmsklj" path="res://assets/personajes/character 00/character_chibi_00.png" id="8_k0kx6"]
 [ext_resource type="Texture2D" uid="uid://dmq0fi8hyjxwc" path="res://assets/ui/cliente frame.png" id="9_2hsy7"]
 [ext_resource type="Texture2D" uid="uid://kwc44166swil" path="res://assets/ui/globo dialogo.png" id="10_jri1q"]
 [ext_resource type="Script" uid="uid://4nbp7jbsj4m0" path="res://scripts/character_cursor.gd" id="11_o1p1e"]
 [ext_resource type="PackedScene" uid="uid://dxfxppksayr4u" path="res://prefabs/popups/pause.tscn" id="14_k0kx6"]
-[ext_resource type="PackedScene" uid="uid://vvrdeo72uxqv" path="res://prefabs/player.tscn" id="14_voec1"]
 [ext_resource type="PackedScene" uid="uid://be5obm451vn8c" path="res://prefabs/popups/intro.tscn" id="15_jri1q"]
 [ext_resource type="Script" uid="uid://d3q8nkhaxhat3" path="res://scripts/ClientManager.gd" id="16_2f17k"]
 [ext_resource type="Texture2D" uid="uid://8gnw3y6odany" path="res://assets/personajes/jhon doe alpha.png" id="17_sabir"]
@@ -49,7 +47,7 @@ versus_base = NodePath("Versus")
 store_coin_manager = NodePath("AtenderQuiosco/Base/BaseMonedas")
 store_client_manager = NodePath("AtenderQuiosco/Base/BaseCliente")
 dialog_manager = NodePath("Dialogo")
-player = NodePath("player")
+player = NodePath("")
 intro_popup = NodePath("Popups/Intro quiosco")
 pause_popup = NodePath("Popups/Pause")
 victory_popup = NodePath("Popups/Victory")
@@ -58,13 +56,6 @@ settings_popup = NodePath("Popups/Settings")
 
 [node name="Main_Terrain" parent="." unique_id=1978853817 instance=ExtResource("3_1yji8")]
 unique_name_in_owner = true
-
-[node name="player" parent="." unique_id=1896769258 instance=ExtResource("14_voec1")]
-transform = Transform3D(-1, 0, 6.2783295e-07, 0, 1, 0, -6.2783295e-07, 0, -1, -98.11186, 226.07349, 2610.0664)
-script = null
-
-[node name="roads_loader" parent="." unique_id=128749738 instance=ExtResource("8_1yji8")]
-surface_gizmo_flags = 3425
 
 [node name="Dialogo" type="Label" parent="." unique_id=312952454 node_paths=PackedStringArray("name_text", "dialog_text", "dialog_box", "character_image_0", "character_image_1", "character_image_2")]
 visible = false
