@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://bcqpaex7r16il" path="res://settings/input/actions/action_gameplay_look.tres" id="10_1x6it"]
 [ext_resource type="Resource" uid="uid://daremaunsm8w7" path="res://settings/input/actions/action_gameplay_move.tres" id="10_hnhqt"]
 [ext_resource type="Resource" uid="uid://dfsnqpdqr6x42" path="res://settings/input/actions/action_gameplay_grab.tres" id="11_ulqtv"]
+[ext_resource type="Resource" uid="uid://xib2rl8dg2py" path="res://settings/input/actions/action_gameplay_zoom.tres" id="12_v2k7m"]
 [ext_resource type="Resource" uid="uid://ca4lax2q1f2cs" path="res://settings/input/actions/action_gameplay_throw.tres" id="12_yxbl0"]
 [ext_resource type="Resource" uid="uid://b5dj2s6h0ybw" path="res://settings/input/actions/action_gameplay_give_change.tres" id="13_v2k7m"]
 [ext_resource type="Resource" uid="uid://vx2lpeca1cye" path="res://settings/input/actions/action_gameplay_return_change.tres" id="14_kbk12"]
@@ -36,6 +37,7 @@ ui_cancel = ExtResource("8_wfrjy")
 ui_move = ExtResource("9_qh8hh")
 gameplay_look = ExtResource("10_1x6it")
 gameplay_move = ExtResource("10_hnhqt")
+gameplay_zoom = ExtResource("12_v2k7m")
 gameplay_grab = ExtResource("11_ulqtv")
 gameplay_throw = ExtResource("12_yxbl0")
 gameplay_give_change = ExtResource("13_v2k7m")

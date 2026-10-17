@@ -18,7 +18,7 @@ var state         : int   = GameState.MENU
 @export var store_coin_manager: Control
 @export var store_client_manager: Control
 @export var dialog_manager: Label
-@export var player: CogitoPlayer
+@export var player: PlayerManager
 
 @export_category("Popups")
 @export var intro_popup: Control
@@ -97,6 +97,8 @@ func _ready() -> void:
 	_set_up_inputs()
 
 	InputManager.switch_to_Gameplay()
+	InputManager._hide_mouse()
+	player._resume_movement()
 	# _start_game_mode()
 	# get_tree().create_timer(0.05).timeout.connect(_start_game_mode)
 	# pause_popup.resume.connect(_on_pause_menu_resume) # Hookup resume signal from Pause Menu
@@ -230,8 +232,8 @@ func _restart_quiosc_game() -> void:
 	store_client_manager.re_start_game()
 
 func _pause_game() -> void:
-	if CogitoSceneManager.is_currently_loading:
-		return
+	# if CogitoSceneManager.is_currently_loading:
+	# 	return
 	if is_showing_ui: #Behaviour when pressing ESC/menu while external UI is open (Readables, Keypad, etc)
 		# menu_pressed.emit(player_interaction_component)
 		# if get_node(player_hud).inventory_interface.is_inventory_open: #Behaviour when pressing ESC/menu while Inventory is open
@@ -239,7 +241,7 @@ func _pause_game() -> void:
 		pass
 	elif !player.is_movement_paused and !player.is_dead:
 		# if !currently_tweening:
-		player._on_pause_movement()
+		player._pause_movement()
 			# get_node(pause_menu).open_pause_menu()
 		# else:
 			# player_interaction_component.send_hint(null, "Wait until I’m seated or standing")
@@ -247,6 +249,7 @@ func _pause_game() -> void:
 		InputManager.switch_to_UI()
 		store_coin_manager._pause_game()  # Pause the store coin manager when the game is paused
 		state = GameState.PAUSED
+		InputManager._show_mouse()
 
 func _resume_game() -> void:
 	pause_popup.hide()
@@ -254,11 +257,12 @@ func _resume_game() -> void:
 	store_coin_manager._resume_game()  # Resume the store coin manager when the game is resumed
 	state = GameState.PLAYING
 
-	player._on_pause_menu_resume()
+	player._resume_movement()
 	get_tree().paused = false
 	# is_pausemenu_open = false
 	# hide()
 	# emit_signal("resume")
+	InputManager._hide_mouse()
 
 func _show_gameover() -> void:
 	gameover_popup.show()

@@ -350,12 +350,12 @@ func generate_roads() -> void:
         # break
 ## Add a new roadpoint in a given direction
 func generate_road_segment(road_record: OsmRoadRecord) -> void:
-
-    for index in range(0, road_record.node_ids.size()):
-        var node_A: OsmNodeRecord =  getNode(road_record.node_ids[index])
+    pass
+    # for index in range(0, road_record.node_ids.size()):
+    #     var node_A: OsmNodeRecord =  getNode(road_record.node_ids[index])
         # var node_B: OsmNodeRecord =  getNode(road_record.node_ids[index])
 
-        var new_rp_A := add_or_get_rp(node_A, road_record)
+        # var new_rp_A := add_or_get_rp(node_A, road_record)
         # var new_rp_B := add_or_get_rp(node_B, road_record)
 
         # Finally, connect them together
@@ -363,73 +363,73 @@ func generate_road_segment(road_record: OsmRoadRecord) -> void:
         # if res != true:
         #     print("Failed to connect RoadPoint")
         #     return
-func add_or_get_rp(node: OsmNodeRecord, road_record: OsmRoadRecord) -> RoadPoint:
+# func add_or_get_rp(node: OsmNodeRecord, road_record: OsmRoadRecord) -> RoadPoint:
 
-    var new_rp : RoadPoint = road_nodes_base.get_node_or_null(str(node.id))
-    if new_rp == null:
-        print("creating RoadPoint")
-        new_rp = RoadPoint.new()
-        road_nodes_base.add_child(new_rp)
-        new_rp.set_owner(get_tree().get_edited_scene_root())
-        new_rp.name = str(node.id)
-    else:
-        print("reusing RoadPoint")
-        print(new_rp)
+#     var new_rp : RoadPoint = road_nodes_base.get_node_or_null(str(node.id))
+#     if new_rp == null:
+#         print("creating RoadPoint")
+#         new_rp = RoadPoint.new()
+#         road_nodes_base.add_child(new_rp)
+#         new_rp.set_owner(get_tree().get_edited_scene_root())
+#         new_rp.name = str(node.id)
+#     else:
+#         print("reusing RoadPoint")
+#         print(new_rp)
 
-    new_rp.transform.origin = node.world_position
-    new_rp.auto_lanes = false
-    new_rp.lane_width = 4.0
-    new_rp.shoulder_width_l = 2.0
-    new_rp.shoulder_width_r = 2.0
-    new_rp.gutter_profile.x = 2.0
-    new_rp.gutter_profile.y = -0.5
-    new_rp.create_geo = true
-    new_rp._last_update_ms = 500
-    new_rp.alignment = RoadPoint.Alignment.DIVIDER
-    new_rp.underside_thickness = -1.0
-    new_rp.flatten_terrain = true
+#     new_rp.transform.origin = node.world_position
+#     new_rp.auto_lanes = false
+#     new_rp.lane_width = 4.0
+#     new_rp.shoulder_width_l = 2.0
+#     new_rp.shoulder_width_r = 2.0
+#     new_rp.gutter_profile.x = 2.0
+#     new_rp.gutter_profile.y = -0.5
+#     new_rp.create_geo = true
+#     new_rp._last_update_ms = 500
+#     new_rp.alignment = RoadPoint.Alignment.DIVIDER
+#     new_rp.underside_thickness = -1.0
+#     new_rp.flatten_terrain = true
 
-    # new_rp.traffic_dir = ref_road_point.traffic_dir.duplicate(true)
-    # new_rp.lanes = ref_road_point.lanes.duplicate(true)
+#     # new_rp.traffic_dir = ref_road_point.traffic_dir.duplicate(true)
+#     # new_rp.lanes = ref_road_point.lanes.duplicate(true)
 
-    new_rp.traffic_dir=[
-        RoadPoint.LaneDir.REVERSE,
-        RoadPoint.LaneDir.FORWARD
-    ]
-    new_rp.lanes=[
-        RoadPoint.LaneType.SLOW,
-        RoadPoint.LaneType.SLOW
-    ]
+#     new_rp.traffic_dir=[
+#         RoadPoint.LaneDir.REVERSE,
+#         RoadPoint.LaneDir.FORWARD
+#     ]
+#     new_rp.lanes=[
+#         RoadPoint.LaneType.SLOW,
+#         RoadPoint.LaneType.SLOW
+#     ]
 
-    # for idx in range(randi_range(1, 4)):
-    #     new_rp.traffic_dir.append(RoadPoint.LaneDir.REVERSE)
-    #     new_rp.lanes.append(RoadPoint.LaneType.SLOW)
-    # for idx in range(randi_range(0, 2)):
-    #     new_rp.traffic_dir.append(RoadPoint.LaneDir.REVERSE)
-    #     new_rp.lanes.append(RoadPoint.LaneType.FAST)
-    # for idx in range(randi_range(0, 2)):
-    #     new_rp.traffic_dir.append(RoadPoint.LaneDir.FORWARD)
-    #     new_rp.lanes.append(RoadPoint.LaneType.FAST)
-    # for idx in range(randi_range(1, 4)):
-    #     new_rp.traffic_dir.append(RoadPoint.LaneDir.FORWARD)
-    #     new_rp.lanes.append(RoadPoint.LaneType.SLOW)
+#     # for idx in range(randi_range(1, 4)):
+#     #     new_rp.traffic_dir.append(RoadPoint.LaneDir.REVERSE)
+#     #     new_rp.lanes.append(RoadPoint.LaneType.SLOW)
+#     # for idx in range(randi_range(0, 2)):
+#     #     new_rp.traffic_dir.append(RoadPoint.LaneDir.REVERSE)
+#     #     new_rp.lanes.append(RoadPoint.LaneType.FAST)
+#     # for idx in range(randi_range(0, 2)):
+#     #     new_rp.traffic_dir.append(RoadPoint.LaneDir.FORWARD)
+#     #     new_rp.lanes.append(RoadPoint.LaneType.FAST)
+#     # for idx in range(randi_range(1, 4)):
+#     #     new_rp.traffic_dir.append(RoadPoint.LaneDir.FORWARD)
+#     #     new_rp.lanes.append(RoadPoint.LaneType.SLOW)
 
-    # Placement of a new roadpoint with interval no larger than buffer,
-    # to avoid flicker removal/adding with the culling system
+#     # Placement of a new roadpoint with interval no larger than buffer,
+#     # to avoid flicker removal/adding with the culling system
 
-    # Randomly rotate the offset vector slightly
-    # var _transform := new_rp.transform
-    # var angle_range := 30 # Random angle rotation range
-    # var random_angle: float = randf_range(-angle_range / 2.0, angle_range / 2.0) # Generate a random angle within the range
-    # var rotation_axis := Vector3.UP
-    # _transform = _transform.rotated(rotation_axis, deg_to_rad(random_angle))
+#     # Randomly rotate the offset vector slightly
+#     # var _transform := new_rp.transform
+#     # var angle_range := 30 # Random angle rotation range
+#     # var random_angle: float = randf_range(-angle_range / 2.0, angle_range / 2.0) # Generate a random angle within the range
+#     # var rotation_axis := Vector3.UP
+#     # _transform = _transform.rotated(rotation_axis, deg_to_rad(random_angle))
 
-    # var rand_y_offset:float = randf_range(-7.5, 7.5)
-    # var offset_pos:Vector3 = _transform.basis.z * buffer_distance * mag + Vector3.UP * rand_y_offset
+#     # var rand_y_offset:float = randf_range(-7.5, 7.5)
+#     # var offset_pos:Vector3 = _transform.basis.z * buffer_distance * mag + Vector3.UP * rand_y_offset
 
-    # new_rp.transform.origin += offset_pos
+#     # new_rp.transform.origin += offset_pos
 
-    return new_rp
+#     return new_rp
 
 
 func getNode(node_id: int) -> OsmNodeRecord:

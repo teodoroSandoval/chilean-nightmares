@@ -255,5 +255,3 @@ func _editor_name() -> String:
 		return name
 		
 	return resource_path.get_file().replace(".tres", "")
-
-

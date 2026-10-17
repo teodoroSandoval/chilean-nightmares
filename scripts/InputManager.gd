@@ -20,6 +20,7 @@ var _current_device_type:GUIDEInput.DeviceType = GUIDEInput.DeviceType.MOUSE
 
 @export var gameplay_look:GUIDEAction
 @export var gameplay_move:GUIDEAction
+@export var gameplay_zoom:GUIDEAction
 @export var gameplay_grab:GUIDEAction
 @export var gameplay_throw:GUIDEAction
 @export var gameplay_give_change:GUIDEAction
@@ -171,3 +172,9 @@ func disable_All() -> void:
 	print("disabling all input")
 	disable_input_UI()
 	disable_input_Gameplay()
+
+func _hide_mouse() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+func _show_mouse() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
