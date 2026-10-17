@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://caco71jxh1t31"]
+
+[ext_resource type="Script" uid="uid://dvyhqd4memj7t" path="res://addons/modular-settings-menu/scripts/language_setting.gd" id="1_jtau4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drjjf"]
+
+[node name="Language" type="HBoxContainer" unique_id=2039011033 node_paths=PackedStringArray("OptionsRef")]
+offset_right = 149.0
+offset_bottom = 23.0
+script = ExtResource("1_jtau4")
+DEFAULT_VALUE = "es"
+OptionsRef = NodePath("Options")
+IDENTIFIER = "Language"
+IS_IN_GAME_SETTING = true
+
+[node name="Label" type="Label" parent="." unique_id=1079252183]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Language"
+vertical_alignment = 1
+
+[node name="Options" type="OptionButton" parent="." unique_id=1700583485]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_drjjf")

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://c66v42g6gs7gr"]
+
+[ext_resource type="Script" uid="uid://dygy74ttyruok" path="res://addons/modular-settings-menu/scripts/settings_section.gd" id="1_i11k5"]
+[ext_resource type="PackedScene" uid="uid://elu1vc0ox472" path="res://addons/modular-settings-menu/scenes/settings-elements/gameplay-elements/fov.tscn" id="2_c8t76"]
+[ext_resource type="PackedScene" uid="uid://caco71jxh1t31" path="res://addons/modular-settings-menu/scenes/settings-elements/gameplay-elements/language.tscn" id="3_wl4af"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e0spm"]
+
+[node name="Gameplay" type="TabBar" unique_id=1899353956]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_e0spm")
+script = ExtResource("1_i11k5")
+IDENTIFIER = "Gameplay"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1800183102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=794999605]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer" unique_id=1373833717]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="ElementList" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer" unique_id=904459396]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="GeneralSettings" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/ElementList" unique_id=949216166]
+layout_mode = 2
+
+[node name="SubSectionName" type="Label" parent="MarginContainer/ScrollContainer/MarginContainer/ElementList/GeneralSettings" unique_id=1543554887]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "General Settings"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/MarginContainer/ElementList/GeneralSettings" unique_id=1509675840]
+layout_mode = 2
+
+[node name="SubSectionElements" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/ElementList/GeneralSettings" unique_id=844855227]
+layout_mode = 2
+
+[node name="FOV" parent="MarginContainer/ScrollContainer/MarginContainer/ElementList/GeneralSettings/SubSectionElements" unique_id=1930128893 instance=ExtResource("2_c8t76")]
+visible = false
+layout_mode = 2
+
+[node name="Language" parent="MarginContainer/ScrollContainer/MarginContainer/ElementList/GeneralSettings/SubSectionElements" unique_id=2039011033 instance=ExtResource("3_wl4af")]
+layout_mode = 2
