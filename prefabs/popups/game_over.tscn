@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b14m5tisbsjsb"]
+
+[ext_resource type="Script" uid="uid://bqvv17yd8bk0y" path="res://scripts/popups/game_over.gd" id="1_pwdcs"]
+
+[node name="GameOver" type="Control" unique_id=437761125 node_paths=PackedStringArray("first_selected_button")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -294.0
+offset_right = 422.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pwdcs")
+first_selected_button = NodePath("Button Retry")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=466636665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.32223505, 0.14846054, 0.298155, 1)
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1077028360]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 407.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button Retry" type="Button" parent="." unique_id=1643012863]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -153.0
+offset_right = 128.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 41
+text = "retry"
+
+[node name="Button To title" type="Button" parent="." unique_id=2006380551]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -81.0
+offset_right = 128.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 41
+text = "to title"
+
+[connection signal="pressed" from="Button Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Button To title" to="." method="_on_to_title_screen_pressed"]

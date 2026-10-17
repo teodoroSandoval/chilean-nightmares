@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="StoryChapter" format=3 uid="uid://b3cvkcek50bvh"]
+
+[ext_resource type="Script" uid="uid://b0rv5nul6ftd1" path="res://scripts/data/Dialog.gd" id="1_dm8yd"]
+[ext_resource type="Script" uid="uid://biidme72jmrqk" path="res://scripts/data/ClientRequest.gd" id="1_jfgy5"]
+[ext_resource type="Script" uid="uid://drfmtiy35qnwm" path="res://scripts/data/StoryChapter.gd" id="2_0psma"]
+[ext_resource type="Resource" uid="uid://budg7jv37jj6" path="res://settings/gameData/characters/character_00.tres" id="2_aqiu0"]
+[ext_resource type="Resource" uid="uid://dkxnrwbbqg6l6" path="res://settings/gameData/characters/character_02.tres" id="2_bhdwu"]
+[ext_resource type="Script" uid="uid://kmoj5py7n8dn" path="res://scripts/data/ItemStack.gd" id="2_iusba"]
+[ext_resource type="Resource" uid="uid://dc6m45h6biraq" path="res://settings/gameData/characters/character_01.tres" id="3_aqiu0"]
+[ext_resource type="Resource" uid="uid://cmpt3f6avunsi" path="res://settings/gameData/items/item_00.tres" id="4_1n1ee"]
+[ext_resource type="Script" uid="uid://cy4udot42bc71" path="res://scripts/data/ItemData.gd" id="5_iusba"]
+[ext_resource type="Resource" uid="uid://cpd8wh0lgb8xq" path="res://settings/gameData/characters/character_03.tres" id="5_j5uwb"]
+[ext_resource type="Resource" uid="uid://bwi4lmr707dnx" path="res://settings/gameData/items/item_02.tres" id="6_bhdwu"]
+[ext_resource type="Resource" uid="uid://cfp50m8oy4j0b" path="res://settings/gameData/characters/character_04.tres" id="7_85vgu"]
+[ext_resource type="Resource" uid="uid://bpcqgyago7eib" path="res://settings/gameData/items/item_03.tres" id="8_1n1ee"]
+
+[sub_resource type="Resource" id="Resource_6vlcl"]
+script = ExtResource("2_iusba")
+item = ExtResource("4_1n1ee")
+quantity = 2
+metadata/_custom_type_script = "uid://kmoj5py7n8dn"
+
+[sub_resource type="Resource" id="Resource_41005"]
+script = ExtResource("1_jfgy5")
+character_data = ExtResource("2_bhdwu")
+initial_dialogs = Array[String](["hola, solo pasaba a ver al gatito", "pero supongo que puedo comprar algo para mis amigas"])
+ending_dialogs = Array[String](["gracias!"])
+requested_items = Array[ExtResource("2_iusba")]([SubResource("Resource_6vlcl")])
+money = 1000
+metadata/_custom_type_script = "uid://biidme72jmrqk"
+
+[sub_resource type="Resource" id="Resource_6a6mn"]
+script = ExtResource("2_iusba")
+item = ExtResource("6_bhdwu")
+metadata/_custom_type_script = "uid://kmoj5py7n8dn"
+
+[sub_resource type="Resource" id="Resource_ix31q"]
+script = ExtResource("1_jfgy5")
+character_data = ExtResource("5_j5uwb")
+initial_dialogs = Array[String](["hola..."])
+ending_dialogs = Array[String](["gracias! hasta luego!"])
+requested_items = Array[ExtResource("2_iusba")]([SubResource("Resource_6a6mn")])
+money = 2000
+metadata/_custom_type_script = "uid://biidme72jmrqk"
+
+[sub_resource type="Resource" id="Resource_1n1ee"]
+script = ExtResource("2_iusba")
+item = ExtResource("8_1n1ee")
+metadata/_custom_type_script = "uid://kmoj5py7n8dn"
+
+[sub_resource type="Resource" id="Resource_bnkcn"]
+script = ExtResource("1_jfgy5")
+character_data = ExtResource("7_85vgu")
+initial_dialogs = Array[String](["hola mija!"])
+ending_dialogs = Array[String](["hasta luego!"])
+requested_items = Array[ExtResource("2_iusba")]([SubResource("Resource_1n1ee")])
+money = 500
+metadata/_custom_type_script = "uid://biidme72jmrqk"
+
+[sub_resource type="Resource" id="Resource_o1p1e"]
+script = ExtResource("1_dm8yd")
+character_data = ExtResource("2_aqiu0")
+screen_side = 2
+dialogs_texts = Array[String](["c_00_E_00"])
+metadata/_custom_type_script = "uid://b0rv5nul6ftd1"
+
+[sub_resource type="Resource" id="Resource_gdyjy"]
+script = ExtResource("1_dm8yd")
+character_data = ExtResource("3_aqiu0")
+screen_side = 2
+dialogs_texts = Array[String](["c_00_E_01"])
+metadata/_custom_type_script = "uid://b0rv5nul6ftd1"
+
+[sub_resource type="Resource" id="Resource_q056u"]
+script = ExtResource("1_dm8yd")
+character_data = ExtResource("2_aqiu0")
+dialogs_texts = Array[String](["c_00_I_00", "c_00_I_01"])
+metadata/_custom_type_script = "uid://b0rv5nul6ftd1"
+
+[sub_resource type="Resource" id="Resource_8plws"]
+script = ExtResource("1_dm8yd")
+character_data = ExtResource("3_aqiu0")
+screen_side = 1
+dialogs_texts = Array[String](["c_00_I_02"])
+metadata/_custom_type_script = "uid://b0rv5nul6ftd1"
+
+[sub_resource type="Resource" id="Resource_22hlv"]
+script = ExtResource("1_dm8yd")
+character_data = ExtResource("2_aqiu0")
+screen_side = 2
+dialogs_texts = Array[String](["c_00_I_03", "c_00_I_04"])
+metadata/_custom_type_script = "uid://b0rv5nul6ftd1"
+
+[resource]
+script = ExtResource("2_0psma")
+name = "Introduccion"
+initial_dialogs = Array[ExtResource("1_dm8yd")]([SubResource("Resource_q056u"), SubResource("Resource_8plws"), SubResource("Resource_22hlv")])
+ending_dialogs = Array[ExtResource("1_dm8yd")]([SubResource("Resource_o1p1e"), SubResource("Resource_gdyjy")])
+clients = Array[ExtResource("1_jfgy5")]([SubResource("Resource_41005"), SubResource("Resource_ix31q"), SubResource("Resource_bnkcn")])
+metadata/_custom_type_script = "uid://drfmtiy35qnwm"

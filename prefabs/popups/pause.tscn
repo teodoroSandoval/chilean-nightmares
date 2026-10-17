@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dxfxppksayr4u"]
+
+[ext_resource type="Script" uid="uid://bw4makwcano0f" path="res://scripts/popups/pause.gd" id="1_vwtlf"]
+
+[node name="Pause" type="Control" unique_id=1752518253 node_paths=PackedStringArray("first_selected_button")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -294.0
+offset_right = 422.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vwtlf")
+first_selected_button = NodePath("Control/CenterContainer/VBoxContainer/Button")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=681762500]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15145826, 0.42990586, 0.012087749, 1)
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1493708685]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 103.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 60
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=1512021812]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=195743780]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 47.0
+offset_right = -148.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=786559912]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=735645657]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Continuar"
+
+[node name="Button2" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=245085237]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Opciones"
+
+[node name="Button3" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1013243583]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Volver al titulo"
+
+[node name="Button4" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1161867460]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Salir del juego"
+
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Button" to="." method="_resume_game"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Button2" to="." method="_show_settings"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Button3" to="." method="_to_title_screen"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Button4" to="." method="_save_and_quit"]

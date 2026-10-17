@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cmpt3f6avunsi"]
+
+[ext_resource type="Script" uid="uid://cy4udot42bc71" path="res://scripts/data/ItemData.gd" id="1_5pd70"]
+
+[resource]
+script = ExtResource("1_5pd70")
+item_name = "item_00"
+item_description = "bebida gaseosa"
+item_value = 300
+metadata/_custom_type_script = "uid://cy4udot42bc71"

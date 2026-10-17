@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://emu5nsgonm82"]
+
+[ext_resource type="Script" uid="uid://da8ps4y03xqmu" path="res://scripts/data/GameData.gd" id="1_2svij"]
+[ext_resource type="Script" uid="uid://biidme72jmrqk" path="res://scripts/data/ClientRequest.gd" id="1_v7e1s"]
+[ext_resource type="Script" uid="uid://drfmtiy35qnwm" path="res://scripts/data/StoryChapter.gd" id="2_fvix2"]
+[ext_resource type="Script" uid="uid://kmoj5py7n8dn" path="res://scripts/data/ItemStack.gd" id="2_y3suc"]
+[ext_resource type="Resource" uid="uid://cmpt3f6avunsi" path="res://settings/gameData/items/item_00.tres" id="3_0kn4b"]
+[ext_resource type="Resource" uid="uid://b3cvkcek50bvh" path="res://settings/gameData/story chapters/chapter_00.tres" id="3_f7g2r"]
+[ext_resource type="Resource" uid="uid://bwi4lmr707dnx" path="res://settings/gameData/items/item_02.tres" id="4_y2o5m"]
+[ext_resource type="Resource" uid="uid://bpcqgyago7eib" path="res://settings/gameData/items/item_03.tres" id="5_7csws"]
+
+[sub_resource type="Resource" id="Resource_6vlcl"]
+script = ExtResource("2_y3suc")
+item = ExtResource("3_0kn4b")
+quantity = 2
+metadata/_custom_type_script = "uid://kmoj5py7n8dn"
+
+[sub_resource type="Resource" id="Resource_41005"]
+script = ExtResource("1_v7e1s")
+requested_items = Array[ExtResource("2_y3suc")]([SubResource("Resource_6vlcl")])
+money = 1000
+metadata/_custom_type_script = "uid://biidme72jmrqk"
+
+[sub_resource type="Resource" id="Resource_6a6mn"]
+script = ExtResource("2_y3suc")
+item = ExtResource("4_y2o5m")
+metadata/_custom_type_script = "uid://kmoj5py7n8dn"
+
+[sub_resource type="Resource" id="Resource_ix31q"]
+script = ExtResource("1_v7e1s")
+requested_items = Array[ExtResource("2_y3suc")]([SubResource("Resource_6a6mn")])
+money = 2000
+metadata/_custom_type_script = "uid://biidme72jmrqk"
+
+[sub_resource type="Resource" id="Resource_1n1ee"]
+script = ExtResource("2_y3suc")
+item = ExtResource("5_7csws")
+metadata/_custom_type_script = "uid://kmoj5py7n8dn"
+
+[sub_resource type="Resource" id="Resource_bnkcn"]
+script = ExtResource("1_v7e1s")
+requested_items = Array[ExtResource("2_y3suc")]([SubResource("Resource_1n1ee")])
+money = 500
+metadata/_custom_type_script = "uid://biidme72jmrqk"
+
+[resource]
+script = ExtResource("1_2svij")
+coin_speed_grab = 4000.0
+coin_speed_throw = 4000.0
+story_chapters = Array[ExtResource("2_fvix2")]([ExtResource("3_f7g2r")])
+random_test_requests = Array[ExtResource("1_v7e1s")]([SubResource("Resource_41005"), SubResource("Resource_ix31q"), SubResource("Resource_bnkcn")])
+metadata/_custom_type_script = "uid://da8ps4y03xqmu"

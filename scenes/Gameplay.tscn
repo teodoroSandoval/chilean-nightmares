@@ -1,0 +1,1236 @@
+[gd_scene format=3 uid="uid://qj52ytay6qkd"]
+
+[ext_resource type="Texture2D" uid="uid://bn2mv8maow6c5" path="res://assets/ui/pattern_BG.png" id="1_4aew2"]
+[ext_resource type="Script" uid="uid://cwm0sdul5frtt" path="res://scripts/GameManager.gd" id="1_jfxgp"]
+[ext_resource type="Texture2D" uid="uid://cf3l160kfx4r5" path="res://assets/ui/container.png" id="2_5sdaa"]
+[ext_resource type="Texture2D" uid="uid://bppou3lafawdv" path="res://assets/ui/Frame 1.png" id="2_75vxi"]
+[ext_resource type="Texture2D" uid="uid://brqyh5emcstn" path="res://assets/ui/Grid_bg.png" id="2_a8mty"]
+[ext_resource type="Script" uid="uid://d2fhjmew0nwxf" path="res://scripts/DialogManager.gd" id="2_gdyjy"]
+[ext_resource type="Resource" uid="uid://emu5nsgonm82" path="res://settings/gameData/gameData.tres" id="2_v4xgt"]
+[ext_resource type="PackedScene" uid="uid://cv2lusvn6no8s" path="res://prefabs/terrains parts/main_terrain.tscn" id="3_1yji8"]
+[ext_resource type="Script" uid="uid://ogdb6a16qt7m" path="res://scripts/CoinManager.gd" id="3_l2ay0"]
+[ext_resource type="Texture2D" uid="uid://dhcugutp8v2yd" path="res://assets/personajes/character 00/character_frame_00.png" id="4_k5k47"]
+[ext_resource type="Texture2D" uid="uid://da2nynevset0g" path="res://assets/ui/bandeja vuelto.png" id="5_xbw1n"]
+[ext_resource type="PackedScene" uid="uid://ovtbqqrnqyg4" path="res://prefabs/cell.tscn" id="6_2np8k"]
+[ext_resource type="Texture2D" uid="uid://glr82nrlkbhc" path="res://assets/ui/Rectangle 41.png" id="6_hsn8a"]
+[ext_resource type="Texture2D" uid="uid://coxmlyaynhh5g" path="res://assets/ui/pause.png" id="7_4j5yk"]
+[ext_resource type="Texture2D" uid="uid://d320ml58qgg1g" path="res://assets/ui/cliente fondo.png" id="7_hlv5w"]
+[ext_resource type="PackedScene" uid="uid://dmhget4c4ky7d" path="res://prefabs/roads_loader.tscn" id="8_1yji8"]
+[ext_resource type="Texture2D" uid="uid://bppe46cfgn587" path="res://assets/personajes/character 02/character_image_02.png" id="8_e3rac"]
+[ext_resource type="Texture2D" uid="uid://4btfqrmmsklj" path="res://assets/personajes/character 00/character_chibi_00.png" id="8_k0kx6"]
+[ext_resource type="Texture2D" uid="uid://dmq0fi8hyjxwc" path="res://assets/ui/cliente frame.png" id="9_2hsy7"]
+[ext_resource type="Texture2D" uid="uid://kwc44166swil" path="res://assets/ui/globo dialogo.png" id="10_jri1q"]
+[ext_resource type="Script" uid="uid://4nbp7jbsj4m0" path="res://scripts/character_cursor.gd" id="11_o1p1e"]
+[ext_resource type="PackedScene" uid="uid://dxfxppksayr4u" path="res://prefabs/popups/pause.tscn" id="14_k0kx6"]
+[ext_resource type="PackedScene" uid="uid://vvrdeo72uxqv" path="res://prefabs/player.tscn" id="14_voec1"]
+[ext_resource type="PackedScene" uid="uid://be5obm451vn8c" path="res://prefabs/popups/intro.tscn" id="15_jri1q"]
+[ext_resource type="Script" uid="uid://d3q8nkhaxhat3" path="res://scripts/ClientManager.gd" id="16_2f17k"]
+[ext_resource type="Texture2D" uid="uid://8gnw3y6odany" path="res://assets/personajes/jhon doe alpha.png" id="17_sabir"]
+[ext_resource type="Texture2D" uid="uid://coohn50l7oxad" path="res://assets/ui/calculadora.png" id="19_41005"]
+[ext_resource type="PackedScene" uid="uid://b3iffeinfphu6" path="res://prefabs/instructions_gameplay_label.tscn" id="23_n20aw"]
+[ext_resource type="PackedScene" uid="uid://dpxw8qn7y8pc6" path="res://prefabs/instructions_ui_label.tscn" id="24_mpps5"]
+[ext_resource type="PackedScene" uid="uid://ri58issx0qvv" path="res://prefabs/popups/victory.tscn" id="24_uu2b5"]
+[ext_resource type="PackedScene" uid="uid://b14m5tisbsjsb" path="res://prefabs/popups/game_over.tscn" id="25_cfxrq"]
+[ext_resource type="PackedScene" uid="uid://battx30cqpjco" path="res://prefabs/poolingCoins.tscn" id="25_k1hro"]
+[ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="27_uu2b5"]
+
+[sub_resource type="FontVariation" id="FontVariation_k1hro"]
+spacing_glyph = -2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2ay0"]
+
+[node name="Gameplay" type="Node3D" unique_id=1679866010 node_paths=PackedStringArray("dialog_base", "quiosc_base", "customization_base", "versus_base", "store_coin_manager", "store_client_manager", "dialog_manager", "player", "intro_popup", "pause_popup", "victory_popup", "gameover_popup", "settings_popup")]
+script = ExtResource("1_jfxgp")
+game_data = ExtResource("2_v4xgt")
+dialog_base = NodePath("Dialogo")
+quiosc_base = NodePath("AtenderQuiosco")
+customization_base = NodePath("CustomizacionQuiosco")
+versus_base = NodePath("Versus")
+store_coin_manager = NodePath("AtenderQuiosco/Base/BaseMonedas")
+store_client_manager = NodePath("AtenderQuiosco/Base/BaseCliente")
+dialog_manager = NodePath("Dialogo")
+player = NodePath("player")
+intro_popup = NodePath("Popups/Intro quiosco")
+pause_popup = NodePath("Popups/Pause")
+victory_popup = NodePath("Popups/Victory")
+gameover_popup = NodePath("Popups/GameOver")
+settings_popup = NodePath("Popups/Settings")
+
+[node name="Main_Terrain" parent="." unique_id=1978853817 instance=ExtResource("3_1yji8")]
+unique_name_in_owner = true
+
+[node name="player" parent="." unique_id=1896769258 instance=ExtResource("14_voec1")]
+transform = Transform3D(-1, 0, 6.2783295e-07, 0, 1, 0, -6.2783295e-07, 0, -1, -98.11186, 226.07349, 2610.0664)
+script = null
+
+[node name="roads_loader" parent="." unique_id=128749738 instance=ExtResource("8_1yji8")]
+surface_gizmo_flags = 3425
+
+[node name="Dialogo" type="Label" parent="." unique_id=312952454 node_paths=PackedStringArray("name_text", "dialog_text", "dialog_box", "character_image_0", "character_image_1", "character_image_2")]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+script = ExtResource("2_gdyjy")
+name_text = NodePath("DialogPanel/NameBox/NameText")
+dialog_text = NodePath("DialogPanel/DialogBox/DialogText")
+dialog_box = NodePath("DialogPanel")
+character_image_0 = NodePath("CharacterPanel/CharacterPosition0")
+character_image_1 = NodePath("CharacterPanel/CharacterPosition1")
+character_image_2 = NodePath("CharacterPanel/CharacterPosition2")
+game_data = ExtResource("2_v4xgt")
+
+[node name="Background" type="TextureRect" parent="Dialogo" unique_id=263937495]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_hlv5w")
+
+[node name="CharacterPanel" type="Control" parent="Dialogo" unique_id=461928523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterPosition0" type="TextureRect" parent="Dialogo/CharacterPanel" unique_id=1050268314]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -977.0
+offset_right = 1000.0
+offset_bottom = 23.0
+grow_vertical = 0
+texture = ExtResource("4_k5k47")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharacterPosition1" type="TextureRect" parent="Dialogo/CharacterPanel" unique_id=1136900078]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1000.0
+offset_top = -1000.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_k5k47")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharacterPosition2" type="TextureRect" parent="Dialogo/CharacterPanel" unique_id=591159926]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -1000.0
+offset_right = 500.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_k5k47")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogPanel" type="Control" parent="Dialogo" unique_id=1197779478]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -372.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogBox" type="NinePatchRect" parent="Dialogo/DialogPanel" unique_id=541681503]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = 28.0
+offset_right = -72.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_hsn8a")
+patch_margin_left = 24
+patch_margin_top = 26
+patch_margin_right = 23
+patch_margin_bottom = 26
+
+[node name="DialogText" type="RichTextLabel" parent="Dialogo/DialogPanel/DialogBox" unique_id=704455750]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = 72.0
+offset_right = -57.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 45
+text = "Lorem ipsum es un texto de relleno estándar utilizado en diseño gráfico, editorial y web para previsualizar maquetas y tipografías antes de insertar el contenido definitivo."
+
+[node name="NameBox" type="TextureRect" parent="Dialogo/DialogPanel" unique_id=1024985787]
+layout_mode = 1
+offset_left = 52.0
+offset_top = -16.0
+offset_right = 682.0
+offset_bottom = 73.0
+texture = ExtResource("6_hsn8a")
+
+[node name="NameText" type="RichTextLabel" parent="Dialogo/DialogPanel/NameBox" unique_id=1837287987]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = 9.0
+offset_right = -41.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Character Name"
+vertical_alignment = 1
+
+[node name="InputHint" type="Control" parent="Dialogo/DialogPanel" unique_id=1599016278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1585.0
+offset_top = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InstructionsUILabel" parent="Dialogo/DialogPanel/InputHint" unique_id=1435113428 instance=ExtResource("24_mpps5")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="AtenderQuiosco" type="Label" parent="." unique_id=1578801062]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+
+[node name="Base" type="Control" parent="AtenderQuiosco" unique_id=1283434796]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="AtenderQuiosco/Base" unique_id=962707340]
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+mouse_filter = 2
+texture = ExtResource("1_4aew2")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BaseMonedas" type="Control" parent="AtenderQuiosco/Base" unique_id=1381411186 node_paths=PackedStringArray("arcade_sidebar", "score_text", "target_score_text", "level_text", "coin_counter_text", "combo_text_text", "progress_bar", "grid_container", "grid_marker", "character_chibi", "row_highlight", "animation_coin", "coins_pooling")]
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 0.5
+anchor_right = 0.25
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -540.0
+offset_right = 372.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_l2ay0")
+arcade_sidebar = NodePath("Side/Data")
+score_text = NodePath("Side/Data/VBoxContainer/PuntosValue")
+target_score_text = NodePath("Side/Data/VBoxContainer/MetaValue")
+level_text = NodePath("Side/Data/VBoxContainer/NivelText")
+coin_counter_text = NodePath("Grid/CharacterCursor/Counter")
+combo_text_text = NodePath("Side/Data/VBoxContainer/ComboText")
+progress_bar = NodePath("Top/ProgressBar")
+grid_container = NodePath("Grid/GridMask/GridContainer")
+grid_marker = NodePath("Grid/Marker")
+character_chibi = NodePath("Grid/CharacterCursor")
+row_highlight = NodePath("Grid/RowHighlight")
+animation_coin = NodePath("Grid/AnimationCoin")
+game_data = ExtResource("2_v4xgt")
+coins_pooling = NodePath("../../../Pools/PoolingCoins")
+
+[node name="Top" type="Control" parent="AtenderQuiosco/Base/BaseMonedas" unique_id=179439651]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 71.0
+grow_horizontal = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="AtenderQuiosco/Base/BaseMonedas/Top" unique_id=1676786849]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -13.5
+offset_right = 350.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.001
+
+[node name="Grid" type="Control" parent="AtenderQuiosco/Base/BaseMonedas" unique_id=554476018]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 101.40845
+offset_right = -80.0
+offset_bottom = -101.40845
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureGrid" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Grid" unique_id=2023917847]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_a8mty")
+flip_h = true
+
+[node name="RowHighlight" type="ColorRect" parent="AtenderQuiosco/Base/BaseMonedas/Grid" unique_id=452776891]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -453.0
+offset_right = 50.0
+offset_bottom = 453.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.21568628)
+
+[node name="GridMask" type="Control" parent="AtenderQuiosco/Base/BaseMonedas/Grid" unique_id=27582127]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -18.408447
+offset_right = 10.0
+offset_bottom = 13.408447
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask" unique_id=1916709455]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -451.09155
+offset_right = 350.0
+offset_bottom = 554.90845
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+columns = 7
+
+[node name="Cell_00" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=770094069 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_01" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=700181181 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_02" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1416200386 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_03" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=567900686 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_04" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1147157927 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_05" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=604705439 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_06" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1265326358 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_07" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=241436778 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_08" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1082645432 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_09" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2107225124 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_10" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2050862360 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_11" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=888180207 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_12" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1675914718 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_13" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=59118279 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_14" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=819308975 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_15" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1545544373 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_16" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=625734367 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_17" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=642244970 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_18" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1717781694 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_19" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=94612996 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_20" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=769701404 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_21" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=841106222 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_22" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=318017113 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_23" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=304469021 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_24" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=525771954 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_25" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1560649640 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_26" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=827056887 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_27" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2007899818 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_28" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1615423001 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_29" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1535650642 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_30" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=38252985 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_31" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1131032865 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_32" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=284403253 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_33" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2049753436 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_34" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1056670182 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_35" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1712414762 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_36" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=481934191 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_37" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=840465789 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_38" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=396864931 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_39" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=811961187 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_40" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=462232419 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_41" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1005952997 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_42" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=135788109 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_43" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=377010372 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_44" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1970602280 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_45" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1810569670 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_46" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1363795865 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_47" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=564524591 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_48" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2063284202 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_49" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=466006260 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_50" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=898042384 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_51" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1845588057 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_52" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=716233271 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_53" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2033302073 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_54" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1249853542 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_55" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=317662629 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_56" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=903595868 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_57" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=887966072 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_58" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1065863537 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_59" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1763351391 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_60" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1863813648 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_61" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1072833157 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_62" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=247402836 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_63" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2144256280 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_64" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1334292851 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_65" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1468001106 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_66" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=1213468599 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_67" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=25185354 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_68" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=185469030 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="Cell_69" parent="AtenderQuiosco/Base/BaseMonedas/Grid/GridMask/GridContainer" unique_id=2064771707 instance=ExtResource("6_2np8k")]
+layout_mode = 2
+
+[node name="TextureFrame" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Grid" unique_id=135061721]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -377.0
+offset_top = -469.0
+offset_right = 377.0
+offset_bottom = 469.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("2_5sdaa")
+expand_mode = 1
+flip_h = true
+
+[node name="Marker" type="Control" parent="AtenderQuiosco/Base/BaseMonedas/Grid" unique_id=1292781303]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -438.59155
+offset_right = -246.0
+offset_bottom = -338.59155
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Grid/Marker" unique_id=1666271044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_2hsy7")
+expand_mode = 1
+
+[node name="CharacterCursor" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Grid" unique_id=1281215699 node_paths=PackedStringArray("coins_in_hand", "coins_base")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -40.183105
+offset_right = 100.0
+offset_bottom = 99.816895
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("8_k0kx6")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("11_o1p1e")
+coins_in_hand = [NodePath("CoinsInHand/Coin_05"), NodePath("CoinsInHand/Coin_04"), NodePath("CoinsInHand/Coin_03"), NodePath("CoinsInHand/Coin_02"), NodePath("CoinsInHand/Coin_01"), NodePath("CoinsInHand/Coin_00")]
+coins_base = NodePath("CoinsInHand")
+
+[node name="CoinsInHand" type="Control" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor" unique_id=1920156379]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 10.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Coin_00" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor/CoinsInHand" unique_id=539343223 instance=ExtResource("6_2np8k")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -48.0
+offset_right = 91.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Coin_01" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor/CoinsInHand" unique_id=1449774859 instance=ExtResource("6_2np8k")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -48.0
+offset_right = 81.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Coin_02" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor/CoinsInHand" unique_id=1788907232 instance=ExtResource("6_2np8k")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -48.0
+offset_right = 73.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Coin_03" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor/CoinsInHand" unique_id=1422965480 instance=ExtResource("6_2np8k")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -48.0
+offset_right = 65.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Coin_04" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor/CoinsInHand" unique_id=2046764524 instance=ExtResource("6_2np8k")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 57.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Coin_05" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor/CoinsInHand" unique_id=651861876 instance=ExtResource("6_2np8k")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -48.5
+offset_right = 48.5
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Counter" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Grid/CharacterCursor" unique_id=997113412]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_filter = 2
+text = "x10"
+horizontal_alignment = 1
+
+[node name="AnimationCoin" parent="AtenderQuiosco/Base/BaseMonedas/Grid" unique_id=404958057 instance=ExtResource("6_2np8k")]
+layout_mode = 0
+offset_right = 97.0
+offset_bottom = 97.0
+mouse_filter = 2
+speed = 5000.0
+
+[node name="Side" type="Control" parent="AtenderQuiosco/Base/BaseMonedas" unique_id=1817707241]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Vuelto" type="Control" parent="AtenderQuiosco/Base/BaseMonedas/Side" unique_id=380874735]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -337.18
+offset_right = -35.0
+offset_bottom = -337.18
+grow_vertical = 0
+
+[node name="Container" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto" unique_id=745822646]
+layout_mode = 0
+offset_right = 205.0
+offset_bottom = 223.0
+texture = ExtResource("5_xbw1n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto/Container" unique_id=692397836]
+layer = 2
+visible = false
+
+[node name="CorrectIcon" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto/Container/CanvasLayer" unique_id=980745906]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 817.0
+offset_top = 742.82
+offset_right = -898.0
+offset_bottom = -114.17999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto/Container/CanvasLayer/CorrectIcon" unique_id=2131705406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -4.8200073
+offset_right = -2.0
+offset_bottom = -4.8200073
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 140
+text = "✅"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IncorrectIcon" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto/Container/CanvasLayer" unique_id=367626618]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 817.0
+offset_top = 742.82
+offset_right = -898.0
+offset_bottom = -114.17999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto/Container/CanvasLayer/IncorrectIcon" unique_id=1846611317]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 140
+text = "❌"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto" unique_id=83870004]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -62.0
+offset_right = 186.0
+grow_vertical = 0
+texture = ExtResource("6_hsn8a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Vuelto/TextureRect2" unique_id=115165302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.1254902, 0.26666668, 0.1764706, 1)
+theme_override_font_sizes/normal_font_size = 34
+text = "VUELTO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Data" type="CenterContainer" parent="AtenderQuiosco/Base/BaseMonedas/Side" unique_id=1768735858]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -219.0
+offset_right = 107.0
+offset_bottom = 107.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AtenderQuiosco/Base/BaseMonedas/Side/Data" unique_id=660135143]
+layout_mode = 2
+
+[node name="PuntosText" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Data/VBoxContainer" unique_id=1725452564]
+custom_minimum_size = Vector2(140, 50)
+clip_contents = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Puntos: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PuntosValue" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Data/VBoxContainer" unique_id=272907492]
+custom_minimum_size = Vector2(140, 50)
+clip_contents = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ComboText" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Data/VBoxContainer" unique_id=876957020]
+custom_minimum_size = Vector2(140, 140)
+clip_contents = false
+layout_mode = 2
+theme_override_colors/default_color = Color(0.92720777, 0.91834533, 0, 1)
+theme_override_constants/line_separation = -20
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = SubResource("FontVariation_k1hro")
+theme_override_font_sizes/normal_font_size = 40
+text = "3 COMBO asd"
+scroll_active = false
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MetaText" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Data/VBoxContainer" unique_id=1545608186]
+visible = false
+custom_minimum_size = Vector2(140, 50)
+clip_contents = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Meta: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MetaValue" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Data/VBoxContainer" unique_id=671513257]
+visible = false
+custom_minimum_size = Vector2(140, 50)
+clip_contents = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NivelText" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseMonedas/Side/Data/VBoxContainer" unique_id=1490631008]
+visible = false
+custom_minimum_size = Vector2(140, 50)
+clip_contents = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Nivel: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BaseCliente" type="Control" parent="AtenderQuiosco/Base" unique_id=267742080 node_paths=PackedStringArray("dialog_base", "client_dialog_text", "change_container", "change_hint_text", "client_image", "coin_manager", "correct_image", "incorrect_image", "coins_pooling")]
+layout_mode = 1
+anchor_left = 0.712
+anchor_top = 0.30600002
+anchor_right = 0.712
+anchor_bottom = 0.30600002
+offset_left = -397.04004
+offset_top = -267.48
+offset_right = 408.96008
+offset_bottom = 331.52
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("16_2f17k")
+dialog_base = NodePath("Globo")
+client_dialog_text = NodePath("Globo/RichTextLabel")
+change_container = NodePath("../BaseMonedas/Side/Vuelto/Container")
+change_hint_text = NodePath("../BaseCalculadora/TextureRect/RichTextLabel")
+client_image = NodePath("Cliente")
+client_default_texture = ExtResource("17_sabir")
+coin_manager = NodePath("../BaseMonedas")
+correct_image = NodePath("../BaseMonedas/Side/Vuelto/Container/CanvasLayer/CorrectIcon")
+incorrect_image = NodePath("../BaseMonedas/Side/Vuelto/Container/CanvasLayer/IncorrectIcon")
+coins_pooling = NodePath("../../../Pools/PoolingCoins")
+game_data = ExtResource("2_v4xgt")
+
+[node name="Background" type="TextureRect" parent="AtenderQuiosco/Base/BaseCliente" unique_id=690505881]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = -19.000122
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_hlv5w")
+expand_mode = 1
+
+[node name="Cliente" type="TextureRect" parent="AtenderQuiosco/Base/BaseCliente" unique_id=454722056]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 280.0
+offset_top = 64.0
+offset_right = -19.000122
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_e3rac")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="AtenderQuiosco/Base/BaseCliente" unique_id=1794476297]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_2hsy7")
+expand_mode = 1
+
+[node name="Globo" type="TextureRect" parent="AtenderQuiosco/Base/BaseCliente" unique_id=748260802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = 47.0
+offset_right = -458.00012
+offset_bottom = -307.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_jri1q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseCliente/Globo" unique_id=2029373422]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -112.5
+offset_right = 199.0
+offset_bottom = 79.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 38
+text = "Quiero dos bebidas ($600) pago con $1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BaseCalculadora" type="Control" parent="AtenderQuiosco/Base" unique_id=1413893939]
+layout_mode = 1
+anchor_left = 0.768
+anchor_top = 0.79600006
+anchor_right = 0.768
+anchor_bottom = 0.79600006
+offset_left = -400.56006
+offset_top = -195.68005
+offset_right = 400.43994
+offset_bottom = 195.31995
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="AtenderQuiosco/Base/BaseCalculadora" unique_id=634248443]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 618.0
+offset_bottom = 404.0
+texture = ExtResource("19_41005")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AtenderQuiosco/Base/BaseCalculadora/TextureRect" unique_id=1173092864]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -182.0
+offset_right = -66.0
+offset_bottom = -115.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.13725491, 0.3529412, 0.16078432, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "400
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BaseLado" type="Control" parent="AtenderQuiosco/Base" unique_id=1399479945]
+layout_mode = 1
+anchor_left = 0.9250001
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="AtenderQuiosco/Base/BaseLado" unique_id=1660530865]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.080000006
+anchor_right = 0.38900003
+anchor_bottom = 0.080000006
+offset_left = -62.01608
+offset_top = -65.40001
+offset_right = 61.98392
+offset_bottom = 65.59999
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l2ay0")
+icon = ExtResource("7_4j5yk")
+icon_alignment = 1
+
+[node name="Frame1" type="Sprite2D" parent="AtenderQuiosco/Base" unique_id=677621003]
+visible = false
+modulate = Color(1, 1, 1, 0.4509804)
+position = Vector2(959.9883, 540.061)
+scale = Vector2(1.0068294, 1.0423533)
+texture = ExtResource("2_75vxi")
+
+[node name="ColorRect" type="ColorRect" parent="AtenderQuiosco/Base" unique_id=612722661]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.54700005
+anchor_top = 0.83100003
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.759888
+offset_top = -4.4800415
+offset_right = -24.0
+offset_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.5764706)
+
+[node name="InstructionsGameplayLabel" parent="AtenderQuiosco/Base/ColorRect" unique_id=1172975986 instance=ExtResource("23_n20aw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1.0
+grow_horizontal = 1
+grow_vertical = 1
+autowrap_mode = 0
+
+[node name="InstructionsUILabel" parent="AtenderQuiosco/Base/ColorRect" unique_id=1789698996 instance=ExtResource("24_mpps5")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "m_03"
+autowrap_mode = 0
+
+[node name="CustomizacionQuiosco" type="Label" parent="." unique_id=1029826601]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+
+[node name="Versus" type="Label" parent="." unique_id=571496630]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+
+[node name="Popups" type="Label" parent="." unique_id=319477866]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pause" parent="Popups" unique_id=1752518253 node_paths=PackedStringArray("settings_popup") instance=ExtResource("14_k0kx6")]
+visible = false
+layout_mode = 1
+settings_popup = NodePath("../Settings")
+
+[node name="Victory" parent="Popups" unique_id=989750432 instance=ExtResource("24_uu2b5")]
+visible = false
+layout_mode = 1
+
+[node name="GameOver" parent="Popups" unique_id=437761125 instance=ExtResource("25_cfxrq")]
+visible = false
+layout_mode = 1
+
+[node name="Intro quiosco" parent="Popups" unique_id=1247030811 instance=ExtResource("15_jri1q")]
+visible = false
+layout_mode = 1
+
+[node name="Settings" parent="Popups" unique_id=1264715510 node_paths=PackedStringArray("MenuPanelRef") instance=ExtResource("27_uu2b5")]
+layout_mode = 1
+MenuPanelRef = NodePath("../Pause")
+
+[node name="Pools" type="Label" parent="." unique_id=482206499]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PoolingCoins" parent="Pools" unique_id=2083080597 instance=ExtResource("25_k1hro")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1868511723]
+transform = Transform3D(-0.17995743, 0, -0.9836744, 0, 1, 0, 0.9836744, 0, -0.17995743, 246.46826, 143.6626, 279.7608)
+
+[connection signal="pressed" from="AtenderQuiosco/Base/BaseLado/Button" to="." method="_pause_game"]
+[connection signal="on_retry" from="Popups/GameOver" to="." method="_restart_quiosc_game"]
+[connection signal="on_to_title_screen" from="Popups/GameOver" to="." method="_to_title_screen"]

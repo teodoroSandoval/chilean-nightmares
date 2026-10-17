@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cpd8wh0lgb8xq"]
+
+[ext_resource type="Texture2D" uid="uid://bw25m2jb6imt4" path="res://assets/personajes/character 03/character_frame_03.png" id="1_rdu2u"]
+[ext_resource type="Script" uid="uid://c6aj511432qoa" path="res://scripts/data/CharacterData.gd" id="2_koixe"]
+
+[resource]
+script = ExtResource("2_koixe")
+character_name = "character_03"
+character_age = 30
+character_gender = "M"
+character_full = ExtResource("1_rdu2u")
+character_frame = ExtResource("1_rdu2u")
+character_icon = ExtResource("1_rdu2u")
+character_chibi = ExtResource("1_rdu2u")
+metadata/_custom_type_script = "uid://c6aj511432qoa"

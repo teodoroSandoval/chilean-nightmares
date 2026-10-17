@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://battx30cqpjco"]
+
+[ext_resource type="Script" uid="uid://dsrglx54arfr0" path="res://scripts/data/ObjectPool.gd" id="1_ja5vj"]
+[ext_resource type="PackedScene" uid="uid://ovtbqqrnqyg4" path="res://prefabs/cell.tscn" id="2_4cd21"]
+
+[node name="PoolingCoins" type="Node2D" unique_id=2083080597 node_paths=PackedStringArray("base_node")]
+script = ExtResource("1_ja5vj")
+min_size = 10
+base_node = NodePath("Cell")
+
+[node name="Cell" parent="." unique_id=770094069 instance=ExtResource("2_4cd21")]
+visible = false

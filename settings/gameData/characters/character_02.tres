@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dkxnrwbbqg6l6"]
+
+[ext_resource type="Texture2D" uid="uid://s8vs36nyrg05" path="res://assets/personajes/character 02/character_chibi_02.png" id="1_6huwk"]
+[ext_resource type="Texture2D" uid="uid://c3f1qi4vovrtt" path="res://assets/personajes/character 02/character_frame_02.png" id="2_k3gf1"]
+[ext_resource type="Texture2D" uid="uid://bppe46cfgn587" path="res://assets/personajes/character 02/character_image_02.png" id="2_noohf"]
+[ext_resource type="Script" uid="uid://c6aj511432qoa" path="res://scripts/data/CharacterData.gd" id="3_k3gf1"]
+
+[resource]
+script = ExtResource("3_k3gf1")
+character_name = "character_02"
+character_age = 17
+character_gender = "F"
+character_full = ExtResource("2_noohf")
+character_frame = ExtResource("2_k3gf1")
+character_icon = ExtResource("1_6huwk")
+character_chibi = ExtResource("1_6huwk")
+metadata/_custom_type_script = "uid://c6aj511432qoa"

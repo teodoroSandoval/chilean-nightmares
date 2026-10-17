@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GUIDEAction" format=3 uid="uid://ca4lax2q1f2cs"]
+
+[ext_resource type="Script" uid="uid://cluhc11vixkf1" path="res://addons/guide/guide_action.gd" id="1_hdtt5"]
+
+[resource]
+script = ExtResource("1_hdtt5")
+name = &"throw"
+is_remappable = true
+metadata/_custom_type_script = "uid://cluhc11vixkf1"

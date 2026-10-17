@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://dj1lbqcff6v5m"]
+
+[ext_resource type="Script" uid="uid://c6b8dj6w2xkms" path="res://scripts/title.gd" id="1_ascc0"]
+[ext_resource type="PackedScene" uid="uid://dpxw8qn7y8pc6" path="res://prefabs/instructions_ui_label.tscn" id="2_iyajp"]
+[ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="3_2sdm5"]
+[ext_resource type="PackedScene" uid="uid://dyvwawri2bu47" path="res://prefabs/popups/collection.tscn" id="3_iyajp"]
+
+[node name="Title" type="Control" unique_id=726987040]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ascc0")
+
+[node name="MainMenu" type="ColorRect" parent="." unique_id=1282198015]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainMenu" unique_id=1759438371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -651.0
+offset_top = -479.0
+offset_right = 651.0
+offset_bottom = -225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 150
+text = "title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu" unique_id=1604214624]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/CenterContainer" unique_id=182176422]
+layout_mode = 2
+
+[node name="ButtonPlayStory" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=1562038281]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "play story mode"
+
+[node name="ButtonPlayInfnite" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=486982992]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "play infinite mode"
+
+[node name="ButtonPlayArcade" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=269964152]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "play arcade mode"
+
+[node name="ButtonPlayVersus" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=1956014551]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "play versus mode"
+
+[node name="ButtonCollection" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=1558266331]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "collection"
+
+[node name="ButtonSettings" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=577137357]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "settings"
+
+[node name="ButtonQuit" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=1585720799]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "quit"
+
+[node name="InstructionsUILabel" parent="MainMenu" unique_id=1435113428 instance=ExtResource("2_iyajp")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -470.0
+offset_top = -171.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CollectionPopup" parent="." unique_id=40755374 instance=ExtResource("3_iyajp")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="Settings" parent="." unique_id=1264715510 node_paths=PackedStringArray("MenuPanelRef") instance=ExtResource("3_2sdm5")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+MenuPanelRef = NodePath("../MainMenu")

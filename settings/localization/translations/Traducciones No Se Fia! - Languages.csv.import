@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bbfvoy3005m0r"
+
+[deps]
+
+files=["res://settings/localization/translations/Traducciones No Se Fia! - Languages.en.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.es.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.pt.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ja.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.zh_Hans.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ru.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.hi.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ar.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.fr.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.de.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.it.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ko.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.pl.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.uk.translation"]
+
+source_file="res://settings/localization/translations/Traducciones No Se Fia! - Languages.csv"
+dest_files=["res://settings/localization/translations/Traducciones No Se Fia! - Languages.en.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.es.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.pt.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ja.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.zh_Hans.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ru.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.hi.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ar.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.fr.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.de.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.it.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.ko.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.pl.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Languages.uk.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

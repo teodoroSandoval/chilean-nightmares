@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cxbvvvioseclg"]
+
+[ext_resource type="Script" uid="uid://c4i5tjgfdgum4" path="res://scripts/credits.gd" id="1_hi4w3"]
+
+[node name="Credits" type="Control" unique_id=1902348283]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hi4w3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=458878259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VScrollBar" type="Control" parent="ColorRect" unique_id=1568432873]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/VScrollBar" unique_id=642795853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/VScrollBar/CenterContainer" unique_id=1741724133]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="ColorRect/VScrollBar/CenterContainer/VBoxContainer" unique_id=1251352077]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/VScrollBar/CenterContainer/VBoxContainer/Control" unique_id=1618806594]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.5
+offset_top = -68.5
+offset_right = 201.5
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "Fabian"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="ColorRect/VScrollBar/CenterContainer/VBoxContainer" unique_id=1097497012]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect/VScrollBar/CenterContainer/VBoxContainer/Control2" unique_id=520655460]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.5
+offset_top = -68.5
+offset_right = 201.5
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "Maria"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="ColorRect/VScrollBar/CenterContainer/VBoxContainer" unique_id=1528478455]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect/VScrollBar/CenterContainer/VBoxContainer/Control3" unique_id=781423943]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.5
+offset_top = -68.5
+offset_right = 201.5
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "Teodoro"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1

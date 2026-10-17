@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dpxw8qn7y8pc6"]
+
+[ext_resource type="Script" uid="uid://c14mpad8x8xjb" path="res://scripts/input_label.gd" id="1_ntguy"]
+[ext_resource type="Script" uid="uid://cluhc11vixkf1" path="res://addons/guide/guide_action.gd" id="2_ab57n"]
+[ext_resource type="Resource" uid="uid://6cq3bxwfvoi4" path="res://settings/input/actions/action_ui_submit.tres" id="3_osal3"]
+[ext_resource type="Resource" uid="uid://bhtap7p3s8tue" path="res://settings/input/context_ui.tres" id="4_sjuyj"]
+
+[node name="InstructionsUILabel" type="RichTextLabel" unique_id=1435113428]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/normal_font_size = 41
+bbcode_enabled = true
+text = "m_00"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_ntguy")
+instructions_text = "m_03"
+actions = Array[ExtResource("2_ab57n")]([ExtResource("3_osal3")])
+limit_to_context = ExtResource("4_sjuyj")

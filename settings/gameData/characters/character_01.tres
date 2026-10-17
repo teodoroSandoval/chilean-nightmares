@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dc6m45h6biraq"]
+
+[ext_resource type="Texture2D" uid="uid://lbro3gutog6h" path="res://assets/personajes/character 01/character_frame_01.png" id="1_bkwx8"]
+[ext_resource type="Script" uid="uid://c6aj511432qoa" path="res://scripts/data/CharacterData.gd" id="3_ylj2h"]
+
+[resource]
+script = ExtResource("3_ylj2h")
+character_name = "character_01"
+character_age = 5
+character_gender = "M"
+character_full = ExtResource("1_bkwx8")
+character_frame = ExtResource("1_bkwx8")
+character_icon = ExtResource("1_bkwx8")
+character_chibi = ExtResource("1_bkwx8")
+metadata/_custom_type_script = "uid://c6aj511432qoa"

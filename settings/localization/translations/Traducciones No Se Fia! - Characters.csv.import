@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dkptwy2783ljl"
+
+[deps]
+
+files=["res://settings/localization/translations/Traducciones No Se Fia! - Characters.en.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.es.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.pt.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ja.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.zh_Hans.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ru.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.hi.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ar.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.fr.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.de.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.it.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ko.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.pl.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.uk.translation"]
+
+source_file="res://settings/localization/translations/Traducciones No Se Fia! - Characters.csv"
+dest_files=["res://settings/localization/translations/Traducciones No Se Fia! - Characters.en.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.es.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.pt.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ja.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.zh_Hans.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ru.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.hi.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ar.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.fr.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.de.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.it.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.ko.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.pl.translation", "res://settings/localization/translations/Traducciones No Se Fia! - Characters.uk.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

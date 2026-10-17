@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cjwdr27ohx30p"
+
+[deps]
+
+files=["res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.en.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.es.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.pt.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ja.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.zh_Hans.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ru.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.hi.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ar.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.fr.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.de.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.it.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ko.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.pl.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.uk.translation"]
+
+source_file="res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.csv"
+dest_files=["res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.en.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.es.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.pt.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ja.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.zh_Hans.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ru.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.hi.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ar.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.fr.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.de.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.it.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.ko.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.pl.translation", "res://settings/localization/translations/Traducciones No Se Fia! - DialogsRequest.uk.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

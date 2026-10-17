@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dmhget4c4ky7d"]
+
+[ext_resource type="Script" uid="uid://bdqyucoxxwqmo" path="res://scripts/OsmRoadImporter.gd" id="1_jh5ed"]
+[ext_resource type="Resource" uid="uid://bs1y3fp6sxx7e" path="res://settings/gameData/roads_data.tres" id="2_ublby"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_705dc"]
+shading_mode = 0
+albedo_color = Color(0.15, 0.9, 1, 1)
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_3dvmj"]
+
+[node name="roads_loader" type="Node3D" unique_id=128749738 node_paths=PackedStringArray("debug_mesh_instance", "transformation_reference")]
+script = ExtResource("1_jh5ed")
+debug_mesh_instance = NodePath("OsmRoadDebugPreview")
+meters_to_godot = 1.0
+max_operations = 10000
+transformation_reference = NodePath("transformation_reference")
+draw_unsorted_roads = false
+draw_buildings = false
+draw_waterway = false
+draw_node = false
+draw_amenity = false
+draw_natural = false
+draw_landuse = false
+draw_railway = false
+draw_leisure = false
+draw_barriers = false
+draw_boundary = false
+draw_man_made = false
+highway_gizmo_flags = 16383
+surface_gizmo_flags = 8191
+roads_data = ExtResource("2_ublby")
+
+[node name="transformation_reference" type="Node3D" parent="." unique_id=1751600091]
+transform = Transform3D(0.909, -1.509958e-07, -7.999184e-08, -1.3725518e-07, -1, 0, -7.9467306e-08, 1.3200472e-14, -0.915, 58.245, 0, 1132.794)
+top_level = true
+
+[node name="OsmRoadDebugPreview" type="MeshInstance3D" parent="." unique_id=1200165249]
+top_level = true
+material_override = SubResource("StandardMaterial3D_705dc")
+mesh = SubResource("ImmediateMesh_3dvmj")

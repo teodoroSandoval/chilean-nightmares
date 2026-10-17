@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://ri58issx0qvv"]
+
+[ext_resource type="Script" uid="uid://dad28nxdmwptx" path="res://scripts/popups/victory.gd" id="1_2qm3k"]
+
+[node name="Victory" type="Control" unique_id=989750432 node_paths=PackedStringArray("score_text", "sales_text", "first_selected_button")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -294.0
+offset_right = 422.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2qm3k")
+score_text = NodePath("points text")
+sales_text = NodePath("sales text")
+first_selected_button = NodePath("Button Continue")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=786685831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.32223505, 0.14846054, 0.298155, 1)
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=959940380]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 103.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 60
+text = "VICTORY!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="points text" type="RichTextLabel" parent="." unique_id=869517438]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -144.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 60
+text = "Puntos: %d"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sales text" type="RichTextLabel" parent="." unique_id=1213934801]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -33.0
+offset_bottom = 126.99994
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 60
+text = "ventas totales: %d"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button Continue" type="Button" parent="." unique_id=2041157243]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -153.0
+offset_right = 128.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 41
+text = "continue"
+
+[node name="Button To title" type="Button" parent="." unique_id=753411689]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -81.0
+offset_right = 128.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 41
+text = "to title"
+
+[connection signal="pressed" from="Button Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Button To title" to="." method="_on_to_title_screen_pressed"]

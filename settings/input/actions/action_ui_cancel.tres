@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GUIDEAction" format=3 uid="uid://bkojp8pcr74ve"]
+
+[ext_resource type="Script" uid="uid://cluhc11vixkf1" path="res://addons/guide/guide_action.gd" id="1_deal7"]
+
+[resource]
+script = ExtResource("1_deal7")
+name = &"cancel"
+is_remappable = true
+metadata/_custom_type_script = "uid://cluhc11vixkf1"

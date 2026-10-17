@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dbrwi562eltgs"]
+
+[ext_resource type="Script" uid="uid://cng1p3lmv3s3v" path="res://scripts/InputManager.gd" id="1_56edw"]
+[ext_resource type="Resource" uid="uid://dyalbac1eamwm" path="res://settings/input/context_gameplay.tres" id="2_3hmge"]
+[ext_resource type="Resource" uid="uid://bhtap7p3s8tue" path="res://settings/input/context_ui.tres" id="3_4gvas"]
+[ext_resource type="Resource" uid="uid://8q6foxe4ga8g" path="res://settings/input/actions/controller_activated.tres" id="4_6bmeh"]
+[ext_resource type="Resource" uid="uid://baqda3yug3cqg" path="res://settings/input/actions/keyboard_mouse_activated.tres" id="5_oycee"]
+[ext_resource type="Resource" uid="uid://cdvh1lfdymght" path="res://settings/input/actions/touch_activated.tres" id="6_1x6it"]
+[ext_resource type="Resource" uid="uid://6cq3bxwfvoi4" path="res://settings/input/actions/action_ui_submit.tres" id="7_rnxeq"]
+[ext_resource type="Resource" uid="uid://bkojp8pcr74ve" path="res://settings/input/actions/action_ui_cancel.tres" id="8_wfrjy"]
+[ext_resource type="Resource" uid="uid://dd2dw37rsjgr5" path="res://settings/input/actions/action_ui_move.tres" id="9_qh8hh"]
+[ext_resource type="Resource" uid="uid://bcqpaex7r16il" path="res://settings/input/actions/action_gameplay_look.tres" id="10_1x6it"]
+[ext_resource type="Resource" uid="uid://daremaunsm8w7" path="res://settings/input/actions/action_gameplay_move.tres" id="10_hnhqt"]
+[ext_resource type="Resource" uid="uid://dfsnqpdqr6x42" path="res://settings/input/actions/action_gameplay_grab.tres" id="11_ulqtv"]
+[ext_resource type="Resource" uid="uid://ca4lax2q1f2cs" path="res://settings/input/actions/action_gameplay_throw.tres" id="12_yxbl0"]
+[ext_resource type="Resource" uid="uid://b5dj2s6h0ybw" path="res://settings/input/actions/action_gameplay_give_change.tres" id="13_v2k7m"]
+[ext_resource type="Resource" uid="uid://vx2lpeca1cye" path="res://settings/input/actions/action_gameplay_return_change.tres" id="14_kbk12"]
+[ext_resource type="Resource" uid="uid://m1kaalfcctuh" path="res://settings/input/actions/action_gameplay_pause.tres" id="15_idts7"]
+[ext_resource type="Resource" uid="uid://ddxh2pmagbdad" path="res://settings/input/actions/action_gameplay_inventory.tres" id="17_rnxeq"]
+[ext_resource type="Resource" uid="uid://b47ola4wb2721" path="res://settings/input/actions/action_gameplay_free_look.tres" id="18_rnxeq"]
+[ext_resource type="Resource" uid="uid://dtk7iwg0rrxei" path="res://settings/input/actions/action_gameplay_jump.tres" id="19_hnhqt"]
+[ext_resource type="Resource" uid="uid://ce7un8ngrvgrq" path="res://settings/input/actions/action_gameplay_crouch.tres" id="20_ulqtv"]
+[ext_resource type="Resource" uid="uid://82gtbn3kbyec" path="res://settings/input/actions/action_gameplay_sprint.tres" id="21_yxbl0"]
+[ext_resource type="Resource" uid="uid://chy8wg2jogl6k" path="res://settings/input/actions/action_gameplay_interact.tres" id="22_yxbl0"]
+[ext_resource type="Resource" uid="uid://cw8xx6qvvkgyt" path="res://settings/input/actions/action_gameplay_interact2.tres" id="23_v2k7m"]
+
+[node name="InputManager" type="Node2D" unique_id=1559538305]
+script = ExtResource("1_56edw")
+mapping_context_gameplay = ExtResource("2_3hmge")
+mapping_context_ui = ExtResource("3_4gvas")
+controller_activated = ExtResource("4_6bmeh")
+keyboard_mouse_activated = ExtResource("5_oycee")
+touch_activated = ExtResource("6_1x6it")
+ui_submit = ExtResource("7_rnxeq")
+ui_cancel = ExtResource("8_wfrjy")
+ui_move = ExtResource("9_qh8hh")
+gameplay_look = ExtResource("10_1x6it")
+gameplay_move = ExtResource("10_hnhqt")
+gameplay_grab = ExtResource("11_ulqtv")
+gameplay_throw = ExtResource("12_yxbl0")
+gameplay_give_change = ExtResource("13_v2k7m")
+gameplay_return_change = ExtResource("14_kbk12")
+gameplay_pause = ExtResource("15_idts7")
+gameplay_inventory = ExtResource("17_rnxeq")
+gameplay_free_look = ExtResource("18_rnxeq")
+gameplay_jump = ExtResource("19_hnhqt")
+gameplay_crouch = ExtResource("20_ulqtv")
+gameplay_sprint = ExtResource("21_yxbl0")
+gameplay_interact = ExtResource("22_yxbl0")
+gameplay_interact2 = ExtResource("23_v2k7m")

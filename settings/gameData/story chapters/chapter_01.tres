@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StoryChapter" format=3 uid="uid://nl5t0ionhqe1"]
+
+[ext_resource type="Script" uid="uid://b0rv5nul6ftd1" path="res://scripts/data/Dialog.gd" id="1_7e6r0"]
+[ext_resource type="Script" uid="uid://drfmtiy35qnwm" path="res://scripts/data/StoryChapter.gd" id="2_pn0ns"]
+
+[resource]
+script = ExtResource("2_pn0ns")
+name = "Capitulo 1"
+metadata/_custom_type_script = "uid://drfmtiy35qnwm"

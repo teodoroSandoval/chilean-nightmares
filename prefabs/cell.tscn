@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ovtbqqrnqyg4"]
+
+[ext_resource type="Texture2D" uid="uid://c0e8gm88cxopi" path="res://assets/coins/10pesos.png" id="1_kef27"]
+[ext_resource type="Script" uid="uid://bxya71to30jh5" path="res://scripts/cell.gd" id="1_oc4ms"]
+
+[node name="Cell" type="Control" unique_id=770094069 node_paths=PackedStringArray("coinTexture", "background")]
+custom_minimum_size = Vector2(97, 97)
+layout_mode = 3
+anchors_preset = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_oc4ms")
+coinTexture = NodePath("CoinTexture")
+background = NodePath("ColorRect")
+speed = 2000.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1546994085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.4084473
+offset_right = -2.0
+offset_bottom = -1.4084473
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.45882353, 0.46666667, 0.4392157, 0)
+
+[node name="CoinTexture" type="TextureRect" parent="." unique_id=490441469]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 8.408447
+offset_right = -10.0
+offset_bottom = -8.408447
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_kef27")
+expand_mode = 1
+stretch_mode = 5

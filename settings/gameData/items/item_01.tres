@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dshgp8sdh8kc3"]
+
+[ext_resource type="Script" uid="uid://cy4udot42bc71" path="res://scripts/data/ItemData.gd" id="1_qrdjx"]
+
+[resource]
+script = ExtResource("1_qrdjx")
+item_name = "item_01"
+item_description = "cajetilla de cigarros"
+item_value = 5000
+metadata/_custom_type_script = "uid://cy4udot42bc71"

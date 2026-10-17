@@ -1,0 +1,133 @@
+key,en,es,pt,ja,zh-Hans,ru,hi,ar,fr,de,it,ko,pl,uk
+title,No Se Fía!,No Se Fía!,Não se fia!,No Se Fía!,No Se Fía!,No Se Fía!,No Se Fía!,لا تخاف!,No Se Fía!,No Se Fía!,No Se Fía!,No Se Fía!,No Se Fía!,Нічого страшного!
+start,Start,Comenzar,Começar,始める,开始,Начинать,शुरू,يبدأ,Commencer,Start,Inizio,시작,Start,Початок
+training base,Training Base,Base de entrenamiento,Base de Treinamento,訓練基地,训练基地,Тренировочная база,प्रशिक्षण केंद्र,قاعدة التدريب,Base d'entraînement,Trainingsbasis,Base di addestramento,훈련 기지,Baza szkoleniowa,Тренувальна база
+options,Options,Opciones,Opções,オプション,选项,Параметры,विकल्प,خيارات,Options,Optionen,Opzioni,옵션,Opcje,Опції
+credits,Credits,Créditos,Créditos,クレジット,鸣谢,Кредиты,क्रेडिट,الشكر والتقدير,Crédits,Credits,Crediti,크레딧,Kredyty,Кредити
+quit game,Quit Game,Abandonar el juego,Sair do jogo,ゲームを終了する,退出游戏,Выход из игры,गेम से बाहर निकलें,انسحب من اللعبة,Quitter le jeu,Spiel beenden,Esci dal gioco,게임 종료,Wyjdź z gry,Вийти з гри
+navigate,Navigate,Navegar por,Navegar,ナビゲート,导航,Навигация,नेविगेट,تصفح,Naviguer,Navigieren,Navigare,탐색하기,Nawigować,Навігація
+confirm,Confirm,Confirmar,Confirmar,確認する,确认,Подтверждать,पुष्टि करना,يتأكد,Confirmer,Bestätigen,Confermare,확인하다,Potwierdzać,Підтвердити
+return,Return,Devolver,Retornar,戻る,返回,Возвращаться,वापस करना,يعود,Retour,Zurückkehren,Ritorno,반품,Powrót,Повернення
+cancel,Cancel,Cancelar,Cancelar,キャンセル,取消,Отмена,रद्द करना,يلغي,Annuler,Stornieren,Cancellare,취소,Anulować,Скасувати
+settings,Settings,Ajustes,Configurações,設定,设置,Настройки,सेटिंग्स,إعدادات,Paramètres,Einstellungen,Impostazioni,설정,Ustawienia,Налаштування
+general,General,General,Em geral,一般的な,一般的,Общий,सामान्य,عام,Général,Allgemein,Generale,일반적인,Ogólny,Загальне
+audio,Audio,Audio,Áudio,オーディオ,声音的,Аудио,ऑडियो,صوتي,Audio,Audio,Audio,오디오,Audio,Аудіо
+video,Video,Video,Vídeo,ビデオ,视频,Видео,वीडियो,فيديو,Vidéo,Video,Video,동영상,Wideo,Відео
+controls,Controls,Controles,Controles,コントロール,控制,Элементы управления,नियंत्रण,أدوات التحكم,Commandes,Bedienelemente,Comandi,통제 수단,Sterownica,Елементи керування
+language,Language,Idioma,Linguagem,言語,语言,Язык,भाषा,لغة,Langue,Sprache,Lingua,언어,Język,Мова
+back,Back,Atrás,Voltar,戻る,后退,Назад,पीछे,خلف,Dos,Zurück,Indietro,뒤쪽에,Z powrotem,Назад
+skip ui animations,Skip Ui Animations,Saltar animaciones de la interfaz de usuario,Ignorar animações da interface do usuário,UIアニメーションをスキップ,跳过用户界面动画,Пропустить анимацию пользовательского интерфейса,यूआई एनिमेशन छोड़ें,تخطي رسوميات واجهة المستخدم,Ignorer les animations d'interface utilisateur,UI-Animationen überspringen,Salta le animazioni dell'interfaccia utente,UI 애니메이션 건너뛰기,Pomiń animacje interfejsu użytkownika,Пропустити анімацію інтерфейсу користувача
+life stock mode,Life Stock Mode,Modo de ganado vivo,Modo de estoque de vida,ライフストックモード,生活股票模式,Режим «Жизненный запас»,लाइफ स्टॉक मोड,وضع المخزون الحي,Mode de vie du bétail,Lebensbestandsmodus,Modalità di stock vitale,생명 주식 모드,Tryb życia,Режим життєвого запасу
+shooting mode,Shooting Mode,Modo de disparo,Modo de disparo,撮影モード,拍摄模式,Режим съемки,शूटिंग मोड,وضع التصوير,Mode de prise de vue,Aufnahmemodus,Modalità di scatto,촬영 모드,Tryb fotografowania,Режим зйомки
+initial ammo,Initial Ammo,Munición inicial,Munição inicial,初期弾薬,初始弹药,Начальный запас боеприпасов,प्रारंभिक गोला बारूद,الذخيرة الأولية,Munitions initiales,Anfangsmunition,Munizioni iniziali,초기 탄약,Amunicja początkowa,Початкові боєприпаси
+developer settings,Developer Settings,Configuración del desarrollador,Configurações do desenvolvedor,開発者向け設定,开发者设置,Настройки разработчика,डेवलपर सेटिंग्स,إعدادات المطور,Paramètres pour développeurs,Entwicklereinstellungen,Impostazioni sviluppatore,개발자 설정,Ustawienia programisty,Налаштування розробника
+master volume,Master Volume,Volumen maestro,Volume Mestre,マスターボリューム,主音量,Мастер-громкость,मास्टर वॉल्यूम,المجلد الرئيسي,Volume maître,Master-Lautstärke,Volume principale,마스터 볼륨,Głośność główna,Головний об'єм
+music,Music,Música,Música,音楽,音乐,Музыка,संगीत,موسيقى,Musique,Musik,Musica,음악,Muzyka,Музика
+sound effects,Sound Effects,Efectos sonoros,Efeitos sonoros,効果音,音效,Звуковые эффекты,ध्वनि प्रभाव,المؤثرات الصوتية,Bruitage,Soundeffekte,Effetti sonori,음향 효과,Efekty dźwiękowe,Звукові ефекти
+player n,Player {id},Jugador {id},Jogador {id},プレイヤー {id},玩家 {id},Игрок {id},खिलाड़ी {आईडी},اللاعب {id},Joueur {id},Spieler {id},Giocatore {id},플레이어 {id},Gracz {id},Гравець {id}
+skip page,Skip Page,Saltar página,Pular página,ページをスキップ,跳过页面,Пропустить страницу,पृष्ठ छोड़ें,تخطي الصفحة,Passer la page,Seite überspringen,Salta pagina,페이지 건너뛰기,Pomiń stronę,Пропустити сторінку
+next,Next,Próximo,Próximo,次,下一个,Следующий,अगला,التالي,Suivant,Nächste,Prossimo,다음,Następny,Далі
+game over,Game Over,Juego terminado,Game Over,ゲームオーバー,游戏结束,Игра закончена,खेल खत्म,انتهت اللعبة,Jeu terminé,Spiel vorbei,Game Over,게임 오버,Koniec gry,Кінець гри
+retry,Retry,Rever,Tentar novamente,リトライ,重试,Повторить попытку,पुन: प्रयास करें,إعادة المحاولة,Réessayer,Wiederholen,Riprova,다시 해 보다,Spróbować ponownie,Повторити спробу
+main menu,Main Menu,Menú principal,Menu principal,メインメニュー,主菜单,Главное меню,मुख्य मेन्यू,القائمة الرئيسية,Menu principal,Hauptmenü,Menù principale,메인 메뉴,Menu główne,Головне меню
+pause,Pause,Pausa,Pausa,一時停止,暂停,Пауза,विराम,يوقف,Pause,Pause,Pausa,정지시키다,Pauza,Пауза
+restart,Restart,Reiniciar,Reiniciar,再起動,重启,Перезапуск,पुनः आरंभ करें,إعادة تشغيل,Redémarrage,Neustart,Ricomincia,재시작,Uruchom ponownie,Перезавантажити
+level completed,Level Completed,Nivel completado,Nível concluído,レベルクリア,关卡完成,Уровень пройден,स्तर पूर्ण,تم إكمال المستوى,Niveau terminé,Level abgeschlossen,Livello completato,레벨 완료,Poziom ukończony,Рівень завершено
+continue,Continue,Continuar,Continuar,続く,继续,Продолжать,जारी रखना,يكمل,Continuer,Weitermachen,Continuare,계속하다,Kontynuować,Продовжити
+grab,Grab,Agarrar,Pegar,掴む,抓住,Схватить,झपटना,يمسك,Saisir,Greifen,Preda,붙잡다,Złapać,Захопити
+hook on,Hook On,Engancharse,Gancho,フックオン,钩子,Крючок,चुनना,علق,Accrochez-vous,Haken Sie ein,Gancio,후크 온,Zaczepić,Гачок на гачок
+lose condition,Lose Condition,Perder condición,Perder a condição,状態を失う,失去条件,Потерять состояние,हार की स्थिति,حالة سيئة,Perdre la condition,Zustand verlieren,Perdere la condizione,패배 조건,Utrata stanu,Втратити стан
+friendly fire,Friendly Fire,Fuego amigo,Fogo amigo,味方からの誤射,友军误伤,Дружественный огонь,गलती से होने वाला सैन्य आक्रमण,نيران صديقة,Feu ami,Freundliches Feuer,Fuoco amico,아군 오인 사격,Ogień sojuszniczy,Дружній вогонь
+level selection,Level Selection,Selección de nivel,Seleção de nível,レベル選択,级别选择,Выбор уровня,स्तर चयन,اختيار المستوى,Sélection du niveau,Levelauswahl,Selezione del livello,레벨 선택,Wybór poziomu,Вибір рівня
+resume,Resume,Reanudar,Retomar,再開する,恢复,Резюме,फिर शुरू करना,سيرة ذاتية,CV,Wieder aufnehmen,Riprendere,재개하다,Wznawiać,Резюме
+loading...,Loading...,Cargando...,Carregando...,読み込み中…,加载中...,Загрузка...,लोड हो रहा है...,تحميل...,Chargement...,Laden...,Caricamento...,로딩 중...,Załadunek...,Завантаження...
+crosshair move with player,Crosshair Move With Player,El punto de mira se mueve con el jugador.,A mira se move junto com o jogador.,クロスヘアはプレイヤーの動きに合わせて移動する,玩家的十字准星移动,Перемещение прицела вместе с игроком.,खिलाड़ी के साथ क्रॉसहेयर की गति,تحريك المؤشر مع اللاعب,Déplacement du réticule avec le joueur,Fadenkreuz bewegt sich mit dem Spieler,Spostamento del mirino con il giocatore,플레이어와 함께 조준점이 이동합니다.,Przesuwanie celownika z graczem,Перехрестя перехрестя з гравцем
+Player Summary,Player Summary,Resumen del jugador,Resumo do jogador,プレイヤー概要,球员概况,Сводка по игроку,खिलाड़ी सारांश,ملخص اللاعبين,Résumé du joueur,Spielerübersicht,Riepilogo del giocatore,선수 요약,Podsumowanie gracza,Огляд гравця
+Total Time:,Total Time:,Tiempo total:,Tempo total:,合計時間:,总耗时：,Общее время:,कुल समय:,إجمالي الوقت:,Durée totale :,Gesamtzeit:,Tempo totale:,총 소요 시간:,Całkowity czas:,Загальний час:
+Eliminated Enemies:,Eliminated Enemies:,Enemigos eliminados:,Inimigos eliminados:,排除した敵：,消灭的敌人：,Устранённые враги:,पराजित शत्रु:,الأعداء الذين تم القضاء عليهم:,Ennemis éliminés :,Eliminierte Feinde:,Nemici eliminati:,제거된 적:,Wyeliminowani wrogowie:,Знищені вороги:
+Max Combo:,Max Combo:,Combo máximo:,Combo máximo:,最大コンボ：,最大连击数：,Максимальное комбо:,ज्यादा कॉम्बो:,أقصى كومبو:,Combo max :,Maximale Kombo:,Combo massima:,최대 콤보:,Maksymalna kombinacja:,Максимальне комбо:
+Death Count:,Death Count:,Número de fallecidos:,Número de mortos:,死亡者数：,死亡人数：,Число погибших:,मृतकों की संख्या:,عدد الوفيات:,Nombre de morts :,Todeszahlen:,Numero di decessi:,사망자 수:,Liczba zgonów:,Кількість смертей:
+Total Score:,Total Score:,Puntuación total:,Pontuação total:,合計スコア：,总分：,Общий балл:,कुल स्कोर:,النتيجة الإجمالية:,Score total :,Gesamtpunktzahl:,Punteggio totale:,총점:,Wynik całkowity:,Загальний бал:
+Best Score:,Best Score:,Mejor puntuación:,Melhor pontuação:,最高得点:,最佳成绩：,Лучший результат:,सर्वश्रेष्ठ स्कोर:,أفضل نتيجة:,Meilleur score :,Beste Punktzahl:,Miglior punteggio:,최고 점수:,Najlepszy wynik:,Найкращий результат:
+Total Enemies:,Total Enemies:,Enemigos totales:,Total de inimigos:,敵の総数：,敌人总数：,Total Enemys:,कुल दुश्मन:,إجمالي الأعداء:,Nombre total d'ennemis :,Gesamtzahl der Feinde:,Numero totale di nemici:,총 적들:,Łączna liczba wrogów:,Всього ворогів:
+load cannon,Load Cannon,Cañón de carga,Carregar Canhão,ロードキャノン,装载炮,Зарядить пушку,तोप लोड करें,تحميل المدفع,Canon à chargement,Ladekanone,Carica il cannone,대포 장전,Załaduj armatę,Зарядити гармату
+skip credits,Skip Credits,Saltar créditos,Pular créditos,クレジットをスキップ,跳过片尾字幕,Пропустить титры,क्रेडिट छोड़ें,تخطي شارة النهاية,Passer le générique,Abspann überspringen,Salta ai titoli di coda,엔딩 크레딧 건너뛰기,Pomiń napisy końcowe,Пропустити кредити
+speed up,Speed Up,Acelerar,Acelerar,スピードアップ,加快,Ускорить,गति बढ़ाना,تسريع,Accélérer,Beschleunigen,Accelerare,속도 높이기,Przyśpieszyć,Прискорення
+director,Director,Director,Diretor,監督,导演,Директор,निदेशक,مخرج,Directeur,Direktor,Direttore,감독,Dyrektor,Директор
+production designer,Production Designer,Diseñador de producción,Designer de Produção,プロダクションデザイナー,制作设计师,Художник-постановщик,उत्पादन डिजाइनर,مصمم إنتاج,Concepteur de production,Produktionsdesigner,Progettista di produzione,프로덕션 디자이너,Projektant produkcji,Художник-постановник
+programming,Programming,Programación,Programação,プログラミング,编程,Программирование,प्रोग्रामिंग,برمجة,Programmation,Programmierung,Programmazione,프로그램 작성,Programowanie,Програмування
+writer,Writer,Escritor,Escritor,作家,作家,Писатель,लेखक,الكاتب,Écrivain,Schriftsteller,Scrittore,작가,Pisarz,Письменник
+join,Join,Unirse,Juntar,参加する,加入,Присоединиться,जोड़ना,ينضم,Rejoindre,Verbinden,Giuntura,가입하다,Dołączyć,Приєднатися
+select character,Select Character,Seleccionar personaje,Selecione o personagem,キャラクターを選択,选择角色,Выберите персонажа,अक्षर का चयन करें,اختر الشخصية,Sélectionner un personnage,Charakter auswählen,Seleziona il personaggio,캐릭터를 선택하세요,Wybierz postać,Виберіть символ
+story mode,Story Mode,Modo historia,Modo História,ストーリーモード,故事模式,Сюжетный режим,कहानी मोड,نمط القصة,Mode Histoire,Story-Modus,Modalità Storia,스토리 모드,Tryb fabularny,Режим історії
+arcade mode,Arcade Mode,Modo Arcade,Modo Arcade,アーケードモード,街机模式,Аркадный режим,आर्केड मोड,وضع الأركيد,Mode Arcade,Arcade-Modus,Modalità Arcade,아케이드 모드,Tryb Arcade,Аркадний режим
+new game,New Game,Nuevo juego,Novo jogo,ニューゲーム,新游戏,Новая игра,नया गेम,لعبة جديدة,Nouveau jeu,Neues Spiel,Nuovo gioco,새로운 게임,Nowa gra,Нова гра
+reset to default,Reset to Default,Restablecer a valores predeterminados,Restaurar padrões de fábrica,初期設定に戻す,重置为默认值,Сброс до значений по умолчанию,वितथ पर ले जाएं,إعادة الضبط إلى الوضع الافتراضي,Réinitialiser par défaut,Auf Standardwerte zurücksetzen,Ripristina le impostazioni predefinite,기본값으로 재설정,Przywróć domyślne,Скинути до заводських налаштувань
+resolution,Resolution,Resolución,Resolução,解決,解决,Разрешение,संकल्प,دقة,Résolution,Auflösung,Risoluzione,해결,Rezolucja,Роздільна здатність
+window mode,Window Mode,Modo ventana,Modo Janela,ウィンドウモード,窗口模式,Оконный режим,विन्डो मोड,وضع النافذة,Mode fenêtré,Fenstermodus,Modalità finestra,창 모드,Tryb okna,Режим вікна
+interact,Interact,Interactuar,Interagir,交流する,相互影响,Взаимодействовать,इंटरैक्ट करना,يتفاعل,Interagir,Interagieren,Interagire,상호작용,Antrakt,Взаємодія
+talk,Talk,Hablar,Falar,話す,讲话,Разговаривать,बात करना,يتحدث,Parler,Sprechen,Parlare,말하다,Rozmawiać,Розмова
+talk to,Talk to {0},Habla con {0},Fale com {0},{0}と話す,与 {0} 交谈,Поговорите с {0},{0} से बात करें,تحدث إلى {0},Parlez à {0},Sprich mit {0},Parla con {0},{0}에게 말을 걸어보세요,Porozmawiaj z {0},Поговоріть з {0}
+complete quests,Complete quests,Completar misiones,Conclua as missões,クエストを完了する,完成任务,Выполняйте задания,खोजों को पूरा करें,أكمل المهام,Terminez les quêtes,Schließe Quests ab,Completa le missioni,퀘스트를 완료하세요,Ukończ zadania,Виконайте квести
+bring to,Bring {0} to {1},Traer {0} a {1},Traga {0} para {1},{0}を{1}に変える,将 {0} 变为 {1},Перенесите {0} в {1},{0} को {1} पर लाएँ,نقل {0} إلى {1},Amener {0} à {1},Bringe {0} zu {1},Porta {0} a {1},{0}을 {1}로 가져오세요,Przenieś {0} do {1},Принесіть {0} до {1}
+complete minigame,Complete the minigame,Completa el minijuego,Complete o minijogo,ミニゲームをクリアする,完成小游戏,Пройдите мини-игру,मिनीगेम पूरा करें,أكمل اللعبة المصغرة,Terminez le mini-jeu,Schließe das Minispiel ab,Completa il minigioco,미니게임을 완료하세요,Ukończ minigrę,Завершіть міні-гру
+quest completed,Quest completed!,¡Misión completada!,Missão concluída!,クエスト完了！,任务完成！,Задание выполнено!,खोज पूरी हुई!,تم إنجاز المهمة!,Quête terminée !,Mission abgeschlossen!,Missione completata!,퀘스트 완료!,Zadanie ukończone!,Квест виконано!
+quiosco,Kiosk,Quiosco,Quiosque,キオスク,亭,Киоск,कीओस्क,كشك,Kiosque,Kiosk,Chiosco,정자,Kiosk,Кіоск
+almacen,Store,Almacenar,Loja,店,店铺,Магазин,इकट्ठा करना,محل,Magasin,Speichern,Negozio,가게,Sklep,Магазин
+comiseria,Commissariat,Comisaría,Comissariado,コミッサリアト,粮食,Комиссариат,कमिसारियत,المفوضية,Intendance,Kommissariat,Commissariato,식량 보급,Komisariat,Комісаріат
+tienda de mascotas,Pet store,Tienda de mascotas,Loja de animais de estimação,ペットショップ,宠物店,Зоомагазин,पालतू जानवर की दुकान,متجر الحيوانات الأليفة,animalerie,Tierhandlung,Negozio di animali,애완동물 가게,Sklep zoologiczny,Зоомагазин
+botilleria,Botillery,Botillería,Botillery,ボティレリー,炮兵,Ботилеварня,बोतल,مصنع تقطير,Botillerie,Botillerie,Bottiglia,병,Botillery,Ботилерія
+farmacia,Pharmacy,Farmacia,Farmácia,薬局,药店,Аптека,फार्मेसी,صيدلية,Pharmacie,Apotheke,Farmacia,약국,Apteka,АПТЕКА
+caja,Box,Caja,Caixa,箱,盒子,Коробка,डिब्बा,صندوق,Boîte,Kasten,Scatola,상자,Skrzynka,Коробка
+entrada tienda,Shop entrance,Entrada de la tienda,Entrada da loja,店舗入口,商店入口,вход в магазин,दुकान का प्रवेश द्वार,مدخل المتجر,Entrée du magasin,Ladeneingang,Ingresso del negozio,상점 입구,Wejście do sklepu,Вхід до магазину
+entrada casa,House entrance,Entrada de la casa,Entrada da casa,家の入り口,房屋入口,Вход в дом,घर का प्रवेश द्वार,مدخل المنزل,Entrée de la maison,Hauseingang,Ingresso della casa,집 입구,Wejście do domu,Вхід до будинку
+escort to,Escort the cityzen {0} to {1},Acompaña al ciudadano {0} a {1},Escorte o cidadão {0} até {1},市民{0}を{1}まで護衛する,护送市民 {0} 到 {1},Сопроводите жителя города {0} к {1},नागरिक {0} को {1} तक ले जाएं,رافق المواطن {0} إلى {1},Escortez le zen de la ville {0} à {1},Begleite den Stadtbewohner {0} nach {1},Scorta il cittadino {0} a {1},도시인 {0}을 {1}까지 호위하세요,Eskortuj cityzen {0} do {1},Супроводьте містянина {0} до {1}
+grab item,Get {0},Obtener {0},Obter {0},{0}を取得する,获取 {0},Получить {0},{0} प्राप्त करें,احصل على {0},Obtenez {0},Rufe {0} ab,Ottieni {0},{0}을 가져오세요,Zdobądź {0},Отримати {0}
+snail food,Snail food,Comida para caracoles,Comida para caracóis,カタツムリの餌,蜗牛饲料,Корм для улиток,घोंघे का भोजन,طعام الحلزون,Nourriture pour escargots,Schneckenfutter,Cibo per lumache,달팽이 먹이,Pokarm dla ślimaków,Їжа для равликів
+created by,Created by,Creado por,Criado por,作成者,由……创建,Создано,के द्वारा बनाई गई,تم إنشاؤه بواسطة,Créé par,Erstellt von,Creato da,제작자:,Stworzone przez,Створено
+resources,Resources,Recursos,Recursos,リソース,资源,Ресурсы,संसाधन,موارد,Ressources,Ressourcen,Risorse,자원,Zasoby,Ресурси
+jump,Jump,Saltar,Pular,ジャンプ,跳,Прыжок,कूदना,اقفز,Saut,Springen,Salto,도약,Skok,Стрибок
+run,Run,Correr,Correr,走る,跑步,Бегать,दौड़ना,يجري,Courir,Laufen,Correre,달리다,Uruchomić,Бігти
+interaction,Interaction,Interacción,Interação,交流,相互作用,Взаимодействие,इंटरैक्शन,تفاعل,Interaction,Interaktion,Interazione,상호 작용,Wzajemne oddziaływanie,Взаємодія
+move,Move,Mover,Mover,動く,移动,Двигаться,कदम,يتحرك,Se déplacer,Bewegen,Mossa,이동하다,Przenosić,Перемістити
+zoom,Zoom,Zoom,Zoom,ズーム,飞涨,Зум,ज़ूम,تكبير,Zoom,Zoom,Zoom,줌,Brzęczenie,Збільшити
+look,Look,Mirar,Olhar,見て,看,Смотреть,देखना,ينظر,Regarder,Suchen,Aspetto,바라보다,Patrzeć,Дивись
+shadows,Shadows,Sombras,Sombras,影,阴影,Тени,छैया छैया,الظلال,Ombres,Schatten,Ombre,그림자,Cienie,Тіні
+antialiasing,Antialiasing (MSAA),Suavizado de alias (MSAA),Antisserrilhamento (MSAA),アンチエイリアシング（MSAA）,抗锯齿（MSAA）,Сглаживание (MSAA),एंटीएलियासिंग (एमएसएए),تقنية منع التعرج (MSAA),Antialiasing (MSAA),Antialiasing (MSAA),Antialiasing (MSAA),안티앨리어싱(MSAA),Antyaliasing (MSAA),Згладжування (MSAA)
+depth of field,Depth of Field,Profundidad de campo,Profundidade de campo,被写界深度,景深,Глубина резкости,क्षेत्र की गहराई,عمق المجال,Profondeur de champ,Schärfentiefe,Profondità di campo,피사계 심도,Głębia ostrości,Глибина різкості
+lens distortion,Lens Distortion,Distorsión de la lente,Distorção da lente,レンズの歪み,镜头畸变,Искажение объектива,लेंस विरूपण,تشوه العدسة,Distorsion de l'objectif,Linsenverzerrung,Distorsione dell'obiettivo,렌즈 왜곡,Zniekształcenie soczewki,Спотворення об'єктива
+caustics effect,Caustics Effect,Efecto cáustico,Efeito cáustico,集光効果,焦散效应,Эффект едких веществ,कास्टिक प्रभाव,تأثير المواد الكاوية,Effets caustiques,Ätzwirkung,Effetto delle caustiche,부식 효과,Efekt kaustyczny,Ефект каустики
+render scale,Render Scale,Escala de renderizado,Escala de renderização,レンダリングスケール,渲染比例,Масштаб рендеринга,रेंडर स्केल,مقياس العرض,Échelle de rendu,Rendergröße,Scala di rendering,렌더링 크기,Skala renderowania,Масштаб візуалізації
+vsync,VSync,Sincronización vertical,Sincronização vertical,VSync,垂直同步,VSync,वीसिंक,مزامنة عمودية,VSync,VSync,VSync,VSync,Synchronizacja pionowa,VSync
+refresh rate,Refresh Rate,Frecuencia de actualización,Taxa de atualização,更新レート,刷新率,Частота обновления,ताज़ा दर,معدل التحديث,Taux de rafraîchissement,Bildwiederholfrequenz,Frequenza di aggiornamento,새로 고침 빈도,Częstotliwość odświeżania,Частота оновлення
+post processing,Post-processing,Postprocesamiento,Pós-processamento,後処理,后期处理,Постобработка,प्रोसेसिंग के बाद,المعالجة اللاحقة,Post-traitement,Nachbearbeitung,Post-elaborazione,후처리,Postprodukcja,Післяобробка
+fog,Fog,Niebla,Névoa,霧,多雾路段,Туман,कोहरा,ضباب,Brouillard,Nebel,Nebbia,안개,Mgła,Туман
+particles,Particles,Partículas,Partículas,粒子,粒子,Частицы,कण,الجسيمات,Particules,Partikel,Particelle,입자,Cząsteczki,Частинки
+take,Take,Llevar,Pegar,取る,拿,Брать,लेना,يأخذ,Prendre,Nehmen,Prendere,가져가다,Brać,Візьміть
+hold,Hold,Sostener,Segurar,所有,抓住,Держать,पकड़ना,يمسك,Prise,Halten,Presa,잡고 있다,Trzymać,Утримувати
+show controls popup,Show controls popup,Mostrar ventana emergente de controles,Exibir janela pop-up de controles,コントロールポップアップを表示,显示控件弹出窗口,Показать всплывающее окно элементов управления,नियंत्रण पॉपअप दिखाएँ,إظهار نافذة عناصر التحكم المنبثقة,Afficher la fenêtre contextuelle des commandes,Popup mit Steuerelementen anzeigen,Mostra i controlli a comparsa,컨트롤 팝업 표시,Pokaż wyskakujące okienko sterowania,Показати спливаюче вікно з елементами керування
+level,Level,Nivel,Nível,レベル,等级,Уровень,स्तर,مستوى,Niveau,Ebene,Livello,수준,Poziom,Рівень
+i want,I want,Quiero,Eu quero,欲しい,我想,Я хочу,मुझे चाहिए,أريد,Je veux,Ich will,Voglio,나는 원해요,Chcę,Я хочу
+i pay with,I pay with,Pago con,Eu pago com,私は支払います,我付款,Я плачу,मैं भुगतान करता हूँ,أدفع بواسطة,Je paie avec,Ich bezahle mit,Pago con,저는 다음으로 결제합니다,Płacę z,Я плачу за допомогою
+cero,zero,cero,zero,ゼロ,零,ноль,शून्य,صفر,zéro,null,zero,영,zero,нуль
+un,one,un,um,1つ,一,один,एक,واحد,un,eins,uno,하나,jeden,один
+dos,two,dos,dois,二,二,два,दो,اثنين,deux,zwei,due,둘,dwa,два
+tres,three,tres,três,三つ,三,три,तीन,ثلاثة,trois,drei,tre,삼,trzy,три
+cuatro,four,cuatro,quatro,4,四,четыре,चार,أربعة,quatre,vier,quattro,넷,cztery,чотири
+cinco,five,cinco,cinco,五,五,пять,पाँच,خمسة,cinq,fünf,cinque,다섯,pięć,п'ять
+seis,six,seis,seis,六,六,шесть,छह,ستة,six,sechs,sei,육,sześć,шість
+siete,seven,siete,Sete,セブン,七,Семь,सात,سبعة,Sept,Sieben,Sette,일곱,siedem,сім
+ocho,eight,ocho,oito,八,八,восемь,आठ,ثمانية,huit,acht,otto,여덟,osiem,вісім
+nueve,nine,nueve,nove,九,九,девять,नौ,تسعة,neuf,neun,nove,아홉,dziewięć,дев'ять
+diez,ten,diez,dez,10,十,десять,दस,عشرة,dix,zehn,dieci,열,dziesięć,десять
+play,Play,Jugar,Jogar,遊ぶ,玩,Играть,खेल,يلعب,Jouer,Spielen,Giocare,놀다,Grać,Грати
+collection,Collection,Colección,Coleção,コレクション,收藏,Коллекция,संग्रह,مجموعة,Collection,Sammlung,Collezione,수집,Kolekcja,Колекція
+quit,Quit,Abandonar,Desistir,やめる,辞职,Покидать,छोड़ना,يترك,Quitter,Aufhören,Esentato,그만두다,Zrezygnować,Вийти
+coin merge,coin merge,fusión de monedas,fusão de moedas,コインマージ,硬币合并,слияние монет,सिक्का विलय,دمج العملات,fusion de pièces,Münzzusammenführung,fusione di monete,코인 병합,scalanie monet,злиття монет
+VICTORY!,VICTORY!,¡VICTORIA!,VITÓRIA!,勝利！,胜利！,ПОБЕДА!,विजय!,انتصار!,VICTOIRE!,SIEG!,VITTORIA!,승리!,ZWYCIĘSTWO!,ПЕРЕМОГА!
+points,Points,puntos,Pontos,ポイント,积分,Баллы,अंक,نقاط,Points,Punkte,Punti,전철기,Zwrotnica,Очки
+total sales,Total sales,Ventas totales,Vendas totais,総売上高,总销售额,Общий объем продаж,कुल बिक्री,إجمالي المبيعات,Ventes totales,Gesamtumsatz,Vendite totali,총 매출액,Całkowita sprzedaż,Загальний обсяг продажів
+play story mode,Play Story Mode,Jugar al modo historia,Jogue o Modo História,ストーリーモードをプレイ,游玩故事模式,Пройти сюжетный режим,स्टोरी मोड खेलें,العب وضع القصة,Jouez au mode Histoire,Story-Modus spielen,Gioca in modalità Storia,스토리 모드 플레이,Zagraj w tryb fabularny,Грати в режимі історії
+play infinite mode,Play Infinite Mode,Jugar en modo infinito,Jogue no Modo Infinito,無限モードをプレイ,无限模式,Играйте в бесконечном режиме,अनंत मोड खेलें,العب الوضع اللانهائي,Jouer en mode infini,Endlosmodus spielen,Gioca in modalità infinita,무한 모드 플레이,Graj w trybie nieskończonym,Грати в нескінченному режимі
+play arcade mode,Play Arcade Mode,Juega al modo Arcade,Jogar no Modo Arcade,アーケードモードをプレイ,游玩街机模式,Играйте в аркадном режиме,आर्केड मोड खेलें,العب وضع الأركيد,Jouez en mode Arcade,Arcade-Modus spielen,Gioca in modalità Arcade,아케이드 모드 플레이,Graj w trybie Arcade,Грати в аркадному режимі
+play versus mode,Play Versus Mode,Jugar en modo Versus,Jogar no Modo Versus,対戦モードをプレイ,进行对战模式,"Играйте в режиме ""Противостояние"".",वर्सेस मोड खेलें,العب وضع المواجهة,Jouer en mode Versus,Versus-Modus spielen,Gioca in modalità Versus,대전 모드 플레이,Graj w trybie Versus,Режим гри проти інших

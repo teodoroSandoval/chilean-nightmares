@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cfp50m8oy4j0b"]
+
+[ext_resource type="Texture2D" uid="uid://bh2eatec07gbq" path="res://assets/personajes/character 04/character_frame_04.png" id="1_uxulr"]
+[ext_resource type="Script" uid="uid://c6aj511432qoa" path="res://scripts/data/CharacterData.gd" id="2_wpedx"]
+
+[resource]
+script = ExtResource("2_wpedx")
+character_name = "la character_04"
+character_age = 60
+character_gender = "F"
+character_full = ExtResource("1_uxulr")
+character_frame = ExtResource("1_uxulr")
+character_icon = ExtResource("1_uxulr")
+character_chibi = ExtResource("1_uxulr")
+metadata/_custom_type_script = "uid://c6aj511432qoa"
