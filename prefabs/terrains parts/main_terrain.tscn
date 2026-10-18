@@ -3,6 +3,18 @@
 [ext_resource type="Terrain3DMaterial" uid="uid://b01p557tug8bx" path="res://assets/terrains/main_terrain_3d_material.tres" id="1_1obd8"]
 [ext_resource type="Terrain3DAssets" uid="uid://dm0bsh4mybs6u" path="res://assets/terrains/main_terrain_3d_assets.tres" id="2_1n23v"]
 [ext_resource type="Script" uid="uid://bmancpbjdlk3k" path="res://scripts/TerrainLoadManager.gd" id="3_pxih2"]
+[ext_resource type="Material" uid="uid://cna3e77smce4p" path="res://Materials/EA_Water_Tropical.tres" id="4_1n23v"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pxih2"]
+size = Vector2(44, 44)
+subdivide_width = 44
+subdivide_depth = 44
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irjq8"]
+transparency = 1
+albedo_color = Color(0, 0.5137255, 0.8666667, 0.7254902)
+
+[sub_resource type="QuadMesh" id="QuadMesh_k5ajt"]
 
 [node name="Main Terrain" type="Node3D" unique_id=1978853817]
 
@@ -12,6 +24,7 @@ material = ExtResource("1_1obd8")
 assets = ExtResource("2_1n23v")
 save_16_bit = true
 label_distance = 4096.0
+collision_mode = 3
 top_level = true
 script = ExtResource("3_pxih2")
 raw_heightmap_folder_path = "G:\\Otros ordenadores\\Mi PC\\DriveSync\\Blender Projects\\Pedro Llama\\%s level\\Heightmaps RAW"
@@ -21,3 +34,50 @@ max_operations = 50
 color_pallette = Array[Color]([Color(0.85882354, 0.7294118, 0.6862745, 1), Color(0.84705883, 0.7882353, 0.7607843, 1), Color(0.26666668, 0.28627452, 0.30980393, 1), Color(0.4627451, 0.44705883, 0.44705883, 1), Color(0.95686275, 0.9490196, 0.9372549, 1), Color(0.84705883, 0.8509804, 0.84705883, 1), Color(0.6862745, 0.62352943, 0.6117647, 1), Color(0.94509804, 0.85882354, 0.8156863, 1)])
 terrain_layer_index = Array[int]([0, 2, 4, 5, 3, 7, 6, 1])
 metadata/_edit_lock_ = true
+
+[node name="Water_Lake" type="MeshInstance3D" parent="." unique_id=752901200]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, 500, 20, 0)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="Water_Lake2" type="MeshInstance3D" parent="." unique_id=2036020809]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, -500, 20, 0)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="Water_Lake3" type="MeshInstance3D" parent="." unique_id=1267834546]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, 500, 20, 500)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="Water_Lake4" type="MeshInstance3D" parent="." unique_id=1705582625]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, -500, 20, 500)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="Water_Lake5" type="MeshInstance3D" parent="." unique_id=1893617645]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, 500, 20, -500)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="Water_Lake7" type="MeshInstance3D" parent="." unique_id=108951463]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, 0, 20, 500)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="Water_Lake8" type="MeshInstance3D" parent="." unique_id=911001972]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, 0, 20, -500)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="Water_Lake6" type="MeshInstance3D" parent="." unique_id=434480269]
+transform = Transform3D(11.36, 0, 0, 0, 11.36, 0, 0, 0, 11.36, -500, 20, -500)
+material_override = ExtResource("4_1n23v")
+mesh = SubResource("PlaneMesh_pxih2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=124030524]
+transform = Transform3D(10000, 0, 0, 0, -0.0004371139, 10000, 0, -10000, -0.0004371139, 0, 0.1, 0)
+visible = false
+sorting_use_aabb_center = false
+material_override = SubResource("StandardMaterial3D_irjq8")
+mesh = SubResource("QuadMesh_k5ajt")

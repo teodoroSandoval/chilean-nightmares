@@ -31,25 +31,16 @@
 [ext_resource type="PackedScene" uid="uid://b14m5tisbsjsb" path="res://prefabs/popups/game_over.tscn" id="25_cfxrq"]
 [ext_resource type="PackedScene" uid="uid://battx30cqpjco" path="res://prefabs/poolingCoins.tscn" id="25_k1hro"]
 [ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="27_uu2b5"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="32_moi63"]
+[ext_resource type="Script" uid="uid://bwqdqgn7x1m5m" path="res://scripts/cameraController.gd" id="32_nprdk"]
 [ext_resource type="PackedScene" uid="uid://vvrdeo72uxqv" path="res://prefabs/player.tscn" id="33_nprdk"]
-[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="34_moi63"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="35_p84op"]
-[ext_resource type="Script" uid="uid://b8hhnqsugykly" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="36_vjg3g"]
+
+[sub_resource type="Environment" id="Environment_k5ajt"]
+background_energy_multiplier = 0.3
 
 [sub_resource type="FontVariation" id="FontVariation_k1hro"]
 spacing_glyph = -2
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2ay0"]
-
-[sub_resource type="Resource" id="Resource_xivcs"]
-script = ExtResource("35_p84op")
-
-[sub_resource type="Resource" id="Resource_c1jlq"]
-script = ExtResource("36_vjg3g")
-projection = 1
-size = 10.0
-far = 1000.0
 
 [node name="Gameplay" type="Node3D" unique_id=1679866010 node_paths=PackedStringArray("dialog_base", "quiosc_base", "customization_base", "versus_base", "store_coin_manager", "store_client_manager", "dialog_manager", "player", "intro_popup", "pause_popup", "victory_popup", "gameover_popup", "settings_popup")]
 script = ExtResource("1_jfxgp")
@@ -68,8 +59,12 @@ victory_popup = NodePath("Popups/Victory")
 gameover_popup = NodePath("Popups/GameOver")
 settings_popup = NodePath("Popups/Settings")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=671066183]
+environment = SubResource("Environment_k5ajt")
+
 [node name="Main_Terrain" parent="." unique_id=1978853817 instance=ExtResource("3_1yji8")]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0140381, -0.00012207031, 0.47521973)
 
 [node name="Dialogo" type="Label" parent="." unique_id=312952454 node_paths=PackedStringArray("name_text", "dialog_text", "dialog_box", "character_image_0", "character_image_1", "character_image_2")]
 visible = false
@@ -1233,43 +1228,47 @@ offset_bottom = 23.0
 
 [node name="PoolingCoins" parent="Pools" unique_id=2083080597 instance=ExtResource("25_k1hro")]
 
-[node name="MainCamera3D" type="Camera3D" parent="." unique_id=175555135]
+[node name="MainCamera3D" type="Camera3D" parent="." unique_id=175555135 node_paths=PackedStringArray("player")]
 unique_name_in_owner = true
 physics_interpolation_mode = 1
-transform = Transform3D(0.9999505, 0, 0, 0, 0.8659116, 0.49996316, 0, -0.49993432, 0.8659616, -1.2545776, 15.9571495, 16.875946)
-top_level = true
+transform = Transform3D(-1, 6.3098284e-08, -6.050907e-08, 0, 0.69214314, 0.7217602, 8.742278e-08, 0.7217602, -0.69214314, -1.255, 69.83184, -20.442)
 projection = 1
-size = 10.0
+size = 20.0
 far = 1000.0
+script = ExtResource("32_nprdk")
+player = NodePath("../player")
+followDistance = 100.0
 
-[node name="PhantomCameraHost" type="Node" parent="MainCamera3D" unique_id=1107054250]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("32_moi63")
-
-[node name="player" parent="." unique_id=1896769258 node_paths=PackedStringArray("phantomCam") instance=ExtResource("33_nprdk")]
-transform = Transform3D(-1, 0, 7.45058e-07, 0, 1, 0, -7.45058e-07, 0, -1, -1.2545776, 5.9578857, -0.4432869)
-phantomCam = NodePath("../PlayerPhantomCamera3D")
+[node name="player" parent="." unique_id=1896769258 node_paths=PackedStringArray("baseCam") instance=ExtResource("33_nprdk")]
+transform = Transform3D(-0.9867087, 0, 0.16249917, 0, 1, 0, -0.16249917, 0, -0.9867087, 122.050766, 26.749352, -331.80786)
+walkSpeed = 20.0
+runSpeed = 40.0
+baseCam = NodePath("../MainCamera3D")
 rotationSpeed = 0.05
 zoomSpeed = 10.0
 minZoom = 2.0
 
-[node name="PlayerPhantomCamera3D" type="Node3D" parent="." unique_id=1159716470 node_paths=PackedStringArray("follow_target")]
-unique_name_in_owner = true
-transform = Transform3D(0.9999505, 0, 0, 0, 0.8659116, 0.49996316, 0, -0.49993432, 0.8659616, -1.2545776, 15.9571495, 16.875946)
-top_level = true
-script = ExtResource("34_moi63")
-priority = 5
-follow_mode = 5
-follow_target = NodePath("../player")
-tween_resource = SubResource("Resource_xivcs")
-tween_on_load = false
-camera_3d_resource = SubResource("Resource_c1jlq")
-follow_damping = true
-follow_distance = 20.0
-spring_length = 20.0
-align_transform_with_view = Callable()
-align_position_with_view = Callable()
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1749402171]
+transform = Transform3D(1.0000001, 0, 0, 0, -0.48938254, 0.87206936, 0, -0.87206924, -0.4893826, 0, 0, 0)
+light_energy = 0.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1111031941]
+transform = Transform3D(1, 0, 0, 0, 0.021131448, 0.9997767, 0, -0.9997767, 0.021131448, 115.039474, 42.372833, -336.3053)
+light_energy = 7.61
+spot_range = 39.72044
+spot_angle = 64.12153
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1195914350]
+transform = Transform3D(1, 0, 0, 0, 0.021131448, 0.9997767, 0, -0.9997767, 0.021131448, -17.729296, 74.05928, -44.55893)
+light_energy = 7.61
+spot_range = 39.72044
+spot_angle = 64.12153
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=305538672]
+transform = Transform3D(1, 0, 0, 0, 0.021131448, 0.9997767, 0, -0.9997767, 0.021131448, -17.729296, 75.33746, 1.142189)
+light_energy = 7.61
+spot_range = 39.72044
+spot_angle = 64.12153
 
 [connection signal="pressed" from="AtenderQuiosco/Base/BaseLado/Button" to="." method="_pause_game"]
 [connection signal="on_retry" from="Popups/GameOver" to="." method="_restart_quiosc_game"]

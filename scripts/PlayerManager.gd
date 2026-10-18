@@ -5,7 +5,7 @@ class_name PlayerManager
 @export var runSpeed: float = 10.0
 @export var jump_velocity: float = 4.5
 @export var gravity: float = 9.8
-@export var phantomCam: PhantomCamera3D
+@export var baseCam: CameraController
 @export var rotationSpeed: float = 1.0
 @export var zoomSpeed: float = 1.0
 @export var minZoom: float = 1
@@ -19,18 +19,16 @@ func _ready() -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if phantomCam:
+	if baseCam:
 		
 		if camRotation != 0:
-			phantomCam.rotation.y += camRotation * delta * rotationSpeed
-			#TODO: compensate the camera position to keep the player in the center of the screen when rotating
-			var offset: Vector3 = phantomCam.global_position - global_position
-			var rotated_offset: Vector3 = offset.rotated(Vector3.UP, camRotation * delta * rotationSpeed)
-			phantomCam.global_position = global_position + rotated_offset
-			
+			baseCam.rotation.y -= camRotation * delta * rotationSpeed
 
 		if camZoom != 0:
-			phantomCam.get_camera_3d_resource().size = clamp(phantomCam.get_camera_3d_resource().size + camZoom * delta * zoomSpeed, minZoom, maxZoom)
+			var scalarFactor = baseCam.size / minZoom
+			baseCam.size = clamp(baseCam.size + (camZoom * delta * zoomSpeed * scalarFactor), minZoom, maxZoom)
+		
+		baseCam._set_camera_position()
 
 
 func _physics_process(delta: float) -> void:
@@ -77,15 +75,19 @@ func _on_movement_input() -> void:
 		velocity.z = 0
 		return
 	
-	if phantomCam:
+	if baseCam:
 		# Get the camera's forward direction
-		var cam_forward: Vector3 = phantomCam.global_transform.basis.z.normalized()
-		var cam_right: Vector3 = phantomCam.global_transform.basis.x.normalized()
+		var cam_forward: Vector3 = baseCam.global_transform.basis.z
+		var cam_right: Vector3 = baseCam.global_transform.basis.x
+		cam_forward.y = 0  # Keep movement in the horizontal plane
+		cam_right.y = 0  # Keep movement in the horizontal plane
+		cam_forward = cam_forward.normalized()
+		cam_right = cam_right.normalized()
 
 		# Calculate the movement direction based on camera orientation
 		var move_direction: Vector3 = (cam_forward * input_vector.y) + (cam_right * input_vector.x)
-		move_direction.y = 0  # Keep movement in the horizontal plane
-		move_direction = move_direction.normalized()
+		# move_direction.y = 0  # Keep movement in the horizontal plane
+		# move_direction = move_direction.normalized()
 
 		var speed: float = walkSpeed
 		if InputManager.gameplay_sprint.value_bool:

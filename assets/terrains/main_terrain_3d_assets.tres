@@ -28,6 +28,7 @@ last_shadow_lod = 0
 lod0_range = 128.0
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_t0sh0"]
+name = "ground_02_color_1k"
 albedo_texture = ExtResource("1_2kjol")
 normal_texture = ExtResource("2_hmv1a")
 uv_scale = 0.5
