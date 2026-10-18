@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df0q68mnj87ll"
-path="res://.godot/imported/00_ground_stone_ground_0019_01_s.jpg-3988b6a11ce916e525d491545e2324ef.ctex"
+uid="uid://c5h7q1dr63w2p"
+path="res://.godot/imported/desert_ground_01_normal_dx_1k.png-0808196cf039cdebff07b8ae07bd08ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/terrain textures/00_ground_stone_ground_0019_01_s.jpg"
-dest_files=["res://.godot/imported/00_ground_stone_ground_0019_01_s.jpg-3988b6a11ce916e525d491545e2324ef.ctex"]
+source_file="res://assets/terrain textures/desert_ground_01_1k/desert_ground_01_normal_dx_1k.png"
+dest_files=["res://.godot/imported/desert_ground_01_normal_dx_1k.png-0808196cf039cdebff07b8ae07bd08ed.ctex"]
 
 [params]
 
