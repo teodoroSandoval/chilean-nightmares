@@ -33,6 +33,8 @@
 [ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="27_uu2b5"]
 [ext_resource type="Script" uid="uid://bwqdqgn7x1m5m" path="res://scripts/cameraController.gd" id="32_nprdk"]
 [ext_resource type="PackedScene" uid="uid://vvrdeo72uxqv" path="res://prefabs/player.tscn" id="33_nprdk"]
+[ext_resource type="PackedScene" uid="uid://be3lgwwdgdycp" path="res://prefabs/house_01.tscn" id="34_5q587"]
+[ext_resource type="PackedScene" uid="uid://c0hnnif6rcw8c" path="res://prefabs/tree_01.tscn" id="34_dyihr"]
 
 [sub_resource type="Environment" id="Environment_k5ajt"]
 background_energy_multiplier = 0.3
@@ -1240,13 +1242,28 @@ player = NodePath("../player")
 followDistance = 100.0
 
 [node name="player" parent="." unique_id=1896769258 node_paths=PackedStringArray("baseCam") instance=ExtResource("33_nprdk")]
-transform = Transform3D(-0.9867087, 0, 0.16249917, 0, 1, 0, -0.16249917, 0, -0.9867087, 122.050766, 26.749352, -331.80786)
+transform = Transform3D(-0.9867087, 0, 0.16249917, 0, 1, 0, -0.16249917, 0, -0.9867087, 111.40636, 25.32119, -332.7275)
 walkSpeed = 20.0
 runSpeed = 40.0
 baseCam = NodePath("../MainCamera3D")
 rotationSpeed = 0.05
 zoomSpeed = 10.0
 minZoom = 2.0
+
+[node name="house_01" parent="." unique_id=180369549 instance=ExtResource("34_5q587")]
+transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 119.58923, 27.416992, -315.43283)
+
+[node name="house_02" parent="." unique_id=1604947196 instance=ExtResource("34_5q587")]
+transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 114.859985, 27.416992, -311.1289)
+
+[node name="house_03" parent="." unique_id=2036050497 instance=ExtResource("34_5q587")]
+transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 87.86052, 27.416992, -311.02173)
+
+[node name="house_04" parent="." unique_id=199624697 instance=ExtResource("34_5q587")]
+transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 83.42641, 27.416992, -306.13013)
+
+[node name="house_05" parent="." unique_id=766138374 instance=ExtResource("34_5q587")]
+transform = Transform3D(2.6819468, 0, 4.219853, 0, 4.9999995, 0, -4.219853, 0, 2.6819468, 79.10715, 27.416992, -300.71744)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1749402171]
 transform = Transform3D(1.0000001, 0, 0, 0, -0.48938254, 0.87206936, 0, -0.87206924, -0.4893826, 0, 0, 0)
@@ -1269,6 +1286,42 @@ transform = Transform3D(1, 0, 0, 0, 0.021131448, 0.9997767, 0, -0.9997767, 0.021
 light_energy = 7.61
 spot_range = 39.72044
 spot_angle = 64.12153
+
+[node name="Tree_01" parent="." unique_id=241761427 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.66138, 25.567596, -307.7889)
+
+[node name="Tree_02" parent="." unique_id=447548356 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.9433, 25.567596, -302.84067)
+
+[node name="Tree_03" parent="." unique_id=1512656577 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.40723, 25.567596, -296.89713)
+
+[node name="Tree_04" parent="." unique_id=622668252 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.03534, 25.567596, -293.98038)
+
+[node name="Tree_05" parent="." unique_id=1161235142 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.443115, 25.567596, -301.10785)
+
+[node name="Tree_06" parent="." unique_id=625995936 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.443115, 24.72995, -331.10785)
+
+[node name="Tree_07" parent="." unique_id=1417514524 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.39844, 24.72995, -319.04666)
+
+[node name="Tree_08" parent="." unique_id=2131680001 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.39844, 24.72995, -334.04666)
+
+[node name="Tree_09" parent="." unique_id=2137200249 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.57721, 24.72995, -326.56973)
+
+[node name="Tree_10" parent="." unique_id=1690653194 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.25482, 24.72995, -324.26926)
+
+[node name="Tree_11" parent="." unique_id=972046409 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.94348, 24.72995, -329.9103)
+
+[node name="Tree_12" parent="." unique_id=1502625811 instance=ExtResource("34_dyihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.55481, 24.7182, -335.04)
 
 [connection signal="pressed" from="AtenderQuiosco/Base/BaseLado/Button" to="." method="_pause_game"]
 [connection signal="on_retry" from="Popups/GameOver" to="." method="_restart_quiosc_game"]

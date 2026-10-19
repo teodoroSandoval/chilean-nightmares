@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c2bywivh62pms" path="res://assets/terrain textures/desert_ground_01_1k/desert_ground_01_baseColor_1k.png" id="7_dvgs6"]
 [ext_resource type="Texture2D" uid="uid://c5h7q1dr63w2p" path="res://assets/terrain textures/desert_ground_01_1k/desert_ground_01_normal_dx_1k.png" id="8_u6bq5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fq6sb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvgs6"]
 transparency = 4
 cull_mode = 2
 vertex_color_use_as_albedo = true
@@ -19,10 +19,10 @@ distance_fade_mode = 1
 distance_fade_min_distance = 128.0
 distance_fade_max_distance = 96.0
 
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_1obd8"]
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_u6bq5"]
 generated_type = 1
 height_offset = 0.5
-material_override = SubResource("StandardMaterial3D_fq6sb")
+material_override = SubResource("StandardMaterial3D_dvgs6")
 last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
@@ -54,5 +54,5 @@ normal_texture = ExtResource("8_u6bq5")
 uv_scale = 1.0
 
 [resource]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_1obd8")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_u6bq5")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_t0sh0"), SubResource("Terrain3DTextureAsset_1ml2i"), SubResource("Terrain3DTextureAsset_b5rlq"), SubResource("Terrain3DTextureAsset_tiyix")])
