@@ -1,31 +1,48 @@
 [gd_resource type="Terrain3DAssets" format=3 uid="uid://dm0bsh4mybs6u"]
 
+[ext_resource type="PackedScene" uid="uid://ddvp0rhkibt3u" path="res://prefabs/trees/tree_a.tscn" id="1_1ml2i"]
 [ext_resource type="Texture2D" uid="uid://tftpir2nnhnm" path="res://assets/terrain textures/ground_02_1k/ground_02_color_1k.png" id="1_2kjol"]
+[ext_resource type="PackedScene" uid="uid://c1napumpghc16" path="res://prefabs/trees/tree_b.tscn" id="2_b5rlq"]
 [ext_resource type="Texture2D" uid="uid://7pr615mc4r6u" path="res://assets/terrain textures/ground_02_1k/ground_02_normal_dx_1k.png" id="2_hmv1a"]
 [ext_resource type="Texture2D" uid="uid://bkusplcjnme7q" path="res://assets/terrain textures/grass_07_1k/grass_07_baseColor_1k.png" id="3_dvgs6"]
+[ext_resource type="PackedScene" uid="uid://bn3ip85amllx2" path="res://prefabs/trees/tree_c.tscn" id="3_vtng6"]
+[ext_resource type="PackedScene" uid="uid://cwu85u283hxgd" path="res://prefabs/trees/tree_d.tscn" id="4_kide5"]
 [ext_resource type="Texture2D" uid="uid://dbjrtnrjwlx8e" path="res://assets/terrain textures/grass_07_1k/grass_07_normal_dx_1k.png" id="4_u6bq5"]
 [ext_resource type="Texture2D" uid="uid://c5ex843p0txwe" path="res://assets/terrain textures/sand_01_1k/sand_01_color_1k.png" id="5_tiyix"]
 [ext_resource type="Texture2D" uid="uid://ds3gma2slv3cs" path="res://assets/terrain textures/sand_01_1k/sand_01_normal_dx_1k.png" id="6_k22f7"]
 [ext_resource type="Texture2D" uid="uid://c2bywivh62pms" path="res://assets/terrain textures/desert_ground_01_1k/desert_ground_01_baseColor_1k.png" id="7_dvgs6"]
 [ext_resource type="Texture2D" uid="uid://c5h7q1dr63w2p" path="res://assets/terrain textures/desert_ground_01_1k/desert_ground_01_normal_dx_1k.png" id="8_u6bq5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvgs6"]
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-backlight_enabled = true
-backlight = Color(0.5, 0.5, 0.5, 1)
-distance_fade_mode = 1
-distance_fade_min_distance = 128.0
-distance_fade_max_distance = 96.0
-
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_u6bq5"]
-generated_type = 1
-height_offset = 0.5
-material_override = SubResource("StandardMaterial3D_dvgs6")
+name = "tree_a"
+scene_file = ExtResource("1_1ml2i")
 last_lod = 0
 last_shadow_lod = 0
-lod0_range = 128.0
+lod0_range = 200.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_0hac2"]
+name = "tree_b"
+id = 1
+scene_file = ExtResource("2_b5rlq")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_650aq"]
+name = "tree_c"
+id = 2
+scene_file = ExtResource("3_vtng6")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_itr7p"]
+name = "tree_d"
+id = 3
+scene_file = ExtResource("4_kide5")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_t0sh0"]
 name = "ground_02_color_1k"
@@ -54,5 +71,5 @@ normal_texture = ExtResource("8_u6bq5")
 uv_scale = 1.0
 
 [resource]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_u6bq5")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_u6bq5"), SubResource("Terrain3DMeshAsset_0hac2"), SubResource("Terrain3DMeshAsset_650aq"), SubResource("Terrain3DMeshAsset_itr7p")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_t0sh0"), SubResource("Terrain3DTextureAsset_1ml2i"), SubResource("Terrain3DTextureAsset_b5rlq"), SubResource("Terrain3DTextureAsset_tiyix")])
