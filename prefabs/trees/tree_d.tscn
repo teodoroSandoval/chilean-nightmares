@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cwu85u283hxgd"]
+
+[ext_resource type="Texture2D" uid="uid://xicby65adahj" path="res://assets/trees/Tree 4/TREE 4_TEAL.png" id="1_2e66r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlf56"]
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_2e66r")
+billboard_mode = 2
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_k5ajt"]
+size = Vector2(4, 4)
+center_offset = Vector3(0, 2, 0)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k5ajt"]
+height = 4.131958
+radius = 0.52197266
+
+[node name="Tree_D" type="MeshInstance3D" unique_id=1075796987]
+material_override = SubResource("StandardMaterial3D_nlf56")
+gi_mode = 2
+mesh = SubResource("QuadMesh_k5ajt")
+
+[node name="collider" type="StaticBody3D" parent="." unique_id=9247821]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collider" unique_id=889917120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.055359, 0)
+shape = SubResource("CylinderShape3D_k5ajt")

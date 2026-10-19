@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://da2nynevset0g" path="res://assets/ui/bandeja vuelto.png" id="5_xbw1n"]
 [ext_resource type="PackedScene" uid="uid://ovtbqqrnqyg4" path="res://prefabs/cell.tscn" id="6_2np8k"]
 [ext_resource type="Texture2D" uid="uid://glr82nrlkbhc" path="res://assets/ui/Rectangle 41.png" id="6_hsn8a"]
+[ext_resource type="PackedScene" uid="uid://dh3pc2au73mw5" path="res://prefabs/streetlight.tscn" id="6_moi63"]
+[ext_resource type="PackedScene" uid="uid://borbvs7w1l1xs" path="res://prefabs/buildings/market_01.tscn" id="6_p84op"]
 [ext_resource type="Texture2D" uid="uid://coxmlyaynhh5g" path="res://assets/ui/pause.png" id="7_4j5yk"]
 [ext_resource type="Texture2D" uid="uid://d320ml58qgg1g" path="res://assets/ui/cliente fondo.png" id="7_hlv5w"]
 [ext_resource type="Texture2D" uid="uid://bppe46cfgn587" path="res://assets/personajes/character 02/character_image_02.png" id="8_e3rac"]
@@ -33,8 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="27_uu2b5"]
 [ext_resource type="Script" uid="uid://bwqdqgn7x1m5m" path="res://scripts/cameraController.gd" id="32_nprdk"]
 [ext_resource type="PackedScene" uid="uid://vvrdeo72uxqv" path="res://prefabs/player.tscn" id="33_nprdk"]
-[ext_resource type="PackedScene" uid="uid://be3lgwwdgdycp" path="res://prefabs/house_01.tscn" id="34_5q587"]
-[ext_resource type="PackedScene" uid="uid://c0hnnif6rcw8c" path="res://prefabs/tree_01.tscn" id="34_dyihr"]
+[ext_resource type="PackedScene" uid="uid://be3lgwwdgdycp" path="res://prefabs/buildings/house_01.tscn" id="34_5q587"]
 
 [sub_resource type="Environment" id="Environment_k5ajt"]
 background_energy_multiplier = 0.3
@@ -70,78 +71,90 @@ environment = SubResource("Environment_k5ajt")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0140381, -0.00012207031, 0.47521973)
 
-[node name="Tree_01" parent="map_base" unique_id=241761427 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.66138, 25.567596, -307.7889)
-
-[node name="Tree_02" parent="map_base" unique_id=447548356 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.9433, 25.567596, -302.84067)
-
-[node name="Tree_03" parent="map_base" unique_id=1512656577 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.40723, 25.567596, -296.89713)
-
-[node name="Tree_04" parent="map_base" unique_id=622668252 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.03534, 25.567596, -293.98038)
-
-[node name="Tree_05" parent="map_base" unique_id=1161235142 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.443115, 25.567596, -301.10785)
-
-[node name="Tree_06" parent="map_base" unique_id=625995936 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.443115, 24.72995, -331.10785)
-
-[node name="Tree_07" parent="map_base" unique_id=1417514524 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.39844, 24.72995, -319.04666)
-
-[node name="Tree_08" parent="map_base" unique_id=2131680001 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.39844, 24.72995, -334.04666)
-
-[node name="Tree_09" parent="map_base" unique_id=2137200249 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.57721, 24.72995, -326.56973)
-
-[node name="Tree_10" parent="map_base" unique_id=1690653194 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.25482, 24.72995, -324.26926)
-
-[node name="Tree_11" parent="map_base" unique_id=972046409 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.94348, 24.72995, -329.9103)
-
-[node name="Tree_12" parent="map_base" unique_id=1502625811 instance=ExtResource("34_dyihr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.55481, 24.7182, -335.04)
-
-[node name="house_01" parent="map_base" unique_id=180369549 instance=ExtResource("34_5q587")]
-transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 119.58923, 27.416992, -315.43283)
-
-[node name="house_02" parent="map_base" unique_id=1604947196 instance=ExtResource("34_5q587")]
-transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 114.859985, 27.416992, -311.1289)
-
-[node name="house_03" parent="map_base" unique_id=2036050497 instance=ExtResource("34_5q587")]
-transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 87.86052, 27.416992, -311.02173)
-
-[node name="house_04" parent="map_base" unique_id=199624697 instance=ExtResource("34_5q587")]
-transform = Transform3D(3.5182893, 0, 3.5526946, 0, 5, 0, -3.5526946, 0, 3.5182893, 83.42641, 27.416992, -306.13013)
-
-[node name="house_05" parent="map_base" unique_id=766138374 instance=ExtResource("34_5q587")]
-transform = Transform3D(2.6819468, 0, 4.219853, 0, 4.9999995, 0, -4.219853, 0, 2.6819468, 79.10715, 27.416992, -300.71744)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="map_base" unique_id=1749402171]
 transform = Transform3D(1, 0, 0, 0, -0.48938254, 0.87206924, 0, -0.87206924, -0.48938254, 0, 0, 0)
 light_energy = 0.0
 
-[node name="SpotLight3D" type="SpotLight3D" parent="map_base" unique_id=1111031941]
-transform = Transform3D(1, 0, 0, 0, 0.021131448, 0.9997767, 0, -0.9997767, 0.021131448, 115.039474, 42.372833, -336.3053)
-light_energy = 7.61
-spot_range = 39.72044
-spot_angle = 64.12153
+[node name="Trees" type="Node3D" parent="map_base" unique_id=644477517]
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="map_base" unique_id=1195914350]
-transform = Transform3D(1, 0, 0, 0, 0.021131448, 0.9997767, 0, -0.9997767, 0.021131448, -17.729296, 74.05928, -44.55893)
-light_energy = 7.61
-spot_range = 39.72044
-spot_angle = 64.12153
+[node name="Buildings" type="Node3D" parent="map_base" unique_id=569966502]
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="map_base" unique_id=305538672]
-transform = Transform3D(1, 0, 0, 0, 0.021131448, 0.9997767, 0, -0.9997767, 0.021131448, -17.729296, 75.33746, 1.142189)
-light_energy = 7.61
-spot_range = 39.72044
-spot_angle = 64.12153
+[node name="house_01" parent="map_base/Buildings" unique_id=180369549 instance=ExtResource("34_5q587")]
+transform = Transform3D(-0.71523887, 0, -0.6988801, 0, 1, 0, 0.6988801, 0, -0.71523887, 122.699524, 25.883394, -316.89825)
+
+[node name="house_02" parent="map_base/Buildings" unique_id=1604947196 instance=ExtResource("34_5q587")]
+transform = Transform3D(-0.71690744, 0, -0.69716835, 0, 1, 0, 0.69716835, 0, -0.71690744, 114.364296, 25.672556, -308.97598)
+
+[node name="house_03" parent="map_base/Buildings" unique_id=2036050497 instance=ExtResource("34_5q587")]
+transform = Transform3D(0.54803854, 0, 0.8364531, 0, 1, 0, -0.8364531, 0, 0.54803854, 58.625263, 28.227407, -272.922)
+
+[node name="house_04" parent="map_base/Buildings" unique_id=199624697 instance=ExtResource("34_5q587")]
+transform = Transform3D(0.4999518, 0, 0.8660534, 0, 1, 0, -0.8660534, 0, 0.4999518, 52.415794, 28.386303, -262.37744)
+
+[node name="house_05" parent="map_base/Buildings" unique_id=766138374 instance=ExtResource("34_5q587")]
+transform = Transform3D(0.46089435, 0, 0.88745505, 0, 1, 0, -0.88745505, 0, 0.46089435, 46.479828, 28.228685, -251.5902)
+
+[node name="house_06" parent="map_base/Buildings" unique_id=324594285 instance=ExtResource("34_5q587")]
+transform = Transform3D(-0.98218966, 0, -0.18789229, 0, 1, 0, 0.18789229, 0, -0.98218966, -236.70212, 112.60046, 171.25179)
+
+[node name="market_01" parent="map_base/Buildings" unique_id=628972984 instance=ExtResource("6_p84op")]
+transform = Transform3D(0.5869973, 0, 0.80958897, 0, 1, 0, -0.80958897, 0, 0.5869973, 24.53004, 33.82907, -207.7071)
+
+[node name="market_02" parent="map_base/Buildings" unique_id=196399478 instance=ExtResource("6_p84op")]
+transform = Transform3D(-0.6266093, 0, -0.7793336, 0, 1, 0, 0.7793336, 0, -0.6266093, 102.69902, 25.859934, -293.4385)
+
+[node name="market_03" parent="map_base/Buildings" unique_id=807726747 instance=ExtResource("6_p84op")]
+transform = Transform3D(-0.5721943, 0, -0.8201182, 0, 1, 0, 0.8201182, 0, -0.5721943, 176.32202, 30.375414, -18.87142)
+
+[node name="market_04" parent="map_base/Buildings" unique_id=678418540 instance=ExtResource("6_p84op")]
+transform = Transform3D(-0.9324242, 0, 0.36136588, 0, 1, 0, -0.36136588, 0, -0.9324242, -403.9679, 44.802, 163.41891)
+
+[node name="Lights" type="Node3D" parent="map_base" unique_id=2017015]
+
+[node name="Streetlight" parent="map_base/Lights" unique_id=814786002 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.7158636, 0, -0.69824016, 0, 1, 0, 0.69824016, 0, 0.7158636, 115.47877, 25.749533, -320.46677)
+
+[node name="Streetlight11" parent="map_base/Lights" unique_id=1927241849 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.7158636, 0, -0.69824016, 0, 1, 0, 0.69824016, 0, 0.7158636, -51.006283, 66.99347, 43.48718)
+
+[node name="Streetlight13" parent="map_base/Lights" unique_id=1353667883 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.7158636, 0, -0.69824016, 0, 1, 0, 0.69824016, 0, 0.7158636, -10.030559, 49.533237, -48.51439)
+
+[node name="Streetlight12" parent="map_base/Lights" unique_id=1262438760 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.9921413, 0, 0.12512231, 0, 1, 0, -0.12512231, 0, 0.9921413, -231.13956, 111.916595, 163.62152)
+
+[node name="Streetlight14" parent="map_base/Lights" unique_id=688987454 instance=ExtResource("6_moi63")]
+transform = Transform3D(-0.17058611, 0, 0.98534286, 0, 1, 0, -0.98534286, 0, -0.17058611, -399.6697, 45.048267, 143.96185)
+
+[node name="Streetlight2" parent="map_base/Lights" unique_id=1982257039 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.7158636, 0, -0.69824016, 0, 1, 0, 0.69824016, 0, 0.7158636, 105.5729, 25.722147, -310.61887)
+
+[node name="Streetlight3" parent="map_base/Lights" unique_id=1105936620 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.7158636, 0, -0.69824016, 0, 1, 0, 0.69824016, 0, 0.7158636, 97.143486, 25.778776, -298.29236)
+
+[node name="Streetlight4" parent="map_base/Lights" unique_id=548541176 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.7158636, 0, -0.69824016, 0, 1, 0, 0.69824016, 0, 0.7158636, 85.668335, 24.951708, -282.83008)
+
+[node name="Streetlight5" parent="map_base/Lights" unique_id=655344257 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.8488671, 0, -0.5286063, 0, 1, 0, 0.5286063, 0, 0.8488671, 74.77373, 27.914257, -267.29538)
+
+[node name="Streetlight6" parent="map_base/Lights" unique_id=1146957028 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.8488671, 0, -0.5286063, 0, 1, 0, 0.5286063, 0, 0.8488671, 66.72298, 27.993036, -248.47266)
+
+[node name="Streetlight7" parent="map_base/Lights" unique_id=797146703 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.8488671, 0, -0.5286063, 0, 1, 0, 0.5286063, 0, 0.8488671, 57.190945, 29.321095, -229.87383)
+
+[node name="Streetlight8" parent="map_base/Lights" unique_id=1260160833 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.8488671, 0, -0.5286063, 0, 1, 0, 0.5286063, 0, 0.8488671, 50.042717, 32.88833, -212.36742)
+
+[node name="Streetlight9" parent="map_base/Lights" unique_id=2081523608 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.8488671, 0, -0.5286063, 0, 1, 0, 0.5286063, 0, 0.8488671, 37.54399, 33.33952, -193.92856)
+
+[node name="Streetlight10" parent="map_base/Lights" unique_id=1425490290 instance=ExtResource("6_moi63")]
+transform = Transform3D(0.8488671, 0, -0.5286063, 0, 1, 0, 0.5286063, 0, 0.8488671, 26.85846, 33.707306, -179.00235)
+
+[node name="Streetlight15" parent="map_base/Lights" unique_id=1668598054 instance=ExtResource("6_moi63")]
+transform = Transform3D(-0.47931793, 0, -0.8776414, 0, 1, 0, 0.8776414, 0, -0.47931793, 166.59314, 30.096489, -39.15171)
 
 [node name="UI" type="Label" parent="." unique_id=1444114731]
 anchors_preset = 15
@@ -1361,7 +1374,7 @@ player = NodePath("../player")
 followDistance = 100.0
 
 [node name="player" parent="." unique_id=1896769258 node_paths=PackedStringArray("baseCam") instance=ExtResource("33_nprdk")]
-transform = Transform3D(-0.9867087, 0, 0.16249917, 0, 1, 0, -0.16249917, 0, -0.9867087, 84.063644, 25.32119, -341.29538)
+transform = Transform3D(-0.9867087, 0, 0.16249917, 0, 1, 0, -0.16249917, 0, -0.9867087, 117.796104, 25.32119, -339.9964)
 walkSpeed = 20.0
 runSpeed = 40.0
 baseCam = NodePath("../MainCamera3D")
