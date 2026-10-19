@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d4gd60y5pxerj"]
+
+[resource]
+resource_name = "PropsMaterial"
+vertex_color_use_as_albedo = true
+emission_enabled = true

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b00th31kyiobr"]
+
+[ext_resource type="Texture2D" uid="uid://bk1iahp4c1do" path="res://assets/trees/Tree 1/TREE 1_TEAL.png" id="1_tp6xt"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_tp6xt")
+billboard_mode = 2
+billboard_keep_scale = true
