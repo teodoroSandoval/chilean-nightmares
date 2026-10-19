@@ -24,6 +24,8 @@
 [ext_resource type="Resource" uid="uid://82gtbn3kbyec" path="res://settings/input/actions/action_gameplay_sprint.tres" id="21_yxbl0"]
 [ext_resource type="Resource" uid="uid://chy8wg2jogl6k" path="res://settings/input/actions/action_gameplay_interact.tres" id="22_yxbl0"]
 [ext_resource type="Resource" uid="uid://cw8xx6qvvkgyt" path="res://settings/input/actions/action_gameplay_interact2.tres" id="23_v2k7m"]
+[ext_resource type="Resource" uid="uid://satv611vu8vd" path="res://settings/input/actions/action_gameplay_lock_view.tres" id="25_idts7"]
+[ext_resource type="Resource" uid="uid://c3bui8dot11p0" path="res://settings/input/actions/action_gameplay_flashlight.tres" id="26_dlu1c"]
 
 [node name="InputManager" type="Node2D" unique_id=1559538305]
 script = ExtResource("1_56edw")
@@ -50,3 +52,5 @@ gameplay_crouch = ExtResource("20_ulqtv")
 gameplay_sprint = ExtResource("21_yxbl0")
 gameplay_interact = ExtResource("22_yxbl0")
 gameplay_interact2 = ExtResource("23_v2k7m")
+gameplay_lock_view = ExtResource("25_idts7")
+gameplay_flashlight = ExtResource("26_dlu1c")

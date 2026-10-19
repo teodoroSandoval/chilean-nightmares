@@ -29,15 +29,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -651.0
+offset_left = -843.0
 offset_top = -479.0
-offset_right = 651.0
+offset_right = 822.0
 offset_bottom = -225.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 150
-text = "title"
+text = "Chilean Nightmares"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -57,10 +57,11 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 74
-text = "play story mode"
+text = "play"
 
 [node name="ButtonPlayInfnite" type="Button" parent="MainMenu/CenterContainer/VBoxContainer" unique_id=486982992]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 74
 text = "play infinite mode"

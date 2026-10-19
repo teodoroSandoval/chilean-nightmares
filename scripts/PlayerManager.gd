@@ -10,13 +10,16 @@ class_name PlayerManager
 @export var zoomSpeed: float = 1.0
 @export var minZoom: float = 1
 @export var maxZoom: float = 100
+@export var flashlight: SpotLight3D
 var camRotation: float = 0.0
 var camZoom: float = 0.0
 var is_movement_paused: bool = false
 var is_dead: bool = false
+var light_intensity: float = 1.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	if flashlight:
+		light_intensity = flashlight.light_energy
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if baseCam:
@@ -49,6 +52,7 @@ func enable_inputs() -> void:
 	InputManager.gameplay_grab.triggered.connect(_action_grab)
 	InputManager.gameplay_throw.triggered.connect(_action_throw)
 	InputManager.gameplay_jump.triggered.connect(_action_jump)
+	InputManager.gameplay_flashlight.completed.connect(_action_flashlight)
 
 
 func disable_inputs() -> void:
@@ -61,15 +65,19 @@ func disable_inputs() -> void:
 	InputManager.gameplay_grab.triggered.disconnect(_action_grab)
 	InputManager.gameplay_throw.triggered.disconnect(_action_throw)
 	InputManager.gameplay_jump.triggered.disconnect(_action_jump)
+	InputManager.gameplay_flashlight.completed.disconnect(_action_flashlight)
 
 func _on_look_input() -> void:
 	var input_vector: Vector2 = InputManager.gameplay_look.value_axis_2d
 	# TODO: rotate camera along y axis only
 	camRotation = input_vector.x
+	
+	if InputManager.gameplay_lock_view.value_bool:
+		var cam_forward: Vector3 = -baseCam.transform.basis.z.normalized()
+		rotation.y = atan2(-cam_forward.x, -cam_forward.z)
 
 func _on_movement_input() -> void:
 	var input_vector: Vector2 = InputManager.gameplay_move.value_axis_2d
-	# TODO: move player with CharacterBody3D
 	if input_vector == Vector2.ZERO:
 		velocity.x = 0
 		velocity.z = 0
@@ -104,6 +112,9 @@ func _on_movement_input() -> void:
 
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+	
+	if !InputManager.gameplay_lock_view.value_bool:
+		rotation.y = atan2(-velocity.x, -velocity.z)
 
 func _on_zoom_input() -> void:
 	var input_vector: float = InputManager.gameplay_zoom.value_axis_1d
@@ -127,3 +138,8 @@ func _pause_movement() -> void:
 func _resume_movement() -> void:
 	is_movement_paused = false
 	enable_inputs()
+func _action_flashlight() -> void:
+	print("Flashlight action triggered")
+	# Handle flashlight toggle action
+	if flashlight:
+		flashlight.light_energy = light_intensity if flashlight.light_energy == 0.0 else 0.0

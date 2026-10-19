@@ -33,6 +33,8 @@ var _current_device_type:GUIDEInput.DeviceType = GUIDEInput.DeviceType.MOUSE
 @export var gameplay_sprint:GUIDEAction
 @export var gameplay_interact:GUIDEAction
 @export var gameplay_interact2:GUIDEAction
+@export var gameplay_lock_view:GUIDEAction
+@export var gameplay_flashlight:GUIDEAction
 # 
 
 # var last_ui_input_vector: Vector2 = Vector2.ZERO

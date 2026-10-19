@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GUIDEAction" format=3 uid="uid://c3bui8dot11p0"]
+
+[ext_resource type="Script" uid="uid://cluhc11vixkf1" path="res://addons/guide/guide_action.gd" id="1_xb8ua"]
+
+[resource]
+script = ExtResource("1_xb8ua")
+name = &"flashlight"
+is_remappable = true
+metadata/_custom_type_script = "uid://cluhc11vixkf1"
