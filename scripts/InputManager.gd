@@ -45,72 +45,19 @@ var _current_device_type:GUIDEInput.DeviceType = GUIDEInput.DeviceType.MOUSE
 @export var gameplay_quick_slot_4:GUIDEAction
 @export var gameplay_quickslot_next_wieldable:GUIDEAction
 @export var gameplay_quickslot_prev_wieldable:GUIDEAction
-# 
 
-# var last_ui_input_vector: Vector2 = Vector2.ZERO
-# var last_gameplay_input_vector: Vector2 = Vector2.ZERO
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# gameplay_move.changed.connect(_on_movement_input)
 	controller_activated.triggered.connect(_on_device_activated.bind(GUIDEInput.DeviceType.JOY))
 	keyboard_mouse_activated.triggered.connect(_on_device_activated.bind(GUIDEInput.DeviceType.KEYBOARD | GUIDEInput.DeviceType.MOUSE))
-	# keyboard_mouse_activated.changed.connect(_on_device_activated.bind(GUIDEInput.DeviceType.KEYBOARD | GUIDEInput.DeviceType.MOUSE))
 	touch_activated.triggered.connect(_on_device_activated.bind(GUIDEInput.DeviceType.TOUCH))
 	ui_move.triggered.connect(_on_movement_input)
 	ui_submit.triggered.connect(_on_submit_input)
 	ui_cancel.triggered.connect(_on_cancel_input)
-	# last_ui_input_vector = Vector2.ZERO
-	# last_gameplay_input_vector = Vector2.ZERO
-	# _setup_input_connections()
 	pass
-## Called when a certain device is activated. Depending on the mode
-## updates the rendering to only show the last activated device.	
 func _on_device_activated(type:GUIDEInput.DeviceType) -> void:
 	_current_device_type = type
 	on_device_changed.emit()
 	
-	# _formatter.formatting_options.input_filter = _filter_current_device_type
-	
-	# label._update_instructions()
-
-# func _setup_input_connections() -> void:
-	# fire.triggered.connect(func() -> void: gpu_particles_2d.emitting = true)
-	# fire.completed.connect(func() -> void: gpu_particles_2d.emitting = false)
-# func _input(event: InputEvent) -> void:
-# 	if event is InputEventKey and (event as InputEventKey).pressed:
-# 		if not (event as InputEventKey).echo: # non continuous inputs
-# 			if(is_input_enabled_UI):
-# 				# 1. Triggered ONCE exactly when the button is first pressed down
-# 				if event.is_action_pressed("ui_Submit") && ui_submit.has_connections():
-# 					ui_submit.emit()
-# 				elif event.is_action_pressed("ui_Cancel") && on_ui_Cancel_pressed.has_connections():
-# 					on_ui_Cancel_pressed.emit()
-# 				elif ui_move.has_connections() and (event.is_action_pressed("ui_Up")  or event.is_action_pressed("ui_Down") or event.is_action_pressed("ui_Left") or event.is_action_pressed("ui_Right")):
-# 					var current_ui_input_vector: Vector2 = Input.get_vector("ui_Left", "ui_Right", "ui_Up", "ui_Down")
-# 					# if current_ui_input_vector != last_ui_input_vector:
-# 					ui_move.emit(current_ui_input_vector)
-# 					# last_ui_input_vector = current_ui_input_vector
-# 			if(is_input_enabled_Gameplay):
-# 				# 1. Triggered ONCE exactly when the button is first pressed down
-# 				if gameplay_move.has_connections() and (event.is_action_pressed("gameplay_Up")  or event.is_action_pressed("gameplay_Down") or event.is_action_pressed("gameplay_Left") or event.is_action_pressed("gameplay_Right")):
-# 					var current_gameplay_input_vector: Vector2 = Input.get_vector("gameplay_Left", "gameplay_Right", "gameplay_Up", "gameplay_Down")
-# 					# if current_gameplay_input_vector != last_gameplay_input_vector:
-# 					gameplay_move.emit(current_gameplay_input_vector)
-# 					# last_gameplay_input_vector = current_gameplay_input_vector
-# 				if event.is_action_pressed("gameplay_Grab") && gameplay_grab.has_connections():
-# 					gameplay_grab.emit()
-# 				elif event.is_action_pressed("gameplay_Throw") && gameplay_throw.has_connections():
-# 					gameplay_throw.emit()
-# 				elif event.is_action_pressed("gameplay_GiveChange") && gameplay_give_change.has_connections():
-# 					gameplay_give_change.emit()
-# 				elif event.is_action_pressed("gameplay_ReturnChange") && gameplay_return_change.has_connections():
-# 					gameplay_return_change.emit()
-# 				elif event.is_action_pressed("gameplay_Pause") && gameplay_pause.has_connections():
-# 					gameplay_pause.emit()
-		# var key : int = (event as InputEventKey).physical_keycode
-		# _check_cheats(key)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
 func _on_movement_input() -> void:
 	var input_vector: Vector2 = InputManager.ui_move.value_axis_2d
 	# Translate the GUIDE joystick movement back into a Native Godot Input Event
@@ -157,19 +104,19 @@ func _on_cancel_input() -> void:
 
 func enable_input_UI() -> void:
 	is_input_enabled_UI = true
-	GUIDE.enable_mapping_context(mapping_context_ui)
+	# GUIDE.enable_mapping_context(mapping_context_ui)
 
 func disable_input_UI() -> void:
 	is_input_enabled_UI = false
-	GUIDE.disable_mapping_context(mapping_context_ui)
+	# GUIDE.disable_mapping_context(mapping_context_ui)
 
 func enable_input_Gameplay() -> void:
 	is_input_enabled_Gameplay = true
-	GUIDE.enable_mapping_context(mapping_context_gameplay)
+	# GUIDE.enable_mapping_context(mapping_context_gameplay)
 
 func disable_input_Gameplay() -> void:
 	is_input_enabled_Gameplay = false
-	GUIDE.disable_mapping_context(mapping_context_gameplay)
+	# GUIDE.disable_mapping_context(mapping_context_gameplay)
 
 func switch_to_UI() -> void:
 	print("switching to UI")
