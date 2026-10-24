@@ -26,6 +26,16 @@
 [ext_resource type="Resource" uid="uid://cw8xx6qvvkgyt" path="res://settings/input/actions/action_gameplay_interact2.tres" id="23_v2k7m"]
 [ext_resource type="Resource" uid="uid://satv611vu8vd" path="res://settings/input/actions/action_gameplay_lock_view.tres" id="25_idts7"]
 [ext_resource type="Resource" uid="uid://c3bui8dot11p0" path="res://settings/input/actions/action_gameplay_flashlight.tres" id="26_dlu1c"]
+[ext_resource type="Resource" uid="uid://xxy06oq70d6i" path="res://settings/input/actions/action_gameplay_action_primary.tres" id="27_8jvhr"]
+[ext_resource type="Resource" uid="uid://d3wralhq7woix" path="res://settings/input/actions/action_gameplay_action_secondary.tres" id="28_yftcc"]
+[ext_resource type="Resource" uid="uid://y0j0uwak7ek3" path="res://settings/input/actions/action_gameplay_change_ammo.tres" id="29_rgl8m"]
+[ext_resource type="Resource" uid="uid://dply80man7tly" path="res://settings/input/actions/action_gameplay_reload.tres" id="30_1c6xf"]
+[ext_resource type="Resource" uid="uid://ooy6lbmeu3jx" path="res://settings/input/actions/action_gameplay_quick_slot_1.tres" id="31_aqoud"]
+[ext_resource type="Resource" uid="uid://bckjrcc18rsnd" path="res://settings/input/actions/action_gameplay_quick_slot_2.tres" id="32_quh6x"]
+[ext_resource type="Resource" uid="uid://b4hlhrji18agw" path="res://settings/input/actions/action_gameplay_quick_slot_3.tres" id="33_q8h8q"]
+[ext_resource type="Resource" uid="uid://cc7sr4c85ts6q" path="res://settings/input/actions/action_gameplay_quick_slot_4.tres" id="34_by37g"]
+[ext_resource type="Resource" uid="uid://bkhjecshl2rec" path="res://settings/input/actions/action_gameplay_quick_slot_next.tres" id="35_51awk"]
+[ext_resource type="Resource" uid="uid://cfercwgl48dvd" path="res://settings/input/actions/action_gameplay_quick_slot_prev.tres" id="36_vjjxc"]
 
 [node name="InputManager" type="Node2D" unique_id=1559538305]
 script = ExtResource("1_56edw")
@@ -54,3 +64,13 @@ gameplay_interact = ExtResource("22_yxbl0")
 gameplay_interact2 = ExtResource("23_v2k7m")
 gameplay_lock_view = ExtResource("25_idts7")
 gameplay_flashlight = ExtResource("26_dlu1c")
+gameplay_action_primary = ExtResource("27_8jvhr")
+gameplay_action_secondary = ExtResource("28_yftcc")
+gameplay_change_ammo_type = ExtResource("29_rgl8m")
+gameplay_reload = ExtResource("30_1c6xf")
+gameplay_quick_slot_1 = ExtResource("31_aqoud")
+gameplay_quick_slot_2 = ExtResource("32_quh6x")
+gameplay_quick_slot_3 = ExtResource("33_q8h8q")
+gameplay_quick_slot_4 = ExtResource("34_by37g")
+gameplay_quickslot_next_wieldable = ExtResource("35_51awk")
+gameplay_quickslot_prev_wieldable = ExtResource("36_vjjxc")

@@ -35,6 +35,16 @@ var _current_device_type:GUIDEInput.DeviceType = GUIDEInput.DeviceType.MOUSE
 @export var gameplay_interact2:GUIDEAction
 @export var gameplay_lock_view:GUIDEAction
 @export var gameplay_flashlight:GUIDEAction
+@export var gameplay_action_primary:GUIDEAction
+@export var gameplay_action_secondary:GUIDEAction
+@export var gameplay_change_ammo_type:GUIDEAction
+@export var gameplay_reload:GUIDEAction
+@export var gameplay_quick_slot_1:GUIDEAction
+@export var gameplay_quick_slot_2:GUIDEAction
+@export var gameplay_quick_slot_3:GUIDEAction
+@export var gameplay_quick_slot_4:GUIDEAction
+@export var gameplay_quickslot_next_wieldable:GUIDEAction
+@export var gameplay_quickslot_prev_wieldable:GUIDEAction
 # 
 
 # var last_ui_input_vector: Vector2 = Vector2.ZERO
@@ -100,8 +110,7 @@ func _on_device_activated(type:GUIDEInput.DeviceType) -> void:
 		# var key : int = (event as InputEventKey).physical_keycode
 		# _check_cheats(key)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
 func _on_movement_input() -> void:
 	var input_vector: Vector2 = InputManager.ui_move.value_axis_2d
 	# Translate the GUIDE joystick movement back into a Native Godot Input Event
