@@ -14,6 +14,7 @@ signal mouse_movement(relative_mouse_movement:Vector2)
 #region Variables
 ## Reference to Pause menu node
 @export var pause_menu : PackedScene
+@export var input_hints : PackedScene
 ## Refereence to Player HUD node
 @export var player_hud : CogitoPlayerHudManager
 # Used for handling input when UI is open/displayed
@@ -521,6 +522,8 @@ func update_look_movement_mouse(event):
 			if camera_mode == 1:
 				neck.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
 				neck.rotation.y = clamp(neck.rotation.y, deg_to_rad(-120), deg_to_rad(120))
+			else:
+				rotate_player_to_camera_front()
 		else:
 			if camera_mode == 1:
 				body.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
@@ -536,6 +539,8 @@ func update_look_movement_mouse(event):
 		else:
 			camera_3rdP.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS) * y_axis_scale)
 			_set_3rdP_camera_position()
+			head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENS) * y_axis_scale)
+			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 			# if camZoom != 0:
 			# 	var scalarFactor = baseCam.size / minZoom
@@ -546,8 +551,15 @@ func update_look_movement_mouse(event):
 	mouse_movement.emit(look_movement)
 
 func rotate_player_to_direction() -> void:
-	
-	body.rotation.y = atan2(-direction.x, -direction.z)
+	var target_rotation = atan2(-direction.x, -direction.z)
+	body.rotation.y = lerp_angle(body.rotation.y, target_rotation, 0.1)
+
+func rotate_player_to_camera_front() -> void:
+	var camera_forward: Vector3 = camera_3rdP.transform.basis.z.normalized()
+	camera_forward.y = 0
+	camera_forward.normalized()
+	var target_rotation = atan2(camera_forward.x, camera_forward.z)
+	body.rotation.y = target_rotation
 
 func _set_3rdP_camera_position() -> void:
 	camera_3rdP.rotation_degrees.x = -LOOK_ANGLE
@@ -589,6 +601,9 @@ func _process_analog_stick_mouselook():
 func _free_look(delta):
 	if Input.is_action_pressed("free_look") or !sliding_timer.is_stopped() or current_moving_state == MovingState.Rolling:
 		is_free_looking = true
+		if camera_mode == 0:
+			rotate_player_to_camera_front()
+
 		if sliding_timer.is_stopped():
 			eyes.rotation.z = -deg_to_rad(
 				neck.rotation.y * FREE_LOOK_TILT_AMOUNT
@@ -905,7 +920,6 @@ func get_current_input_direction() -> Vector3:
 		cam_right = cam_right.normalized()
 		# Calculate the movement direction based on camera orientation
 		var move_direction: Vector3 = (cam_forward * input_direction.y) + (cam_right * input_direction.x)
-		print(move_direction)
 		return move_direction.normalized()
 
 func _is_ledge_climbable() -> bool:
@@ -1117,7 +1131,7 @@ func _input_handling_and_movement(delta):
 	if direction and active:
 		main_velocity.x = lerp(main_velocity.x, direction.x * current_speed, delta * current_lerp_speed)
 		main_velocity.z = lerp(main_velocity.z, direction.z * current_speed, delta * current_lerp_speed)
-		if camera_mode == 0:
+		if camera_mode == 0 && !is_free_looking:
 			rotate_player_to_direction()
 	else:
 		main_velocity.x = lerp(main_velocity.x, 0.0, delta * current_lerp_speed)

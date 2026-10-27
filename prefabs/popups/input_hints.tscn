@@ -1,0 +1,318 @@
+[gd_scene format=3 uid="uid://8m5dupskls3x"]
+
+[ext_resource type="PackedScene" uid="uid://btf6bmlgtfk1b" path="res://addons/cogito/Components/DynamicInputIcon.tscn" id="1_5778l"]
+[ext_resource type="Script" uid="uid://cb4udt7lqsyfs" path="res://scripts/popups/input_hints_controller.gd" id="1_v7dax"]
+
+[node name="input hints" type="Control" unique_id=879608133]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v7dax")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=326611916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 631.0
+offset_top = 322.0
+offset_right = -704.0
+offset_bottom = -330.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5372549)
+
+[node name="CloseButton" type="Button" parent="ColorRect" unique_id=931151005]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 37.0
+offset_bottom = 37.0
+text = "X"
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=2120821236]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = -4.0
+offset_right = 17.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/CenterContainer" unique_id=1258014954]
+layout_mode = 2
+columns = 2
+
+[node name="input item base" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=470250447]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base" unique_id=1969919033]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "moverse:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base" unique_id=1117334266 instance=ExtResource("1_5778l")]
+position = Vector2(111.000015, 25)
+action_name = "forward"
+
+[node name="DynamicInputIcon2" parent="ColorRect/CenterContainer/GridContainer/input item base" unique_id=1973615717 instance=ExtResource("1_5778l")]
+position = Vector2(151.00002, 25)
+action_name = "back"
+
+[node name="DynamicInputIcon3" parent="ColorRect/CenterContainer/GridContainer/input item base" unique_id=551633432 instance=ExtResource("1_5778l")]
+position = Vector2(190.00002, 25)
+action_name = "left"
+
+[node name="DynamicInputIcon4" parent="ColorRect/CenterContainer/GridContainer/input item base" unique_id=26377244 instance=ExtResource("1_5778l")]
+position = Vector2(228.00002, 25)
+action_name = "right"
+
+[node name="input item base2" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=694172506]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base2" unique_id=198483557]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "mirar:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base2" unique_id=1180310176 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+frame = 115
+action_name = "look"
+
+[node name="input item base3" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1390639911]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base3" unique_id=1472361261]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "saltar:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base3" unique_id=828442453 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "jump"
+
+[node name="input item base4" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1581704285]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base4" unique_id=2121130926]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "agacharse:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base4" unique_id=1089061099 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "crouch"
+
+[node name="input item base5" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1762410812]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base5" unique_id=1710446213]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "correr:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base5" unique_id=999334457 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "sprint"
+
+[node name="input item base6" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1878548914]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base6" unique_id=702788178]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "pause:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base6" unique_id=817687146 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "menu"
+
+[node name="input item base7" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=2027782811]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base7" unique_id=1672891193]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "inventario:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base7" unique_id=1632879929 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "inventory"
+
+[node name="input item base8" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1579030111]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base8" unique_id=2008144013]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "fijar direccion:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base8" unique_id=670573287 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "free_look"
+
+[node name="input item base9" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=2139300195]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base9" unique_id=999668511]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "interaccion 1:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base9" unique_id=818642352 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "interact"
+
+[node name="input item base10" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=802049528]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base10" unique_id=659022361]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "interaccion 2:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base10" unique_id=22707625 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "interact2"
+
+[node name="input item base11" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1491597392]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base11" unique_id=1226099868]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "accion primaria:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base11" unique_id=448914894 instance=ExtResource("1_5778l")]
+position = Vector2(199.045, 25)
+action_name = "action_primary"
+
+[node name="input item base12" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=492442306]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base12" unique_id=527533432]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.76100004
+anchor_bottom = 1.0
+offset_right = -0.25001526
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+text = "accion secundaria:"
+fit_content = true
+vertical_alignment = 1
+
+[node name="DynamicInputIcon" parent="ColorRect/CenterContainer/GridContainer/input item base12" unique_id=849919486 instance=ExtResource("1_5778l")]
+position = Vector2(198.99995, 25)
+action_name = "action_secondary"
+
+[connection signal="pressed" from="ColorRect/CloseButton" to="." method="close_input_hints"]

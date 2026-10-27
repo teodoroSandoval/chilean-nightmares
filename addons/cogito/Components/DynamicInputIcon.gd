@@ -109,6 +109,7 @@ func update_icon_kbm(): # Sets the bound action to keyboard and mouse icon
 	if keyboard_input is InputEventKey:
 		var keycode: int = maxi(keyboard_input.physical_keycode, keyboard_input.keycode)
 		if keycode_to_frame_index(OS.get_keycode_string(keycode)) == -1:
+			print("cant found keycode icon: " + OS.get_keycode_string(keycode) + " - " + str(keycode))
 			return
 		frame = keycode_to_frame_index(OS.get_keycode_string(keycode))
 	elif keyboard_input is InputEventMouseButton:
@@ -123,7 +124,8 @@ func update_icon_kbm(): # Sets the bound action to keyboard and mouse icon
 		if keyboard_input.get_button_index() == MOUSE_BUTTON_WHEEL_DOWN:
 			frame = keycode_to_frame_index("Mouse Wheel Down")
 		
-		
+	elif action_name == "look":
+		frame = 115
 	else:
 		CogitoGlobals.debug_log(true, "DynamicInputIcon.gd", "Action " + action_name + ": No primary keyboard/mouse input map assigned.")
 		frame = 0
@@ -313,6 +315,11 @@ func keycode_to_frame_index(key_code_string: String) -> int:
 			return 65
 		"Shift":
 			return 66
+		"Backspace":
+			return 67
+		"CapsLock":
+			return 68
+		
 		
 		_:
 			return -1
