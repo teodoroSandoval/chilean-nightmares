@@ -1,14 +1,5 @@
 [gd_scene format=3 uid="uid://b3iffeinfphu6"]
 
-[ext_resource type="Script" uid="uid://c14mpad8x8xjb" path="res://scripts/input_label.gd" id="1_4fyek"]
-[ext_resource type="Script" uid="uid://cluhc11vixkf1" path="res://addons/guide/guide_action.gd" id="2_wtidm"]
-[ext_resource type="Resource" uid="uid://daremaunsm8w7" path="res://settings/input/actions/action_gameplay_move.tres" id="3_w416m"]
-[ext_resource type="Resource" uid="uid://dfsnqpdqr6x42" path="res://settings/input/actions/action_gameplay_grab.tres" id="4_q3weh"]
-[ext_resource type="Resource" uid="uid://ca4lax2q1f2cs" path="res://settings/input/actions/action_gameplay_throw.tres" id="5_ncejo"]
-[ext_resource type="Resource" uid="uid://b5dj2s6h0ybw" path="res://settings/input/actions/action_gameplay_give_change.tres" id="6_mkxqt"]
-[ext_resource type="Resource" uid="uid://vx2lpeca1cye" path="res://settings/input/actions/action_gameplay_return_change.tres" id="7_80ldw"]
-[ext_resource type="Resource" uid="uid://dyalbac1eamwm" path="res://settings/input/context_gameplay.tres" id="8_ys7e0"]
-
 [node name="InstructionsGameplayLabel" type="RichTextLabel" unique_id=1172975986]
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +12,3 @@ bbcode_enabled = true
 text = "m_00"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("1_4fyek")
-instructions_text = "m_00"
-actions = Array[ExtResource("2_wtidm")]([ExtResource("3_w416m"), ExtResource("4_q3weh"), ExtResource("5_ncejo"), ExtResource("6_mkxqt"), ExtResource("7_80ldw")])
-limit_to_context = ExtResource("8_ys7e0")

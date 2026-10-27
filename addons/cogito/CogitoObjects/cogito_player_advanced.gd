@@ -11,7 +11,6 @@ signal toggled_interface(is_showing_ui:bool)
 
 signal mouse_movement(relative_mouse_movement:Vector2)
 
-
 #region Variables
 ## Reference to Pause menu node
 @export var pause_menu : PackedScene
@@ -107,6 +106,8 @@ var landing_volume: float = 0.8
 @export var LANDING_MIN_ROLL_VELOCITY : float = -8.5
 @export var FREE_FALL_MIN_VELOCITY : float = -15
 @export var FREE_FALL_MIN_DIE_VELOCITY : float = -40
+@export var FOLLOW_DISTANCE: float = 100.0
+@export var LOOK_ANGLE: float = 30.0
 
 @export_group("Headbob Properties")
 ## Head bob strength. Currently controlled/overridden by the in-game options.
@@ -212,13 +213,18 @@ var ledge_climbing_shapecast_initial_position : Vector3
 
 #var external_gravity_force : Vector3 = Vector3.ZERO
 
+var camera: Camera3D
+var camera_mode: int = 0
+var last_camera_mode: int = 1
+var prev_camera_mode: int = -1
 # Node caching
 @onready var player_interaction_component: PlayerInteractionComponent = $PlayerInteractionComponent
 @onready var body: Node3D = $Body
 @onready var neck: Node3D = $Body/Neck
 @onready var head: Node3D = $Body/Neck/Head
 @onready var eyes: Node3D = $Body/Neck/Head/Eyes
-@onready var camera: Camera3D = $Body/Neck/Head/Eyes/Camera
+@onready var camera_FP: Camera3D = $Body/Neck/Head/Eyes/Camera
+@onready var camera_3rdP: Camera3D = $Camera_3rdP
 @onready var animationPlayer: AnimationPlayer = $Body/Neck/Head/Eyes/AnimationPlayer
 @onready var swimming_head_shapecast: ShapeCast3D = $Body/Neck/Head/Eyes/Camera/SwimmingHeadShapeCast
 @onready var under_water_effect: ColorRect = $GUI/Panel/AspectRatioContainer/UnderWaterEffect
@@ -256,6 +262,8 @@ func _ready():
 	if uid == -1:
 		uid = get_instance_id()
 	
+	set_camera_mode()
+
 	initial_collision_mask = collision_mask
 	
 	CogitoSceneManager._current_player_node = self
@@ -432,31 +440,34 @@ func resume() -> void:
 	is_in_interaction_state = true
 	state_chart.send_event("resume")
 
+func switch_next_camera_mode() -> void:
+	camera_mode = camera_mode + 1
+	if camera_mode > last_camera_mode:
+		camera_mode = 0
+	set_camera_mode()
 
+func set_camera_mode() -> void:
+	if prev_camera_mode != camera_mode:
+		prev_camera_mode = camera_mode
+
+		match camera_mode:
+			0:
+				set_3rdPersonCamera()
+			1:
+				set_1stPersonCamera()
+			_:
+				pass
+func set_3rdPersonCamera() -> void:
+	camera = camera_3rdP
+	camera.make_current()
+
+func set_1stPersonCamera() -> void:
+	camera = camera_FP
+	camera.make_current()
+			
 func on_input(event):
 	if event is InputEventMouseMotion and is_mouselook_active:
-		var look_movement: Vector2 = Vector2(0.0,0.0)
-		
-		#If players sitting & look marker is present, use sittable look handling
-		if is_sitting and CogitoSceneManager._current_sittable_node.look_marker_node:
-			handle_sitting_look(event)
-		else:
-			if is_free_looking:
-				neck.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
-				neck.rotation.y = clamp(neck.rotation.y, deg_to_rad(-120), deg_to_rad(120))
-			else:
-				body.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
-				look_movement.x = -event.relative.x
-			
-			if INVERT_Y_AXIS:
-				head.rotate_x(-deg_to_rad(-event.relative.y * MOUSE_SENS))
-				look_movement.y = -event.relative.y
-			else:
-				head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENS))
-				look_movement.y = event.relative.y
-			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-			
-		mouse_movement.emit(look_movement)
+		update_look_movement_mouse(event)
 
 	# Checking Analog stick input for mouse look
 	if event is InputEventJoypadMotion and is_mouselook_active:
@@ -490,10 +501,61 @@ func on_input(event):
 	# Open/closes Inventory if Inventory button is pressed
 	if event.is_action_pressed("inventory") and !is_dead:
 		player_hud.set_inventory_visibility(true)
+
+	if event.is_action_pressed("switch_camera_mode") and !is_dead:
+		switch_next_camera_mode()
 		
 	if player_hud and player_hud.inventory_interface and player_hud.inventory_interface.quick_slots:
 		player_hud.inventory_interface.quick_slots.on_input(event)
 
+
+func update_look_movement_mouse(event):
+	
+	var look_movement: Vector2 = Vector2(0.0,0.0)
+		
+	#If players sitting & look marker is present, use sittable look handling
+	if is_sitting and CogitoSceneManager._current_sittable_node.look_marker_node:
+		handle_sitting_look(event)
+	else:
+		if is_free_looking:
+			if camera_mode == 1:
+				neck.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
+				neck.rotation.y = clamp(neck.rotation.y, deg_to_rad(-120), deg_to_rad(120))
+		else:
+			if camera_mode == 1:
+				body.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS))
+				look_movement.x = -event.relative.x
+		
+		var y_axis_scale = 1
+		if INVERT_Y_AXIS:
+			y_axis_scale = -1
+
+		if camera_mode == 1:
+			head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENS) * y_axis_scale)
+			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		else:
+			camera_3rdP.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS) * y_axis_scale)
+			_set_3rdP_camera_position()
+
+			# if camZoom != 0:
+			# 	var scalarFactor = baseCam.size / minZoom
+			# 	baseCam.size = clamp(baseCam.size + (camZoom * delta * zoomSpeed * scalarFactor), minZoom, maxZoom)
+
+		look_movement.y = event.relative.y * y_axis_scale
+		
+	mouse_movement.emit(look_movement)
+
+func rotate_player_to_direction() -> void:
+	
+	body.rotation.y = atan2(-direction.x, -direction.z)
+
+func _set_3rdP_camera_position() -> void:
+	camera_3rdP.rotation_degrees.x = -LOOK_ANGLE
+	
+	var player_position: Vector3 = global_position
+	var camera_forward: Vector3 = -camera_3rdP.transform.basis.z.normalized()
+	var offset: Vector3 = camera_forward * -FOLLOW_DISTANCE
+	camera_3rdP.global_position = player_position + offset
 
 func get_params(transform3d, motion):
 	var params : PhysicsTestMotionParameters3D = _params
@@ -831,12 +893,26 @@ func is_in_crouching_state():
 func is_in_sprinting_state():
 	return current_moving_state == MovingState.Sprinting
 
+func get_current_input_direction() -> Vector3:
+	if camera_mode == 1:
+		return (body.global_transform.basis * Vector3(input_direction.x, 0, input_direction.y)).normalized()
+	else:
+		var cam_forward: Vector3 = camera_3rdP.global_transform.basis.z
+		var cam_right: Vector3 = camera_3rdP.global_transform.basis.x
+		cam_forward.y = 0  # Keep movement in the horizontal plane
+		cam_right.y = 0  # Keep movement in the horizontal plane
+		cam_forward = cam_forward.normalized()
+		cam_right = cam_right.normalized()
+		# Calculate the movement direction based on camera orientation
+		var move_direction: Vector3 = (cam_forward * input_direction.y) + (cam_right * input_direction.x)
+		print(move_direction)
+		return move_direction.normalized()
 
 func _is_ledge_climbable() -> bool:
 	if not input_direction:
 		return false
-	
-	direction = (body.global_transform.basis * Vector3(input_direction.x, 0, input_direction.y)).normalized()
+
+	direction = get_current_input_direction()
 
 	if direction.dot(-body.global_basis.z) < 0.5:
 		return false
@@ -1041,6 +1117,8 @@ func _input_handling_and_movement(delta):
 	if direction and active:
 		main_velocity.x = lerp(main_velocity.x, direction.x * current_speed, delta * current_lerp_speed)
 		main_velocity.z = lerp(main_velocity.z, direction.z * current_speed, delta * current_lerp_speed)
+		if camera_mode == 0:
+			rotate_player_to_direction()
 	else:
 		main_velocity.x = lerp(main_velocity.x, 0.0, delta * current_lerp_speed)
 		main_velocity.z = lerp(main_velocity.z, 0.0, delta * current_lerp_speed)
@@ -1176,8 +1254,8 @@ func _on_grounded_state_physics_processing(delta: float) -> void:
 		eyes.position.y = lerp(eyes.position.y, 0.0, delta * LERP_SPEED)
 		eyes.position.x = lerp(eyes.position.x, 0.0, delta * LERP_SPEED)
 	
-	direction = (body.global_transform.basis * Vector3(input_direction.x, 0, input_direction.y)).normalized()
-	
+	direction = get_current_input_direction()
+
 	_footstep_sounds_system()
 	
 	if was_jumping and not jumped_from_slide and Input.is_action_pressed("sprint") and is_sprinting_in_airborne:
@@ -1885,7 +1963,7 @@ func _process_on_ladder(_delta):
 			neck.rotate_y(deg_to_rad(-joystick_v_event.get_axis_value() * JOY_V_SENS))
 			neck.rotation.y = clamp(neck.rotation.y, deg_to_rad(-120), deg_to_rad(120))
 
-	var look_vector = camera.get_camera_transform().basis
+	var look_vector = camera_FP.get_camera_transform().basis
 	var looking_down = look_vector.z.dot(Vector3.UP) > 0.5
 
 	# Applying ladder input_dir to direction
@@ -1921,7 +1999,7 @@ func enter_ladder(ladder: CollisionShape3D, ladderDir: Vector3):
 	# called by ladder_area.gd
 	ladder_direction = ladderDir
 	# try and capture player's intent based on where they're looking
-	var look_vector = camera.get_camera_transform().basis
+	var look_vector = camera_FP.get_camera_transform().basis
 	var looking_away = look_vector.z.dot(ladderDir) < 0.33
 	var looking_down = look_vector.z.dot(Vector3.UP) > 0.5
 	if looking_down or not looking_away:
@@ -1992,7 +2070,7 @@ func _handle_water_physics(delta) -> void:
 	
 	input_direction = Input.get_vector("left", "right", "forward", "back")
 	
-	var look_vector = camera.get_camera_transform().basis
+	var look_vector = camera_FP.get_camera_transform().basis
 	var direction = look_vector * Vector3(input_direction.x, 0, input_direction.y).normalized()
 	
 	if Input.is_action_pressed("jump"):

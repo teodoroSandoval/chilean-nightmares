@@ -9,12 +9,19 @@ func _init() -> void:
 		currentLocale = "es"
 		print("setted default locale to es")
 	OPTION_LIST_ = get_option_dictionary()
+	print(OPTION_LIST_)
 	currentValue = OPTION_LIST_.find_key(currentLocale)
+	print(currentValue)
+	if currentValue == null:
+		currentValue = OPTION_LIST_.keys()[0]
+		
 	DEFAULT_VALUE = currentValue
+
 
 func get_option_dictionary() -> Dictionary:
 	var dict: Dictionary = {}
 	var locales: PackedStringArray = TranslationServer.get_loaded_locales()
+	print(locales)
 	for locale in locales:
 		# dict[locale] = tr("loc_name_" + locale) + "("+locale+")"
 		var translatedLocale: String = "loc_name_" + locale
