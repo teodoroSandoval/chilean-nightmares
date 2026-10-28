@@ -42,6 +42,7 @@ func _ready():
 
 func _process(delta):
 	if is_on:
+		print(delta * drain_rate)
 		# Drain battery when flashlight is on
 		player_interaction_component.equipped_wieldable_item.subtract(delta * drain_rate)
 		if player_interaction_component.equipped_wieldable_item.charge_current == 0:

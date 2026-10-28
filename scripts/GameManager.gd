@@ -7,6 +7,7 @@ enum GameMode    { STORY_MODE, INFINITE_MODE, ARCADE_MODE, VERSUS_MODE }
 var state         : int   = GameState.MENU
 
 @export var game_data: GameData
+@export var show_hints: bool = false
 
 @export_category("Main Sections")
 @export var dialog_base: Label
@@ -98,13 +99,14 @@ func _ready() -> void:
 
 	# InputManager.switch_to_Gameplay()
 	# InputManager._hide_mouse()
-	if player.input_hints:
-		var current_input_hints: InputHintsController = player.input_hints.instantiate()
-		current_input_hints.input_hints_closed.connect(player._on_pause_menu_resume)
-		current_input_hints.input_hints_opened.connect(player._on_pause_menu_pause)
-		add_child(current_input_hints)
-	# if player:
-	# 	player._resume_movement()
+	if show_hints:
+		if player.input_hints:
+			var current_input_hints: InputHintsController = player.input_hints.instantiate()
+			current_input_hints.input_hints_closed.connect(player._on_pause_menu_resume)
+			current_input_hints.input_hints_opened.connect(player._on_pause_menu_pause)
+			add_child(current_input_hints)
+	else:
+		player._on_pause_menu_resume()
 	# _start_game_mode()
 	# get_tree().create_timer(0.05).timeout.connect(_start_game_mode)
 	# pause_popup.resume.connect(_on_pause_menu_resume) # Hookup resume signal from Pause Menu

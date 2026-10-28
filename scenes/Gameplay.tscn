@@ -11,10 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://d320ml58qgg1g" path="res://assets/ui/cliente fondo.png" id="7_hlv5w"]
 [ext_resource type="PackedScene" uid="uid://c2t21qbkevaof" path="res://addons/cogito/DemoScenes/DemoPrefabs/cogito_demo_hint.tscn" id="17_l2ay0"]
 [ext_resource type="PackedScene" uid="uid://w6hpf431lt3l" path="res://addons/cogito/DemoScenes/DemoPrefabs/chair_cushion.tscn" id="18_2np8k"]
-[ext_resource type="PackedScene" uid="uid://d580wtspsjkw" path="res://addons/cogito/PackedScenes/Pickups/pickup_useless_item.tscn" id="20_gdyjy"]
+[ext_resource type="PackedScene" uid="uid://cwd3g16ep0idw" path="res://addons/cogito/PackedScenes/Pickups/pickup_flashlight.tscn" id="18_v4xgt"]
+[ext_resource type="PackedScene" uid="uid://ciil8mli32kuk" path="res://addons/cogito/PackedScenes/Pickups/pickup_laser_rifle.tscn" id="19_2f17k"]
+[ext_resource type="PackedScene" uid="uid://cgce75ts2twkp" path="res://addons/cogito/PackedScenes/Pickups/pickup_pickaxe.tscn" id="20_41005"]
+[ext_resource type="PackedScene" uid="uid://o0xgl5obc551" path="res://addons/cogito/PackedScenes/Pickups/pickup_pistol.tscn" id="21_k1hro"]
+[ext_resource type="PackedScene" uid="uid://sfypssn0rllo" path="res://addons/cogito/PackedScenes/Pickups/pickup_stamina_extension.tscn" id="22_8miw0"]
+[ext_resource type="PackedScene" uid="uid://bab56bf0vqfss" path="res://addons/cogito/PackedScenes/Pickups/pickup_battery.tscn" id="23_2f17k"]
 [ext_resource type="PackedScene" uid="uid://dpxw8qn7y8pc6" path="res://prefabs/instructions_ui_label.tscn" id="24_mpps5"]
 [ext_resource type="PackedScene" uid="uid://battx30cqpjco" path="res://prefabs/poolingCoins.tscn" id="25_k1hro"]
-[ext_resource type="Script" uid="uid://bwqdqgn7x1m5m" path="res://scripts/cameraController.gd" id="32_nprdk"]
 [ext_resource type="PackedScene" uid="uid://be3lgwwdgdycp" path="res://prefabs/buildings/house_01.tscn" id="34_5q587"]
 [ext_resource type="PackedScene" uid="uid://otv80grtivvc" path="res://addons/cogito/PackedScenes/cogito_player_advanced.tscn" id="37_xivcs"]
 [ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="38_c1jlq"]
@@ -23,7 +27,7 @@
 [sub_resource type="Environment" id="Environment_k5ajt"]
 background_energy_multiplier = 0.3
 
-[sub_resource type="Resource" id="Resource_o1p1e"]
+[sub_resource type="Resource" id="Resource_v4xgt"]
 resource_local_to_scene = true
 script = ExtResource("39_6l46x")
 grid = true
@@ -78,6 +82,7 @@ data = PackedVector3Array(0.6928, 0.0903, -1.6, 0, 0.0903, -1.2, 0.6128, 0.0903,
 [node name="Gameplay" type="Node3D" unique_id=1679866010 node_paths=PackedStringArray("dialog_base", "dialog_manager", "player")]
 script = ExtResource("1_jfxgp")
 game_data = ExtResource("2_v4xgt")
+show_hints = true
 dialog_base = NodePath("Dialogo")
 dialog_manager = NodePath("Dialogo")
 player = NodePath("CogitoPlayer")
@@ -348,50 +353,73 @@ offset_bottom = 23.0
 
 [node name="PoolingCoins" parent="Pools" unique_id=2083080597 instance=ExtResource("25_k1hro")]
 
-[node name="MainCamera3D" type="Camera3D" parent="." unique_id=175555135]
-unique_name_in_owner = true
-physics_interpolation_mode = 1
-transform = Transform3D(-1, 6.3098284e-08, -6.050907e-08, 0, 0.69214314, 0.7217602, 8.742278e-08, 0.7217602, -0.69214314, -1.255, 69.83184, -20.442)
-projection = 1
-size = 20.0
-far = 1000.0
-script = ExtResource("32_nprdk")
-followDistance = 100.0
-
 [node name="CogitoPlayer" parent="." unique_id=1413948432 instance=ExtResource("37_xivcs")]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.203804, 26.668312, -339.55902)
-inventory_data = SubResource("Resource_o1p1e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.03693, 26.668312, -334.4676)
+inventory_data = SubResource("Resource_v4xgt")
 
 [node name="Hint_01_Welcome" parent="." unique_id=1369460404 instance=ExtResource("17_l2ay0")]
 transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 116.359726, 27.090147, -330.0405)
 
-[node name="Node3D" type="Node3D" parent="." unique_id=36397904]
+[node name="table base" type="Node3D" parent="." unique_id=36397904]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.49875, 25.994242, -316.33093)
 
-[node name="chairCushion" parent="Node3D" unique_id=93524143 instance=ExtResource("18_2np8k")]
+[node name="chairCushion" parent="table base" unique_id=93524143 instance=ExtResource("18_2np8k")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0.26151276, 0, -0.73062134)
 placement_on_leave = 0
 
-[node name="chairCushion2" parent="Node3D" unique_id=741044628 instance=ExtResource("18_2np8k")]
+[node name="chairCushion2" parent="table base" unique_id=741044628 instance=ExtResource("18_2np8k")]
 transform = Transform3D(-0.819152, 0, -0.573576, 0, 1, 0, 0.573576, 0, -0.819152, 0.34783936, 0, 0.6748352)
 
-[node name="chairCushion3" parent="Node3D" unique_id=1639358728 instance=ExtResource("18_2np8k")]
+[node name="chairCushion3" parent="table base" unique_id=1639358728 instance=ExtResource("18_2np8k")]
 transform = Transform3D(-0.88558, 0, 0.464487, 0, 1, 0, -0.464487, 0, -0.88558, -0.36067963, 0, 0.7953491)
 
-[node name="tableRound" type="StaticBody3D" parent="Node3D" unique_id=1063987685]
+[node name="tableRound" type="StaticBody3D" parent="table base" unique_id=1063987685]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.62551117, 0.53146744, -0.70318604)
 metadata/_edit_group_ = true
 
-[node name="tableRound(Clone)" type="MeshInstance3D" parent="Node3D/tableRound" unique_id=1177646741]
+[node name="tableRound(Clone)" type="MeshInstance3D" parent="table base/tableRound" unique_id=1177646741]
 mesh = SubResource("ArrayMesh_o1p1e")
 surface_material_override/0 = SubResource("StandardMaterial3D_gdyjy")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/tableRound" unique_id=594439836]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table base/tableRound" unique_id=594439836]
 shape = SubResource("ConcavePolygonShape3D_k5k47")
 
-[node name="pickup_useless_item" parent="." unique_id=313191841 instance=ExtResource("20_gdyjy")]
-transform = Transform3D(-0.607514, 0, 0.794309, 0, 1, 0, -0.794309, 0, -0.607514, 116.597466, 26.450272, -326.12384)
+[node name="Pickup_Flashlight" parent="." unique_id=2096758129 instance=ExtResource("18_v4xgt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.28328, 26.663677, -325.2508)
 
-[node name="pickup_useless_item2" parent="." unique_id=1480165665 instance=ExtResource("20_gdyjy")]
-transform = Transform3D(-0.607514, 0, 0.794309, 0, 1, 0, -0.794309, 0, -0.607514, 123.35664, 27.036251, -316.29074)
+[node name="Pickup_LaserRifle" parent="." unique_id=461128878 instance=ExtResource("19_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.622604, 27.057293, -324.6409)
+
+[node name="Pickup_Pickaxe" parent="." unique_id=1396632347 instance=ExtResource("20_41005")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.66878, 26.042212, -321.00113)
+
+[node name="pickup_pistol" parent="." unique_id=1703678965 instance=ExtResource("21_k1hro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.22424, 26.912567, -323.90683)
+
+[node name="Pickup_StaminaExtension" parent="." unique_id=181554645 instance=ExtResource("22_8miw0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.7697, 26.697718, -319.79623)
+
+[node name="Pickup_StaminaExtension2" parent="." unique_id=727754117 instance=ExtResource("22_8miw0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122.987465, 26.951298, -316.56516)
+
+[node name="Pickup_Battery" parent="." unique_id=765139494 instance=ExtResource("23_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.71521, 27.09055, -322.6497)
+
+[node name="Pickup_Battery2" parent="." unique_id=162241154 instance=ExtResource("23_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.37226, 27.09055, -322.6497)
+
+[node name="Pickup_Battery3" parent="." unique_id=531193394 instance=ExtResource("23_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.37226, 27.09055, -323.31995)
+
+[node name="Pickup_Battery4" parent="." unique_id=466441486 instance=ExtResource("23_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.01145, 27.09055, -323.31995)
+
+[node name="Pickup_Battery5" parent="." unique_id=823166214 instance=ExtResource("23_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.01145, 27.09055, -322.646)
+
+[node name="Pickup_Battery6" parent="." unique_id=1236555456 instance=ExtResource("23_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.67511, 27.09055, -322.646)
+
+[node name="Pickup_Battery7" parent="." unique_id=1679896398 instance=ExtResource("23_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.84189, 27.09055, -323.20767)
