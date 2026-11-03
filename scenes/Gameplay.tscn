@@ -14,25 +14,18 @@
 [ext_resource type="PackedScene" uid="uid://cwd3g16ep0idw" path="res://addons/cogito/PackedScenes/Pickups/pickup_flashlight.tscn" id="18_v4xgt"]
 [ext_resource type="PackedScene" uid="uid://ciil8mli32kuk" path="res://addons/cogito/PackedScenes/Pickups/pickup_laser_rifle.tscn" id="19_2f17k"]
 [ext_resource type="PackedScene" uid="uid://cgce75ts2twkp" path="res://addons/cogito/PackedScenes/Pickups/pickup_pickaxe.tscn" id="20_41005"]
+[ext_resource type="PackedScene" uid="uid://b64nenmdopvc1" path="res://prefabs/cogito_player_advanced_custom.tscn" id="21_2f17k"]
 [ext_resource type="PackedScene" uid="uid://o0xgl5obc551" path="res://addons/cogito/PackedScenes/Pickups/pickup_pistol.tscn" id="21_k1hro"]
 [ext_resource type="PackedScene" uid="uid://sfypssn0rllo" path="res://addons/cogito/PackedScenes/Pickups/pickup_stamina_extension.tscn" id="22_8miw0"]
 [ext_resource type="PackedScene" uid="uid://bab56bf0vqfss" path="res://addons/cogito/PackedScenes/Pickups/pickup_battery.tscn" id="23_2f17k"]
 [ext_resource type="PackedScene" uid="uid://dpxw8qn7y8pc6" path="res://prefabs/instructions_ui_label.tscn" id="24_mpps5"]
 [ext_resource type="PackedScene" uid="uid://battx30cqpjco" path="res://prefabs/poolingCoins.tscn" id="25_k1hro"]
 [ext_resource type="PackedScene" uid="uid://be3lgwwdgdycp" path="res://prefabs/buildings/house_01.tscn" id="34_5q587"]
-[ext_resource type="PackedScene" uid="uid://otv80grtivvc" path="res://addons/cogito/PackedScenes/cogito_player_advanced.tscn" id="37_xivcs"]
 [ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="38_c1jlq"]
 [ext_resource type="Script" uid="uid://btnha2whsheir" path="res://addons/cogito/InventoryPD/cogito_inventory.gd" id="39_6l46x"]
 
 [sub_resource type="Environment" id="Environment_k5ajt"]
 background_energy_multiplier = 0.3
-
-[sub_resource type="Resource" id="Resource_v4xgt"]
-resource_local_to_scene = true
-script = ExtResource("39_6l46x")
-grid = true
-inventory_size = Vector2i(6, 3)
-inventory_slots = Array[ExtResource("38_c1jlq")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_niukq"]
 resource_name = "wood"
@@ -79,13 +72,20 @@ emission_enabled = true
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k5k47"]
 data = PackedVector3Array(0.6928, 0.0903, -1.6, 0, 0.0903, -1.2, 0.6128, 0.0903, -0.88, 0.6128, 0.0903, -0.88, 0.7728, 0.0903, -0.88, 0.6928, 0.0903, -1.6, 0.7728, 0.0903, -0.88, 1.3856, 0.0903, -1.2, 0.6928, 0.0903, -1.6, 0.7728, 0.0903, -0.88, 0.7728, 0.0903, -0.72, 1.3856, 0.0903, -1.2, 0.6128, 0.0903, -0.72, 0.6128, 0.0903, -0.88, 0, 0.0903, -1.2, 0.6928, 0.0903, 0, 0.6128, 0.0903, -0.72, 0, 0.0903, -1.2, 0.6928, 0.0903, 0, 0.7728, 0.0903, -0.72, 0.6128, 0.0903, -0.72, 0, 0.0903, -0.4, 0.6928, 0.0903, 0, 0, 0.0903, -1.2, 0, 0.0903, -1.2, 0, 0.0903, -0.8, 0, 0.0903, -0.4, 0.6928, 0.0903, 0, 1.3856, 0.0903, -0.4, 0.7728, 0.0903, -0.72, 1.3856, 0.0903, -0.4, 1.3856, 0.0903, -1.2, 0.7728, 0.0903, -0.72, 1.3856, 0.0903, -0.4, 1.3856, 0.0903, -0.8, 1.3856, 0.0903, -1.2, 0.6928, 0.1935, 0, 0, 0.1935, -0.4, 0, 0.1935, -1.2, 0, 0.1935, -1.2, 0.6928, 0.1935, -1.6, 0.6928, 0.1935, 0, 0.6928, 0.1935, -1.6, 1.3856, 0.1935, -0.4, 0.6928, 0.1935, 0, 0.6928, 0.1935, -1.6, 1.3856, 0.1935, -1.2, 1.3856, 0.1935, -0.4, 0.6928, 0.1935, -1.6, 0.6928, 0.0903, -1.6, 1.3856, 0.0903, -1.2, 1.3856, 0.0903, -1.2, 1.3856, 0.1935, -1.2, 0.6928, 0.1935, -1.6, 1.3856, 0.0903, -0.8, 1.3856, 0.0903, -0.4, 1.3856, 0.1935, -0.4, 1.3856, 0.1935, -0.4, 1.3856, 0.1935, -1.2, 1.3856, 0.0903, -0.8, 1.3856, 0.1935, -1.2, 1.3856, 0.0903, -1.2, 1.3856, 0.0903, -0.8, 1.3856, 0.1935, -0.4, 1.3856, 0.0903, -0.4, 0.6928, 0.0903, 0, 0.6928, 0.0903, 0, 0.6928, 0.1935, 0, 1.3856, 0.1935, -0.4, 0.6928, 0.1935, 0, 0.6928, 0.0903, 0, 0, 0.0903, -0.4, 0, 0.0903, -0.4, 0, 0.1935, -0.4, 0.6928, 0.1935, 0, 0, 0.1935, -1.2, 0, 0.1935, -0.4, 0, 0.0903, -0.4, 0, 0.0903, -0.4, 0, 0.0903, -0.8, 0, 0.1935, -1.2, 0, 0.0903, -0.8, 0, 0.0903, -1.2, 0, 0.1935, -1.2, 0, 0.1935, -1.2, 0, 0.0903, -1.2, 0.6928, 0.0903, -1.6, 0.6928, 0.0903, -1.6, 0.6928, 0.1935, -1.6, 0, 0.1935, -1.2, 0.7728, 0.0903, -0.72, 0.7728, -0.4, -0.72, 0.6128, -0.4, -0.72, 0.6128, -0.4, -0.72, 0.6128, 0.0903, -0.72, 0.7728, 0.0903, -0.72, 0.6128, 0.0903, -0.88, 0.6128, 0.0903, -0.72, 0.6128, -0.4, -0.72, 0.6128, -0.4, -0.72, 0.6128, -0.4, -0.88, 0.6128, 0.0903, -0.88, 0.6128, 0.0903, -0.88, 0.6128, -0.4, -0.88, 0.7728, -0.4, -0.88, 0.7728, -0.4, -0.88, 0.7728, 0.0903, -0.88, 0.6128, 0.0903, -0.88, 0.7728, -0.4, -0.88, 0.7728, -0.4, -0.72, 0.7728, 0.0903, -0.72, 0.7728, 0.0903, -0.72, 0.7728, 0.0903, -0.88, 0.7728, -0.4, -0.88, 0.8128, -0.4, -0.68, 0.8128, -0.44, -0.68, 0.5728, -0.44, -0.68, 0.5728, -0.44, -0.68, 0.5728, -0.4, -0.68, 0.8128, -0.4, -0.68, 0.5728, -0.4, -0.92, 0.5728, -0.4, -0.68, 0.5728, -0.44, -0.68, 0.5728, -0.44, -0.68, 0.5728, -0.44, -0.92, 0.5728, -0.4, -0.92, 0.8128, -0.44, -0.92, 0.8128, -0.44, -0.68, 0.8128, -0.4, -0.68, 0.8128, -0.4, -0.68, 0.8128, -0.4, -0.92, 0.8128, -0.44, -0.92, 0.5728, -0.4, -0.68, 0.5728, -0.4, -0.92, 0.6128, -0.4, -0.72, 0.6128, -0.4, -0.72, 0.8128, -0.4, -0.68, 0.5728, -0.4, -0.68, 0.6128, -0.4, -0.72, 0.7728, -0.4, -0.72, 0.8128, -0.4, -0.68, 0.7728, -0.4, -0.72, 0.7728, -0.4, -0.88, 0.8128, -0.4, -0.68, 0.6128, -0.4, -0.88, 0.6128, -0.4, -0.72, 0.5728, -0.4, -0.92, 0.5728, -0.4, -0.92, 0.8128, -0.4, -0.92, 0.6128, -0.4, -0.88, 0.8128, -0.4, -0.92, 0.7728, -0.4, -0.88, 0.6128, -0.4, -0.88, 0.8128, -0.4, -0.92, 0.8128, -0.4, -0.68, 0.7728, -0.4, -0.88, 0.4928, -0.44, -1, 0.4928, -0.44, -0.6, 0.4928, -0.5, -0.6, 0.4928, -0.5, -0.6, 0.4928, -0.5, -1, 0.4928, -0.44, -1, 0.4928, -0.44, -1, 0.4928, -0.5, -1, 0.8928, -0.5, -1, 0.8928, -0.5, -1, 0.8928, -0.44, -1, 0.4928, -0.44, -1, 0.8928, -0.44, -0.6, 0.8928, -0.5, -0.6, 0.4928, -0.5, -0.6, 0.4928, -0.5, -0.6, 0.4928, -0.44, -0.6, 0.8928, -0.44, -0.6, 0.8928, -0.5, -1, 0.8928, -0.5, -0.6, 0.8928, -0.44, -0.6, 0.8928, -0.44, -0.6, 0.8928, -0.44, -1, 0.8928, -0.5, -1, 0.4928, -0.44, -0.6, 0.4928, -0.44, -1, 0.5728, -0.44, -0.68, 0.5728, -0.44, -0.68, 0.8928, -0.44, -0.6, 0.4928, -0.44, -0.6, 0.5728, -0.44, -0.68, 0.8128, -0.44, -0.68, 0.8928, -0.44, -0.6, 0.8128, -0.44, -0.68, 0.8128, -0.44, -0.92, 0.8928, -0.44, -0.6, 0.5728, -0.44, -0.92, 0.5728, -0.44, -0.68, 0.4928, -0.44, -1, 0.4928, -0.44, -1, 0.8928, -0.44, -1, 0.5728, -0.44, -0.92, 0.8928, -0.44, -1, 0.8128, -0.44, -0.92, 0.5728, -0.44, -0.92, 0.8928, -0.44, -1, 0.8928, -0.44, -0.6, 0.8128, -0.44, -0.92, 0.9128, -0.54, -1.02, 0.4728, -0.54, -1.02, 0.4728, -0.54, -0.58, 0.4728, -0.54, -0.58, 0.9128, -0.54, -0.58, 0.9128, -0.54, -1.02, 0.4928, -0.5, -1, 0.4728, -0.54, -1.02, 0.9128, -0.54, -1.02, 0.9128, -0.54, -1.02, 0.8928, -0.5, -1, 0.4928, -0.5, -1, 0.9128, -0.54, -1.02, 0.9128, -0.54, -0.58, 0.8928, -0.5, -0.6, 0.8928, -0.5, -0.6, 0.8928, -0.5, -1, 0.9128, -0.54, -1.02, 0.8928, -0.5, -0.6, 0.9128, -0.54, -0.58, 0.4728, -0.54, -0.58, 0.4728, -0.54, -0.58, 0.4928, -0.5, -0.6, 0.8928, -0.5, -0.6, 0.4928, -0.5, -0.6, 0.4728, -0.54, -0.58, 0.4728, -0.54, -1.02, 0.4728, -0.54, -1.02, 0.4928, -0.5, -1, 0.4928, -0.5, -0.6, 0.5728, -0.4, -0.92, 0.5728, -0.44, -0.92, 0.8128, -0.44, -0.92, 0.8128, -0.44, -0.92, 0.8128, -0.4, -0.92, 0.5728, -0.4, -0.92)
 
+[sub_resource type="Resource" id="Resource_41005"]
+resource_local_to_scene = true
+script = ExtResource("39_6l46x")
+grid = true
+inventory_size = Vector2i(6, 3)
+inventory_slots = Array[ExtResource("38_c1jlq")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
 [node name="Gameplay" type="Node3D" unique_id=1679866010 node_paths=PackedStringArray("dialog_base", "dialog_manager", "player")]
 script = ExtResource("1_jfxgp")
 game_data = ExtResource("2_v4xgt")
 show_hints = true
 dialog_base = NodePath("Dialogo")
 dialog_manager = NodePath("Dialogo")
-player = NodePath("CogitoPlayer")
+player = NodePath("CogitoPlayerCustom")
 
 [node name="map_base" type="Node3D" parent="." unique_id=872007917]
 
@@ -353,11 +353,6 @@ offset_bottom = 23.0
 
 [node name="PoolingCoins" parent="Pools" unique_id=2083080597 instance=ExtResource("25_k1hro")]
 
-[node name="CogitoPlayer" parent="." unique_id=1413948432 instance=ExtResource("37_xivcs")]
-process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.03693, 26.668312, -334.4676)
-inventory_data = SubResource("Resource_v4xgt")
-
 [node name="Hint_01_Welcome" parent="." unique_id=1369460404 instance=ExtResource("17_l2ay0")]
 transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 116.359726, 27.090147, -330.0405)
 
@@ -423,3 +418,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.67511, 27.09055, -322.646
 
 [node name="Pickup_Battery7" parent="." unique_id=1679896398 instance=ExtResource("23_2f17k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.84189, 27.09055, -323.20767)
+
+[node name="CogitoPlayerCustom" parent="." unique_id=1413948432 instance=ExtResource("21_2f17k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.32496, 27.147013, -331.2658)
+inventory_data = SubResource("Resource_41005")
