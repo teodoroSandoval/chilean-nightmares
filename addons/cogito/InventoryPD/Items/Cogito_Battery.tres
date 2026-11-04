@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("1_3ov2u")
-reload_amount = 10
+reload_amount = 100
 name = "Battery"
 description = "Can be combined with the Flashlight. Non-rechargeable."
 icon = ExtResource("1_fjosn")

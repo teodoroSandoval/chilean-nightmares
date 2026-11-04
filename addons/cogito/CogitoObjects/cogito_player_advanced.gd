@@ -227,6 +227,7 @@ var prev_camera_mode: int = -1
 @onready var camera_FP: Camera3D = $Body/Neck/Head/Eyes/Camera
 @onready var camera_3rdP: Camera3D = $Camera_3rdP
 @onready var animationPlayer: AnimationPlayer = $Body/Neck/Head/Eyes/AnimationPlayer
+@onready var animationPlayerB: AnimationPlayer = $_8DirSprite/AnimationPlayer
 @onready var swimming_head_shapecast: ShapeCast3D = $Body/Neck/Head/Eyes/Camera/SwimmingHeadShapeCast
 @onready var under_water_effect: ColorRect = $GUI/Panel/AspectRatioContainer/UnderWaterEffect
 @onready var crouch_shapecast: ShapeCast3D = $CrouchShapeCast
@@ -268,6 +269,8 @@ func _ready():
 	initial_collision_mask = collision_mask
 	
 	CogitoSceneManager._current_player_node = self
+	print("Cogito Player Advanced is ready. Instance ID: " + str(uid))
+	print(CogitoSceneManager._current_player_node)
 	player_interaction_component.interaction_raycast = $Body/Neck/Head/Eyes/Camera/InteractionRaycast
 	player_interaction_component.exclude_player(get_rid())
 	
@@ -837,7 +840,8 @@ func _on_player_state_loaded():
 func _physics_process(delta):
 	_process_analog_stick_mouselook()
 	_free_look(delta)
-
+func _get_forward_direction() -> Vector3:
+	return body.global_transform.basis.x.normalized()
 #region State Chart
 enum MovingState {
 	Undefined,
