@@ -510,3 +510,7 @@ func get_inventory() -> CogitoInventory:
 func update_equipped() -> void:
 	if equipped_wieldable_item:
 		equipped_wieldable_item.update_wieldable_data(self)
+func set_1stPersonMode() -> void:
+	interaction_raycast.set_1stPersonMode()
+func set_3rdPersonMode() -> void:
+	interaction_raycast.set_3rdPersonMode()

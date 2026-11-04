@@ -461,11 +461,14 @@ func set_camera_mode() -> void:
 func set_3rdPersonCamera() -> void:
 	camera = camera_3rdP
 	camera.make_current()
+	head.rotation.x = 0
+	player_interaction_component.set_3rdPersonMode()
 
 func set_1stPersonCamera() -> void:
 	camera = camera_FP
 	camera.make_current()
-			
+	player_interaction_component.set_1stPersonMode()
+
 func on_input(event):
 	if event is InputEventMouseMotion and is_mouselook_active:
 		update_look_movement_mouse(event)
@@ -539,8 +542,9 @@ func update_look_movement_mouse(event):
 		else:
 			camera_3rdP.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENS) * y_axis_scale)
 			_set_3rdP_camera_position()
-			head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENS) * y_axis_scale)
-			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+			# head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENS) * y_axis_scale)
+			# head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+			head.rotation.x = 0
 
 			# if camZoom != 0:
 			# 	var scalarFactor = baseCam.size / minZoom

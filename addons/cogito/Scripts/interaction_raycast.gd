@@ -4,12 +4,15 @@ extends RayCast3D
 signal interactable_seen(interactable)
 signal interactable_unseen()
 
-@onready var shapecast : ShapeCast3D = $InteractionShapecast
+@onready var shapecastA : ShapeCast3D = $InteractionShapecastA
+@onready var shapecastB : ShapeCast3D = $InteractionShapecastB
+@onready var current_shapecast : ShapeCast3D
 # currently a node, but could just be an offset position
 # if shapecasting, the collider closest to the hotspot's position is used
 @onready var hotspot : Node3D = $ShapecastHotspot
 # the starting position of the hotspot, which is closer to the raycast target position
 var hotspot_base_pos_z : float = -1.5
+var _mode : int = 0
 
 # DEBUGGING
 @onready var raycast_highlighter = $RaycastHighlighter
@@ -28,6 +31,7 @@ func _ready() -> void:
 	if !show_debug_shapes:
 		raycast_highlighter.visible = false
 		target_highlighter.visible = false
+	set_current_shapecast()
 
 
 func _process(_delta: float) -> void:
@@ -84,13 +88,13 @@ func _update_interactable() -> void:
 
 	# if not raycasting a collider, then attempt a shapecast
 	if collider == null:
-		if shapecast.is_colliding():
+		if current_shapecast.is_colliding():
 			# select the closest of all colliders detected by the shapecast
 			var closest_distance = INF
-			for i in range(shapecast.get_collision_count()):
-				var shape_collider = shapecast.get_collider(i)
+			for i in range(current_shapecast.get_collision_count()):
+				var shape_collider = current_shapecast.get_collider(i)
 				if shape_collider != null and shape_collider.is_in_group("interactable"):
-					var collision_point = shapecast.get_collision_point(i)
+					var collision_point = current_shapecast.get_collision_point(i)
 					#print("shapecast colliding with %s" % shape_collider)
 					var distance = collision_point.distance_squared_to(hotspot_global_position)
 					# always return the closest interactable to the hotspot's global position
@@ -116,3 +120,20 @@ func _update_interactable() -> void:
 		collider = null
 
 	_interactable = collider
+
+func set_1stPersonMode() -> void:
+	_mode = 0
+	set_current_shapecast()
+
+func set_3rdPersonMode() -> void:
+	_mode = 1
+	set_current_shapecast()
+
+func set_current_shapecast() -> void:
+	shapecastA.hide()
+	shapecastB.hide()
+	if _mode == 0:
+		current_shapecast = shapecastA
+	else:
+		current_shapecast = shapecastB
+	current_shapecast.show()
