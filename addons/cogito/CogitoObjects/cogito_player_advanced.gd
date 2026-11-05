@@ -427,11 +427,13 @@ func _reload_options():
 
 # Signal from Pause Menu
 func _on_pause_menu_resume() -> void:
+	print("_on_pause_menu_resume")
 	_reload_options()
 	resume()
 
 
 func _on_pause_menu_pause() -> void:
+	print("_on_pause_menu_pause")
 	pause()
 
 

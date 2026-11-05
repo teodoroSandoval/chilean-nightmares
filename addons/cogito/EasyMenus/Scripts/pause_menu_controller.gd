@@ -288,3 +288,5 @@ func _on_back_to_main_menu_pressed() -> void:
 
 func _on_input_device_changed(device: String, device_index: int) -> void:
 	Input.mouse_mode = Input.MouseMode.MOUSE_MODE_VISIBLE if device_index < 0 else Input.MouseMode.MOUSE_MODE_CAPTURED
+func _on_test_button() -> void:
+	print("Test button pressed")

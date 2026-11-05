@@ -11,9 +11,10 @@ signal input_hints_opened
 
 #region Variables
 # @export var nodes_to_focus: Array[Control]
-@export var sound_hover : AudioStream
-@export var sound_click : AudioStream
-@export var empty_slot_texture : Texture
+# @export var sound_hover : AudioStream
+# @export var sound_click : AudioStream
+# @export var empty_slot_texture : Texture
+# var close_button : Button = $ColorRect/CloseButton
 
 var playback : AudioStreamPlaybackPolyphonic
 var temp_screenshot : Image
@@ -61,16 +62,15 @@ func _ready() -> void:
 	input_hints_opened.emit()
 	
 	InputHelper.device_changed.connect(_on_input_device_changed)
+	CogitoSceneManager.switch_active_slot_to(CogitoSceneManager._active_slot)
 		
 	temp_screenshot = CogitoSceneManager.grab_screenshot(CogitoGlobals.screenshot_scale)
 	# nodes_to_focus[0].grab_focus.call_deferred()
+	close_button.grab_focus.call_deferred()
 	
 	InputRouter.push(on_input)
 	if InputHelper.device_index == -1:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
-		
-	# close_button.grab_focus.call_deferred()
 
 func _exit_tree() -> void:
 	InputHelper.device_changed.disconnect(_on_input_device_changed)
@@ -81,6 +81,7 @@ func on_input(event):
 		close_input_hints()
 
 func close_input_hints():
+	print("Closing input hints")
 	get_tree().paused = false
 	InputRouter.pop()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

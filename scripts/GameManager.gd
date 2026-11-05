@@ -99,14 +99,25 @@ func _ready() -> void:
 
 	# InputManager.switch_to_Gameplay()
 	# InputManager._hide_mouse()
+	async_start_game()
+	
+func async_start_game() -> void:
+	#TODO: wait for 0.5 seconds to show the intro popup, then wait for it to close before starting the game
+	await get_tree().create_timer(1.5).timeout
+	# await CogitoSceneManager.is_currently_loading == false
+	print(CogitoSceneManager.is_currently_loading)
+
+	player._on_pause_menu_resume()
+
 	if show_hints:
 		if player.input_hints:
 			var current_input_hints: InputHintsController = player.input_hints.instantiate()
 			current_input_hints.input_hints_closed.connect(player._on_pause_menu_resume)
 			current_input_hints.input_hints_opened.connect(player._on_pause_menu_pause)
 			add_child(current_input_hints)
-	else:
-		player._on_pause_menu_resume()
+			player._on_pause_menu_pause()
+	# else:
+	# 	player._on_pause_menu_resume()
 	# _start_game_mode()
 	# get_tree().create_timer(0.05).timeout.connect(_start_game_mode)
 	# pause_popup.resume.connect(_on_pause_menu_resume) # Hookup resume signal from Pause Menu

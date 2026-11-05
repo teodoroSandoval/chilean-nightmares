@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cb4udt7lqsyfs" path="res://scripts/popups/input_hints_controller.gd" id="1_v7dax"]
 
 [node name="input hints" type="Control" unique_id=879608133]
+process_mode = 3
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -24,35 +25,27 @@ offset_right = -704.0
 offset_bottom = -330.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0, 0, 0, 0.5372549)
-
-[node name="CloseButton" type="Button" parent="ColorRect" unique_id=931151005]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 14.0
-offset_right = 37.0
-offset_bottom = 37.0
-text = "X"
 
 [node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=2120821236]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 17.0
-offset_top = -4.0
-offset_right = 17.0
-offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="GridContainer" type="GridContainer" parent="ColorRect/CenterContainer" unique_id=1258014954]
 layout_mode = 2
+mouse_filter = 2
 columns = 2
 
 [node name="input item base" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=470250447]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base" unique_id=1969919033]
 layout_mode = 1
@@ -86,6 +79,7 @@ action_name = "right"
 [node name="input item base2" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=694172506]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base2" unique_id=198483557]
 layout_mode = 1
@@ -108,6 +102,7 @@ action_name = "look"
 [node name="input item base3" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1390639911]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base3" unique_id=1472361261]
 layout_mode = 1
@@ -129,6 +124,7 @@ action_name = "jump"
 [node name="input item base4" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1581704285]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base4" unique_id=2121130926]
 layout_mode = 1
@@ -150,6 +146,7 @@ action_name = "crouch"
 [node name="input item base5" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1762410812]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base5" unique_id=1710446213]
 layout_mode = 1
@@ -171,6 +168,7 @@ action_name = "sprint"
 [node name="input item base6" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1878548914]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base6" unique_id=702788178]
 layout_mode = 1
@@ -192,6 +190,7 @@ action_name = "menu"
 [node name="input item base7" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=2027782811]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base7" unique_id=1672891193]
 layout_mode = 1
@@ -213,6 +212,7 @@ action_name = "inventory"
 [node name="input item base8" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1579030111]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base8" unique_id=2008144013]
 layout_mode = 1
@@ -234,6 +234,7 @@ action_name = "free_look"
 [node name="input item base9" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=2139300195]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base9" unique_id=999668511]
 layout_mode = 1
@@ -255,6 +256,7 @@ action_name = "interact"
 [node name="input item base10" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=802049528]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base10" unique_id=659022361]
 layout_mode = 1
@@ -276,6 +278,7 @@ action_name = "interact2"
 [node name="input item base11" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=1491597392]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base11" unique_id=1226099868]
 layout_mode = 1
@@ -297,6 +300,7 @@ action_name = "action_primary"
 [node name="input item base12" type="Control" parent="ColorRect/CenterContainer/GridContainer" unique_id=492442306]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/GridContainer/input item base12" unique_id=527533432]
 layout_mode = 1
@@ -315,4 +319,13 @@ vertical_alignment = 1
 position = Vector2(198.99995, 25)
 action_name = "action_secondary"
 
-[connection signal="pressed" from="ColorRect/CloseButton" to="." method="close_input_hints"]
+[node name="CloseButton" type="Button" parent="ColorRect" unique_id=931151005]
+z_index = 4
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 43.0
+offset_bottom = 42.0
+text = "X"
+
+[connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]

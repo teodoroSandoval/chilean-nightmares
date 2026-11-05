@@ -358,7 +358,7 @@ offset_bottom = 23.0
 [node name="PoolingCoins" parent="Pools" unique_id=2083080597 instance=ExtResource("25_k1hro")]
 
 [node name="Hint_01_Welcome" parent="." unique_id=1369460404 instance=ExtResource("17_l2ay0")]
-transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 116.359726, 27.090147, -330.0405)
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 116.359726, 26.912668, -330.0405)
 
 [node name="table base" type="Node3D" parent="." unique_id=36397904]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.49875, 25.994242, -316.33093)
